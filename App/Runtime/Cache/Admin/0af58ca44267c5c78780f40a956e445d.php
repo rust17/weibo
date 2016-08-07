@@ -6,6 +6,9 @@
     <script type="text/javascript" src="/weibo/Public/Admin/easyui/jquery.min.js"></script>
     <script type="text/javascript" src="/weibo/Public/Admin/easyui/jquery.easyui.min.js"></script>
     <script type="text/javascript" src="/weibo/Public/Admin/easyui/locale/easyui-lang-zh_CN.js"></script>
+    <script type="text/javascript" src="/weibo/Public/Admin/js/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="/weibo/Public/Admin/easyui/themes/default/easyui.css" />
+    <link rel="stylesheet" type="text/css" href="/weibo/Public/Admin/easyui/themes/icon.css" />
 </head>
 <body>
 
