@@ -447,7 +447,7 @@ class Template_Lite_Compiler extends Template_Lite {
 					}
 					else
 					{
-						$_result .= 'default: ';
+						$_result .= 'Default: ';
 					}
 					return $_result . ' ?>';
 				}

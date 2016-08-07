@@ -38,7 +38,7 @@ class ETCore{
 				'TemplateDir'=>'template' ,			//模板存放目录
 				'AutoImage'	 =>'on' ,				//自动解析图片目录开关 on表示开放 off表示关闭
 				'LangDir'	 =>'language' ,			//语言文件存放的目录
-				'Language'	 =>'default' ,			//语言的默认文件
+				'Language'	 =>'Default' ,			//语言的默认文件
 				'Copyright'	 =>'off' ,				//版权保护
 				'MemCache'	 =>'' ,					//Memcache服务器地址例如:127.0.0.1:11211
 			)
@@ -62,14 +62,14 @@ class ETCore{
 		//载入语言文件
 		$this->LangDir		= (defined('LangDir')?LangDir:( ((@$set['LangDir']!='language' && @$set['LangDir'])?$set['LangDir']:'language') )).'/';
 		if(is_dir($this->LangDir)){
-			$this->Language	= (defined('Language')?Language:( (($set['Language']!='default' && $set['Language'])?$set['Language']:'default') ));
+			$this->Language	= (defined('Language')?Language:( (($set['Language']!='Default' && $set['Language'])?$set['Language']:'Default') ));
 			if(@is_file($this->LangDir.$this->Language.'.php')){
 				$lang = array();
 				@include_once $this->LangDir.$this->Language.'.php';
 				$this->LangData = $lang;
 			}
 		}else{
-			$this->Language = 'default';
+			$this->Language = 'Default';
 		}
 		
 		
@@ -283,7 +283,7 @@ class ETCore{
 			$id 	 = md5($str);
 			
 			//不存在数据则写入
-			if($this->LangData[$id]=='' && $this->Language=='default'){
+			if($this->LangData[$id]=='' && $this->Language=='Default'){
 							
 				//语言包文件
 				if (@is_file($this->LangDir.$this->Language.'.php')){
@@ -316,7 +316,7 @@ class ETCore{
 				}
 
 				//文件安全处理
-				$data = (!is_file($this->LangDir.'default.php'))?"<?\n/**\n/* SYSTN ET Language For ".$this->Language."\n*/\n\n\n":'';
+				$data = (!is_file($this->LangDir.'Default.php'))?"<?\n/**\n/* SYSTN ET Language For ".$this->Language."\n*/\n\n\n":'';
 				
 				
 				if (trim($str)){
@@ -325,7 +325,7 @@ class ETCore{
 					$data.= $docs."\n";
 					$data.= "*/\n";
 					$data.= '$lang["'.$id.'"] = "'.$str.'";'."\n\n";
-					$this->writer($this->LangDir.'default.php',$data,'a+');
+					$this->writer($this->LangDir.'Default.php',$data,'a+');
 				}
 			}
 
@@ -409,7 +409,7 @@ class ETCore{
 				$Ease_base   = "<title>$Ease_name</title><a href='http://www.systn.com'>$Ease_name</a>";
 				$this->writer($this->CacheDir.'index.htm',$Ease_base);
 				$this->writer($this->CacheDir.'index.html',$Ease_base);
-				$this->writer($this->CacheDir.'default.htm',$Ease_base);
+				$this->writer($this->CacheDir.'Default.htm',$Ease_base);
 			}
 			
 			

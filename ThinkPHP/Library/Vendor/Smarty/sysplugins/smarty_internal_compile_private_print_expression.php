@@ -65,7 +65,7 @@ class Smarty_Internal_Compile_Private_Print_Expression extends Smarty_Internal_C
                 $output = $compiler->compileTag('private_modifier', array(), array('modifierlist' => $parameter['modifierlist'], 'value' => $output));
             }
             if (!$_attr['nofilter']) {
-                // default modifier
+                // Default modifier
                 if (!empty($compiler->smarty->default_modifiers)) {
                     if (empty($compiler->default_modifier_list)) {
                         $modifierlist = array();

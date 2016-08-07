@@ -403,7 +403,7 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data {
      * @param string   $type       plugin type
      * @param string   $tag        name of template tag
      * @param callback $callback   PHP callback to register
-     * @param boolean  $cacheable  if true (default) this fuction is cachable
+     * @param boolean  $cacheable  if true (Default) this fuction is cachable
      * @param array    $cache_attr caching attributes if any
      * @throws SmartyException when the plugin tag is invalid
      */
@@ -559,7 +559,7 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data {
     }
 
     /**
-     * Registers a default plugin handler
+     * Registers a Default plugin handler
      *
      * @param callable $callback class/method name
      * @throws SmartyException if $callback is not callable
@@ -574,7 +574,7 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data {
     }
 
     /**
-     * Registers a default template handler
+     * Registers a Default template handler
      *
      * @param callable $callback class/method name
      * @throws SmartyException if $callback is not callable
@@ -589,7 +589,7 @@ abstract class Smarty_Internal_TemplateBase extends Smarty_Internal_Data {
     }
 
     /**
-     * Registers a default template handler
+     * Registers a Default template handler
      *
      * @param callable $callback class/method name
      * @throws SmartyException if $callback is not callable

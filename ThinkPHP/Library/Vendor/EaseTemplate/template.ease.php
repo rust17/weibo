@@ -29,7 +29,7 @@ Class template extends ETCore{
 				'TemplateDir'=>'template' ,			//模板存放目录
 				'AutoImage'	 =>'on' ,				//自动解析图片目录开关 on表示开放 off表示关闭
 				'LangDir'	 =>'language' ,			//语言文件存放的目录
-				'Language'	 =>'default' ,			//语言的默认文件
+				'Language'	 =>'Default' ,			//语言的默认文件
 				'Copyright'	 =>'off' ,				//版权保护
 				'MemCache'	 =>'' ,					//Memcache服务器地址例如:127.0.0.1:11211
 			)

@@ -217,7 +217,7 @@ class Oracle extends Db{
                     'name'    => strtolower($val['column_name']),
                     'type'    => strtolower($val['data_type']),
                     'notnull' => $val['notnull'],
-                    'default' => $val['data_default'],
+                    'Default' => $val['data_default'],
                     'primary' => $val['pk'],
                     'autoinc' => $val['pk'],
                 );

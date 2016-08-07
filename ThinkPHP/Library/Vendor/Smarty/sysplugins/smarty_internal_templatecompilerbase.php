@@ -66,7 +66,7 @@ abstract class Smarty_Internal_TemplateCompilerBase {
      */
     public $inheritance = false;
     /**
-     * plugins loaded by default plugin handler
+     * plugins loaded by Default plugin handler
      *
      * @var array
      */
@@ -337,7 +337,7 @@ abstract class Smarty_Internal_TemplateCompilerBase {
                         }
                     }
                     if (!$found) {
-                        // call default handler
+                        // call Default handler
                         foreach ($this->smarty->plugin_search_order as $plugin_type) {
                             if ($this->getPluginFromDefaultHandler($tag, $plugin_type)) {
                                 $found = true;
@@ -495,7 +495,7 @@ abstract class Smarty_Internal_TemplateCompilerBase {
     }
 
     /**
-     * Check for plugins by default plugin handler
+     * Check for plugins by Default plugin handler
      *
      * @param string $tag         name of tag
      * @param string $plugin_type type of plugin

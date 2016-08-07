@@ -218,7 +218,7 @@ class Mssql extends Db{
                     'name'    => $val['column_name'],
                     'type'    => $val['data_type'],
                     'notnull' => (bool) ($val['is_nullable'] === ''), // not null is empty, null is yes
-                    'default' => $val['column_default'],
+                    'Default' => $val['column_default'],
                     'primary' => false,
                     'autoinc' => false,
                 );

@@ -26,7 +26,7 @@ class Cx extends TagLib {
         'else'      =>  array('attr'=>'','close'=>0),
         'switch'    =>  array('attr'=>'name','level'=>2),
         'case'      =>  array('attr'=>'value,break'),
-        'default'   =>  array('attr'=>'','close'=>0),
+        'Default'   =>  array('attr'=>'','close'=>0),
         'compare'   =>  array('attr'=>'name,value,type','level'=>3,'alias'=>'eq,equal,notequal,neq,gt,lt,egt,elt,heq,nheq'),
         'range'     =>  array('attr'=>'name,value,type','level'=>3,'alias'=>'in,notin,between,notbetween'),
         'empty'     =>  array('attr'=>'name','level'=>3),
@@ -173,7 +173,7 @@ class Cx extends TagLib {
      * <switch name="a.name" >
      * <case value="1" break="false">1</case>
      * <case value="2" >2</case>
-     * <default />other
+     * <Default />other
      * </switch>
      * @access public
      * @param array $tag 标签属性
@@ -226,14 +226,14 @@ class Cx extends TagLib {
 
     /**
      * default标签解析 需要配合switch才有效
-     * 使用： <default />ddfdf
+     * 使用： <Default />ddfdf
      * @access public
      * @param array $tag 标签属性
      * @param string $content  标签内容
      * @return string
      */
     public function _default($tag) {
-        $parseStr = '<?php default: ?>';
+        $parseStr = '<?php Default: ?>';
         return $parseStr;
     }
 

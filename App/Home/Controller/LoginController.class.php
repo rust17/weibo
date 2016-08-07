@@ -5,3 +5,11 @@
  * Date: 2016/8/7
  * Time: 9:02
  */
+namespace Home\Controller;
+use Think\Controller;
+
+class LoginController extends Controller{
+    public function index(){
+        $this->display();
+    }
+}

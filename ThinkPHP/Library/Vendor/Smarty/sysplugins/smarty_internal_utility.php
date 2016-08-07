@@ -745,7 +745,7 @@ class Smarty_Internal_Utility {
                 "modifiercompiler.count_paragraphs.php" => true,
                 "modifiercompiler.count_sentences.php" => true,
                 "modifiercompiler.count_words.php" => true,
-                "modifiercompiler.default.php" => true,
+                "modifiercompiler.Default.php" => true,
                 "modifiercompiler.escape.php" => true,
                 "modifiercompiler.from_charset.php" => true,
                 "modifiercompiler.indent.php" => true,

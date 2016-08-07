@@ -202,17 +202,17 @@ class Smarty extends Smarty_Internal_TemplateBase {
     */
     public $joined_config_dir = null;
     /**
-    * default template handler
+    * Default template handler
     * @var callable
     */
     public $default_template_handler_func = null;
     /**
-    * default config handler
+    * Default config handler
     * @var callable
     */
     public $default_config_handler_func = null;
     /**
-    * default plugin handler
+    * Default plugin handler
     * @var callable
     */
     public $default_plugin_handler_func = null;
@@ -518,7 +518,7 @@ class Smarty extends Smarty_Internal_TemplateBase {
     */
     public $autoload_filters = array();
     /**
-    * default modifier
+    * Default modifier
     * @var array
     */
     public $default_modifiers = array();
@@ -538,12 +538,12 @@ class Smarty extends Smarty_Internal_TemplateBase {
     */
     public $start_time = 0;
     /**
-    * default file permissions
+    * Default file permissions
     * @var int
     */
     public $_file_perms = 0644;
     /**
-    * default dir permissions
+    * Default dir permissions
     * @var int
     */
     public $_dir_perms = 0771;
@@ -587,7 +587,7 @@ class Smarty extends Smarty_Internal_TemplateBase {
             mb_internal_encoding(SMARTY_RESOURCE_CHAR_SET);
         }
         $this->start_time = microtime(true);
-        // set default dirs
+        // set Default dirs
         $this->setTemplateDir('.' . DS . 'templates' . DS)
             ->setCompileDir('.' . DS . 'templates_c' . DS)
             ->setPluginsDir(SMARTY_PLUGINS_DIR)
@@ -1024,7 +1024,7 @@ class Smarty extends Smarty_Internal_TemplateBase {
     }
 
     /**
-    * Set default modifiers
+    * Set Default modifiers
     *
     * @param array|string $modifiers modifier or list of modifiers to set
     * @return Smarty current Smarty instance for chaining
@@ -1036,7 +1036,7 @@ class Smarty extends Smarty_Internal_TemplateBase {
     }
 
     /**
-    * Add default modifiers
+    * Add Default modifiers
     *
     * @param array|string $modifiers modifier or list of modifiers to add
     * @return Smarty current Smarty instance for chaining
@@ -1053,9 +1053,9 @@ class Smarty extends Smarty_Internal_TemplateBase {
     }
 
     /**
-    * Get default modifiers
+    * Get Default modifiers
     *
-    * @return array list of default modifiers
+    * @return array list of Default modifiers
     */
     public function getDefaultModifiers()
     {
@@ -1173,7 +1173,7 @@ class Smarty extends Smarty_Internal_TemplateBase {
         } else {
             $data = null;
         }
-        // default to cache_id and compile_id of Smarty object
+        // Default to cache_id and compile_id of Smarty object
         $cache_id = $cache_id === null ? $this->cache_id : $cache_id;
         $compile_id = $compile_id === null ? $this->compile_id : $compile_id;
         // already in template cache?

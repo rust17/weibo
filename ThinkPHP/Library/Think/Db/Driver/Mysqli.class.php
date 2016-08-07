@@ -214,7 +214,7 @@ class Mysqli extends Db{
                     'name'    => $val['Field'],
                     'type'    => $val['Type'],
                     'notnull' => (bool) ($val['Null'] === ''), // not null is empty, null is yes
-                    'default' => $val['Default'],
+                    'Default' => $val['Default'],
                     'primary' => (strtolower($val['Key']) == 'pri'),
                     'autoinc' => (strtolower($val['Extra']) == 'auto_increment'),
                 );

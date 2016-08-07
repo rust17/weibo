@@ -22,10 +22,10 @@
  * </pre>
  * Params:
  * <pre>
- * - name       (optional) - string default "checkbox"
+ * - name       (optional) - string Default "checkbox"
  * - values     (required) - array
  * - options    (optional) - associative array
- * - checked    (optional) - array default not set
+ * - checked    (optional) - array Default not set
  * - separator  (optional) - ie <br> or &nbsp;
  * - output     (optional) - the output next to each checkbox
  * - assign     (optional) - assign the output as an array to this variable

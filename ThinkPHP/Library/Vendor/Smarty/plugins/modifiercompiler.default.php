@@ -7,13 +7,13 @@
  */
 
 /**
- * Smarty default modifier plugin
+ * Smarty Default modifier plugin
  *
  * Type:     modifier<br>
- * Name:     default<br>
- * Purpose:  designate default value for empty variables
+ * Name:     Default<br>
+ * Purpose:  designate Default value for empty variables
  *
- * @link http://www.smarty.net/manual/en/language.modifier.default.php default (Smarty online manual)
+ * @link http://www.smarty.net/manual/en/language.modifier.Default.php Default (Smarty online manual)
  * @author Uwe Tews
  * @param array $params parameters
  * @return string with compiled code

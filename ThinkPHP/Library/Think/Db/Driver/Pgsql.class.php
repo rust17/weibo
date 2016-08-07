@@ -219,7 +219,7 @@ class Pgsql extends Db{
                 'name'    => $val['Field'],
                 'type'    => $val['Type'],
                 'notnull' => (bool) ($val['Null'] == 't'?1:0), // 't' is 'not null'
-                'default' => $val['Default'],
+                'Default' => $val['Default'],
                 'primary' => (strtolower($val['Key']) == 't'),
                 'autoinc' => (strtolower($val['Default']) == "nextval('{$tableName}_id_seq'::regclass)"),
                 );

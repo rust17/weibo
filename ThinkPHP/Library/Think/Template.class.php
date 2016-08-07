@@ -561,7 +561,7 @@ class  Template {
             //模板函数过滤
             $fun = strtolower(trim($args[0]));
             switch($fun) {
-            case 'default':  // 特殊模板函数
+            case 'Default':  // 特殊模板函数
                 $name = '(isset('.$name.') && ('.$name.' !== ""))?('.$name.'):'.$args[1];
                 break;
             default:  // 通用模板函数

@@ -233,7 +233,7 @@ class Ibase extends Db{
                     'name'    => trim($val['FIELD']),
                     'type'    => '',
                     'notnull' => (bool) ($val['NULL1'] ==1), // 1表示不为Null
-                    'default' => $val['DEFAULT1'],
+                    'Default' => $val['DEFAULT1'],
                     'primary' => false,
                     'autoinc' => false,
                 );

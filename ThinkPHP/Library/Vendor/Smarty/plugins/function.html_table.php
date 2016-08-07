@@ -25,9 +25,9 @@
  * - td_attr    - table cell attributes (arrays are cycled)
  * - trailpad   - value to pad trailing cells with
  * - caption    - text for caption element
- * - vdir       - vertical direction (default: "down", means top-to-bottom)
- * - hdir       - horizontal direction (default: "right", means left-to-right)
- * - inner      - inner loop (default "cols": print $loop line by line,
+ * - vdir       - vertical direction (Default: "down", means top-to-bottom)
+ * - hdir       - horizontal direction (Default: "right", means left-to-right)
+ * - inner      - inner loop (Default "cols": print $loop line by line,
  *                $loop will be printed column by column otherwise)
  * </pre>
  * Examples:

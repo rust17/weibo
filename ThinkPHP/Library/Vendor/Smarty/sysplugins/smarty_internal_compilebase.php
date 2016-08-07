@@ -114,7 +114,7 @@ abstract class Smarty_Internal_CompileBase {
                 }
             }
         }
-        // default 'false' for all option flags not set
+        // Default 'false' for all option flags not set
         foreach ($this->option_flags as $flag) {
             if (!isset($_indexed_attr[$flag])) {
                 $_indexed_attr[$flag] = false;

@@ -48,7 +48,7 @@ class ColoredInspector implements Inspector {
    *   - 'keyword'
    *   - 'string'
    *   - 'boolean'
-   *   - 'default'
+   *   - 'Default'
    *
    * And the values, one of the following colors:
    *
@@ -163,7 +163,7 @@ class ColoredInspector implements Inspector {
   public function _buildAst($type, $value, $seen = array()) {
     // FIXME: Improve this AST so it doesn't require access to dump() or colorize()
     if ($this->_isSeen($value, $seen)) {
-      return $this->_colorize('default', '*** RECURSION ***');
+      return $this->_colorize('Default', '*** RECURSION ***');
     } else {
       $nextSeen = array_merge($seen, array($value));
     }
@@ -244,7 +244,7 @@ class ColoredInspector implements Inspector {
       'bool'    => 'light_purple',
       'keyword' => 'light_cyan',
       'comment' => 'dark_grey',
-      'default' => 'none'
+      'Default' => 'none'
     );
   }
 
@@ -252,7 +252,7 @@ class ColoredInspector implements Inspector {
     if (!empty($this->_colorMap[$type])) {
       $colorName = $this->_colorMap[$type];
     } else {
-      $colorName = $this->_colorMap['default'];
+      $colorName = $this->_colorMap['Default'];
     }
 
     return sprintf(

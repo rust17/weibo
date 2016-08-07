@@ -60,7 +60,7 @@ class Spyc {
 
   /**
    * Setting this to true will force YAMLDump to enclose any string value in
-   * quotes.  False by default.
+   * quotes.  False by Default.
    * 
    * @var bool
    */
@@ -68,7 +68,7 @@ class Spyc {
 
   /**
    * Setting this to true will forse YAMLLoad to use syck_load function when
-   * possible. False by default.
+   * possible. False by Default.
    * @var bool
    */
   var $setting_use_syck_is_possible = false;
@@ -171,16 +171,16 @@ class Spyc {
      *
      * Oh, and you can decide how big the indent is and what the wordwrap
      * for folding is.  Pretty cool -- just pass in 'false' for either if
-     * you want to use the default.
+     * you want to use the Default.
      *
-     * Indent's default is 2 spaces, wordwrap's default is 40 characters.  And
+     * Indent's Default is 2 spaces, wordwrap's Default is 40 characters.  And
      * you can turn off wordwrap by passing in 0.
      *
      * @access public
      * @return string
      * @param array $array PHP array
-     * @param int $indent Pass in false to use the default, which is 2
-     * @param int $wordwrap Pass in 0 for no wordwrap, false for default (40)
+     * @param int $indent Pass in false to use the Default, which is 2
+     * @param int $wordwrap Pass in 0 for no wordwrap, false for Default (40)
      */
   function YAMLDump($array,$indent = false,$wordwrap = false) {
     $spyc = new Spyc;
@@ -197,16 +197,16 @@ class Spyc {
      *
      * Oh, and you can decide how big the indent is and what the wordwrap
      * for folding is.  Pretty cool -- just pass in 'false' for either if
-     * you want to use the default.
+     * you want to use the Default.
      *
-     * Indent's default is 2 spaces, wordwrap's default is 40 characters.  And
+     * Indent's Default is 2 spaces, wordwrap's Default is 40 characters.  And
      * you can turn off wordwrap by passing in 0.
      *
      * @access public
      * @return string
      * @param array $array PHP array
-     * @param int $indent Pass in false to use the default, which is 2
-     * @param int $wordwrap Pass in 0 for no wordwrap, false for default (40)
+     * @param int $indent Pass in false to use the Default, which is 2
+     * @param int $wordwrap Pass in 0 for no wordwrap, false for Default (40)
      */
   function dump($array,$indent = false,$wordwrap = false) {
     // Dumps to some very clean YAML.  We'll have to add some more features

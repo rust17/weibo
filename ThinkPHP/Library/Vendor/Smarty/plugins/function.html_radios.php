@@ -16,10 +16,10 @@
  * Purpose:    Prints out a list of radio input types<br>
  * Params:
  * <pre>
- * - name       (optional) - string default "radio"
+ * - name       (optional) - string Default "radio"
  * - values     (required) - array
  * - options    (required) - associative array
- * - checked    (optional) - array default not set
+ * - checked    (optional) - array Default not set
  * - separator  (optional) - ie <br> or &nbsp;
  * - output     (optional) - the output next to each radio button
  * - assign     (optional) - assign the output as an array to this variable

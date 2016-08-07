@@ -151,7 +151,7 @@ abstract class Smarty_Resource {
      * @param Smarty_Template_Source   $source    source object
      * @param Smarty_Internal_Template $_template template object
      * @return string fully qualified filepath
-     * @throws SmartyException if default template handler is registered but not callable
+     * @throws SmartyException if Default template handler is registered but not callable
      */
     protected function buildFilepath(Smarty_Template_Source $source, Smarty_Internal_Template $_template=null)
     {
@@ -416,7 +416,7 @@ abstract class Smarty_Resource {
      *
      * @note "C:/foo.tpl" was forced to file resource up till Smarty 3.1.3 (including).
      * @param string  $resource_name    template_resource or config_resource to parse
-     * @param string  $default_resource the default resource_type defined in $smarty
+     * @param string  $default_resource the Default resource_type defined in $smarty
      * @param string &$name             the parsed resource name
      * @param string &$type             the parsed resource type
      * @return void
@@ -425,7 +425,7 @@ abstract class Smarty_Resource {
     {
         $parts = explode(':', $resource_name, 2);
         if (!isset($parts[1]) || !isset($parts[0][1])) {
-            // no resource given, use default
+            // no resource given, use Default
             // or single character before the colon is not a resource type, but part of the filepath
             $type = $default_resource;
             $name = $resource_name;

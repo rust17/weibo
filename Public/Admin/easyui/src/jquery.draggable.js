@@ -396,7 +396,7 @@
 //				case "touchstart": type = "mousedown"; break;
 //				case "touchmove":  type = "mousemove"; break;        
 //				case "touchend":   type = "mouseup";   break;
-//				default: return;
+//				Default: return;
 //			}
 //			var simulatedEvent = document.createEvent("MouseEvent");
 //			simulatedEvent.initMouseEvent(type, true, true, window, 1,

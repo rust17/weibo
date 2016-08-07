@@ -44,7 +44,7 @@ class Smarty_Internal_Compile_Capture extends Smarty_Internal_CompileBase {
         // check and get attributes
         $_attr = $this->getAttributes($compiler, $args);
 
-        $buffer = isset($_attr['name']) ? $_attr['name'] : "'default'";
+        $buffer = isset($_attr['name']) ? $_attr['name'] : "'Default'";
         $assign = isset($_attr['assign']) ? $_attr['assign'] : 'null';
         $append = isset($_attr['append']) ? $_attr['append'] : 'null';
 

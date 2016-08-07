@@ -196,7 +196,7 @@ class BaiduBCS {
 			}
 			$request->set_read_file ( $opt ['fileUpload'] );
 			// Determine the length to read from the file
-			$length = $request->read_stream_size; // The file size by default
+			$length = $request->read_stream_size; // The file size by Default
 			$file_size = $length;
 			if (isset ( $opt ["length"] )) {
 				if ($opt ["length"] > $file_size) {
@@ -205,7 +205,7 @@ class BaiduBCS {
 				$length = $opt ['length'];
 			}
 			if (isset ( $opt ['seekTo'] ) && ! isset ( $opt ["length"] )) {
-				// Read from seekTo until EOF by default, when set seekTo but not set $opt["length"]
+				// Read from seekTo until EOF by Default, when set seekTo but not set $opt["length"]
 				$length -= ( integer ) $opt ['seekTo'];
 			}
 			$request->set_read_stream_size ( $length );
@@ -519,7 +519,7 @@ class BaiduBCS {
 			throw new BCS_Exception ( 'File not found!', - 1 );
 		}
 		$fileSize = filesize ( $opt ['fileUpload'] );
-		$sub_object_size = 1024 * 1024; //default 1MB
+		$sub_object_size = 1024 * 1024; //Default 1MB
 		if (defined ( "BCS_SUPERFILE_SLICE_SIZE" )) {
 			$sub_object_size = BCS_SUPERFILE_SLICE_SIZE;
 		}
@@ -585,7 +585,7 @@ class BaiduBCS {
 	 * @param string $dir (Required)
 	 * @param array $opt(Optional)
 	 * string prefix 文件object前缀
-	 * boolean has_sub_directory(default=true)   object命名中是否携带文件的子目录结构，若置为false，请确认待上传的目录和所有子目录中没有重名文件，否则会产生object覆盖问题
+	 * boolean has_sub_directory(Default=true)   object命名中是否携带文件的子目录结构，若置为false，请确认待上传的目录和所有子目录中没有重名文件，否则会产生object覆盖问题
 	 * BaiduBCS::IMPORT_BCS_PRE_FILTER   用户可自定义上传文件前的操作函数
 	 * 1. 函数参数列表顺序需为 ($bucket,$object,$file,&$opt)，注意$opt为upload_directory函数传入的$opt的拷贝，只对当前object生效
 	 * 2. 函数返回值必须为boolean，当true该文件进行上传，若false跳过上传
