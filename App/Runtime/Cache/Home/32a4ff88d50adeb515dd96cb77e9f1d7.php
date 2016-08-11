@@ -34,6 +34,24 @@
 
 <div id="footer"></div>
 <p class="footer_text">&copy;2009-2014 瓢城Web 俱乐部. Power by ThinkPHP.</p>
-<div id="register"></div>
+<div id="register">
+    <form>
+        <p>
+            <label for="user">账号：</label>
+            <input type="text" name="user" class="text" id="user" palcehoder="昵称，不小于两位!"/>
+            <span class="star">*</span>
+        </p>
+        <p>
+            <label for="pass">密码：</label>
+            <input type="password" name="pass" class="text" id="pass" palchoder="密码，不小于6位!" />
+            <span class="star">*</span>
+        </p>
+        <p>
+            <label for="email">邮箱：</label>
+            <input type="text" name="email" class="text" id="email" palcehoder="电子邮件，用于找回密码!"/>
+            <span class="star">*</span>
+        </p>
+    </form>
+</div>
 </body>
 </html>

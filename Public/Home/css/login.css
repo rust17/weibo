@@ -1,9 +1,44 @@
 @charset "UTF-8";
+/*
+自定义jQuery UI 皮肤
+*/
+.ui-dialog{
+    padding: 0 !important;
+    border:1px solid #666666 !important;
+    border-radius:0 !important;
+}
+.ui-dialog-titlebar{
+    padding: 0 !important;
+    height: 37px !important;
+    background: url("../img/ui_header_bg.png") !important;
+    border: 1px solid #FFFFFF !important;
+    border-bottom: none !important;
+    border-radius:0 !important;
+}
+.ui-dialog-title{
+    color: #FFFFFF !important;
+    height: 37px !important;
+    line-height: 35px !important;
+    font-size: 14px !important;
+    text-indent: 10px !important;
+}
+.ui-dialog-content{
+    width: 100% !important;
+}
+.ui-dialog-buttonset button{
+    background: url("../img/button.png") !important;
+    border: none !important;
+    color: #fff !important;
+    height: 35px !important;
+}
+.ui-dialog-buttonset button:hover{
+    background: url("../img/button_hover.png") !important;
+}
 body{
     margin: 0;
     padding: 0;
     height: 100%;
-    background: #666;
+    background: #ccc;
 }
 #header{
     width: 198px;
@@ -79,4 +114,15 @@ body{
     font-size: 13px;
     position: absolute;
     bottom:0;
+}
+#register input.text{
+    width: 270px;
+    height: 25px;
+    padding: 5px;
+    border: 1px solid #cccccc;
+    border-radius: 3px;
+    background: #FFFFFF;
+}
+#register span.star{
+    color: red;
 }
