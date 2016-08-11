@@ -20,13 +20,20 @@
 
 <div id="main">
     <form id="login">
-        <input type="text" name="user">
-        <input type="password" name="password">
-        <input type="submit" name="submit" value="登录">
+        <div class="top">
+            <input type="text" name="user" placeholder="用户名">
+            <input type="password" name="password" placeholder="密码">
+            <input type="submit" name="submit" value="登录">
+        </div>
+        <div class="bottom">
+            <a href="javascript:void(0)" id="reg_link">注册新用户</a>
+            <a href="javascript:void(0)">忘记密码?</a>
+        </div>
     </form>
 </div>
 
 <div id="footer"></div>
-
+<p class="footer_text">&copy;2009-2014 瓢城Web 俱乐部. Power by ThinkPHP.</p>
+<div id="register"></div>
 </body>
 </html>
