@@ -8,4 +8,12 @@ return array(
     'TMPL_TEMPLATE_SUFFIX'=>'.html',
     //设置默认主题目录
     'DEFAULT_THEME'=>'Default',
+    //数据库配置
+    'DB_TYPE'=>'pdo',
+    'DB_USER'=>'root',
+    'DB_PWD'=>'',
+    'DB_PREFIX'=>'weibo_',
+    'DB_DSN'=>'mysql:host=localhost;dbname=weibo;charset=UTF8',
+    //URL模式
+    'URL_MODEL'=>2,
 );

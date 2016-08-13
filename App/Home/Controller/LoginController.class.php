@@ -12,4 +12,8 @@ class LoginController extends Controller{
     public function index(){
         $this->display();
     }
+    public function test(){
+        $m = M('User');
+        dump($m->select());
+    }
 }
