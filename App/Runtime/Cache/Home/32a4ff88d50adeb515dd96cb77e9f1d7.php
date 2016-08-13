@@ -39,6 +39,7 @@
 <p class="footer_text">&copy;2009-2014 瓢城Web 俱乐部. Power by ThinkPHP.</p>
 
 <form id="register">
+    <ol class="register_errors"></ol>
     <p>
         <label for="username">账号：</label>
         <input type="text" name="username" class="text" id="username" placeholder="昵称，不小于两位!"/>

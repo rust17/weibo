@@ -33,6 +33,22 @@ class UserModel extends Model{
         array('create','time',1,'function'),
     );
 
+    //验证占用字段
+    public function checkField($field,$type){
+        $data = array();
+        switch ($type){
+            case 'username':
+                $data['username'] = $field;
+                break;
+            case 'email':
+                $data['email'] = $field;
+                break;
+            default:
+                return 0;
+        }
+        return $this->create($data) ? 1 : $this->getError();
+    }
+
     //注册一条用户
     public function register($username,$password,$repassword,$email){
         $data = array(
