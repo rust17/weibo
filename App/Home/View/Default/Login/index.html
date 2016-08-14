@@ -24,8 +24,12 @@
 <div id="main">
     <form id="login">
         <div class="top">
-            <input type="text" name="user" placeholder="用户名">
-            <input type="password" name="password" placeholder="密码">
+            <span class="username">
+                <input type="text" name="username" placeholder="账号/邮箱">
+            </span>
+            <span class="password">
+                <input type="password" name="password" placeholder="密码">
+            </span>
             <input type="submit" name="submit" value="登录">
         </div>
         <div class="bottom">
@@ -65,7 +69,7 @@
     </p>
 </form>
 
-<form id="verify_register">
+<form id="verify_register" form-click="">
     <ol class="ver_error"></ol>
     <p>
         <label for="verify">验证码：</label>

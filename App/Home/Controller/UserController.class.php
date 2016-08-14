@@ -19,12 +19,24 @@ class UserController extends Controller{
             $this->error('非法访问');
         }
     }
+    //登录行为返回给Ajax
+    public function login(){
+        if(IS_AJAX) {
+            $User = D('User');
+            $uid = $User->login(I('post.username'), I('post.password'));
+            echo $uid;
+        }else{
+            $this->error('非法访问');
+        }
+    }
     //Ajax验证数据，账号返回给Ajax
     public function checkUserName(){
         if(IS_AJAX){
             $User = D('User');
-            $uid[] = $User->checkField(I('post.username'),'username');
-            echo $uid[0]['username'] ? 'false': 'true';
+            $uid = $User->checkField(I('post.username'),'username');
+            echo $uid >0 ? 'true' : 'false';
+        }else{
+            $this->error('非法访问');
         }
     }
     //Ajax验证数据，邮箱返回给Ajax
@@ -32,7 +44,9 @@ class UserController extends Controller{
         if(IS_AJAX){
             $User = D('User');
             $uid = $User->checkField(I('post.email'),'email');
-            echo $uid['email'] ? 'false': 'true';
+            echo $uid >0 ? 'true' : 'false';
+        }else{
+            $this->error('非法访问');
         }
     }
 
@@ -41,7 +55,9 @@ class UserController extends Controller{
         if(IS_AJAX){
             $User = D('User');
             $uid = $User->checkField(I('post.verify'),'verify');
-            echo $uid['verify'] ? 'false' : 'true';
+            echo $uid >0 ? 'true' : 'false';
+        }else{
+            $this->error('非法访问');
         }
     }
 }

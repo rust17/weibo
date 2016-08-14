@@ -10,12 +10,12 @@ use Think\Model;
 
 class UserModel extends Model{
     //批量验证
-    protected $patchValidate = true;
+    //protected $patchValidate = true;
 
     //自动验证
     protected $_validate = array(
-        //-1,'账号长度不合法'
-        array('username','2,20',-1,self::EXISTS_VALIDATE,'length'),
+        //-1,'账号不合法'
+        array('username','/^[^@]{2,20}$/i',-1,self::EXISTS_VALIDATE),
         //-2,'密码长度不合法'
         array('password','6,30',-2,self::EXISTS_VALIDATE,'length'),
         //-3,'密码和密码确认不一致'
@@ -28,12 +28,16 @@ class UserModel extends Model{
         array('email','',-6,self::EXISTS_VALIDATE,'unique',self::MODEL_INSERT),
         //-7,'验证码错误'
         array('Verify','check_verify',-7,self::EXISTS_VALIDATE,'function'),
+        //-8,'登录用户名不合法'
+        array('login_username','2,50',-8,self::EXISTS_VALIDATE,'length'),
+        //noemail,判断登录用户名是否是邮箱
+        array('login_username','email','noemail',self::EXISTS_VALIDATE),
 
     );
     //自动填充
     protected $_auto = array(
-        array('password','sha1',1,'function'),
-        array('create','time',1,'function'),
+        array('password','sha1',self::MODEL_BOTH,'function'),
+        array('create','time',self::MODEL_INSERT,'function'),
     );
 
     //验证占用字段
@@ -69,6 +73,39 @@ class UserModel extends Model{
             return $uid ? $uid : 0;
         }else{
             return $this->getError();
+        }
+    }
+
+    //登录用户
+    public function login($username,$password){
+        $data = array(
+            'login_username'=>$username,
+            'password'=>$password,
+        );
+        //where条件
+        $map = array();
+        if($this->create($data)){
+            //这里采用邮箱登陆方式
+            $map['email'] = $username;
+        }else{
+            if($this->getError()=='noemail'){
+                //这里采用账号登陆方式
+                $map['username'] = $username;
+            }else{
+                return $this->getError();
+            }
+        }
+        //验证密码
+        $user = $this->field('id,password')->where($map)->find();
+        if($user['password'] == sha1($password)){
+            //登录验证后写入登录消息
+            $update = array(
+                'id' => $user['id'],
+                'last_login'=>NOW_TIME,
+                'last_ip'=>get_client_ip(1),
+            );
+        }else{
+            return -9;
         }
     }
 }

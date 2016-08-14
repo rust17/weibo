@@ -9,7 +9,36 @@ $(function(){
     //    .css('background-size','100%');
     //登录页的按钮
     $('#login input[type="submit"]').button();
-
+    $('#login').validate({
+        submitHandler : function(form){
+            $('#verify_register').attr('form-click','login');
+            $('#verify_register').dialog('open');
+        },
+        rules : {
+            username : {
+                required : true,
+                minlength : 2,
+                maxlength : 50,
+            },
+            password : {
+                required : true,
+                minlength : 6,
+                maxlength : 30,
+            },
+        },
+        messages : {
+            username : {
+                required : '账号不得为空',
+                minlength : $.format('账号不得小于{0}位'),
+                maxlength : $.format('账号不得大于{0}位'),
+            },
+            password : {
+                required : '密码不得为空',
+                minlength : $.format('密码不得小于{0}位'),
+                maxlength : $.format('密码不得大于{0}位'),
+            },
+        },
+    });
     //创建注册对话框
     $('#register').dialog({
         width : 430,
@@ -27,6 +56,7 @@ $(function(){
         }],
     }).validate({
         submitHandler : function(form){
+            $('#verify_register').attr('form-click','register');
             $('#verify_register').dialog('open');
 
         },
@@ -54,8 +84,9 @@ $(function(){
                 required : true,
                 minlength : 2,
                 maxlength : 20,
+                inAt : true,
                 remote : {
-                    url : ThinkPHP['MODULE']+'/User/checkUsername',
+                    url : ThinkPHP['MODULE']+'/User/checkUserName',
                     type : 'POST',
                     beforeSend : function(){
                         $('#username').next().html('&nbsp;').removeClass('succ').addClass('loading');
@@ -102,6 +133,7 @@ $(function(){
                 required : '账号不得为空',
                 minlength : $.format('账号不得小于{0}位'),
                 maxlength : $.format('账号不得大于{0}位'),
+                inAt : '账号不得包含@符号',
                 remote : '账号被占用',
             },
             password : {
@@ -163,7 +195,7 @@ $(function(){
         },
     });
 
-    //创建注册对话框
+    //验证码对话框
     $('#verify_register').dialog({
         width : 290,
         height : 300,
@@ -180,43 +212,70 @@ $(function(){
             style : 'right:85px',
         }],
         close : function(e){
-            $('#register').dialog('widget').find('button').eq(1).button('enable');
+            if($('#verify_register').attr('form-click') == 'register') {
+                $('#register').dialog('widget').find('button').eq(1).button('enable');
+            }
         }
     }).validate({
         submitHandler : function(form){
-            $('#register').ajaxSubmit({
-                url: ThinkPHP['MODULE']+'/User/register',
-                type : 'POST',
-                data : {
-                    verify : $('#verify').val(),
-                },
-                beforeSubmit : function(){
-                    $('#loading').dialog('open');
-                    $('#register').dialog('widget').find('button').eq(1).button('disable');
-                    $('#verify_register').dialog('widget').find('button').eq(1).button('disable');
-                },
-                success : function(responseText){
-                    if(responseText){
-                        $('#register').dialog('widget').find('button').eq(1).button('enable');
-                        $('#verify_register').dialog('widget').find('button').eq(1).button('enable');
-                        $('#loading').css('background','url('+ThinkPHP['IMG']+'/success.gif)no-repeat').html('数据新增成功');
-                        setTimeout(function(){
-                            if(verifyimg.indexOf('?')>0){
-                                $('.verifyimg').attr('src',verifyimg + '&random=' +Math.random());
-                            }else {
-                                $('.verifyimg').attr('src', verifyimg + '?random=' + Math.random());
-                            }
-                            $('#register').dialog('close');
-                            $('#verify_register').dialog('close');
-                            $('#loading').dialog('close');
-                            $('#register').resetForm();
-                            $('#verify_register').resetForm();
-                            $('span.star').html('*').removeClass('succ');
-                            $('#loading').css('background','url('+ThinkPHP['IMG']+'/loading.gif)no-repeat').html('数据交互中。。。');
-                        },1000);
+            if($('#verify_register').attr('form-click') == 'register') {
+                $('#register').ajaxSubmit({
+                    url: ThinkPHP['MODULE'] + '/User/register',
+                    type: 'POST',
+                    data: {
+                        verify: $('#verify').val(),
+                    },
+                    beforeSubmit: function () {
+                        $('#loading').dialog('open');
+                        $('#register').dialog('widget').find('button').eq(1).button('disable');
+                        $('#verify_register').dialog('widget').find('button').eq(1).button('disable');
+                    },
+                    success: function (responseText) {
+                        if (responseText) {
+                            $('#register').dialog('widget').find('button').eq(1).button('enable');
+                            $('#verify_register').dialog('widget').find('button').eq(1).button('enable');
+                            $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/success.gif)no-repeat').html('数据新增成功');
+                            setTimeout(function () {
+                                if (verifyimg.indexOf('?') > 0) {
+                                    $('.verifyimg').attr('src', verifyimg + '&random=' + Math.random());
+                                } else {
+                                    $('.verifyimg').attr('src', verifyimg + '?random=' + Math.random());
+                                }
+                                $('#register').dialog('close');
+                                $('#verify_register').dialog('close');
+                                $('#loading').dialog('close');
+                                $('#register').resetForm();
+                                $('#verify_register').resetForm();
+                                $('span.star').html('*').removeClass('succ');
+                                $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/loading.gif)no-repeat').html('数据交互中。。。');
+                            }, 1000);
+                        }
                     }
-                }
-            });
+                });
+            }else if($('#verify_register').attr('form-click') == 'login'){
+                $('#login').ajaxSubmit({
+                    url : ThinkPHP['MODULE']+'/User/login',
+                    type : 'POST',
+                    beforeSubmit : function(){
+                        $('#loading').dialog('open');
+                    },
+                    success : function(responseText){
+                        if(responseText == -9){
+                            $('#loading').dialog('option','width',210).css('background','url('+ThinkPHP['IMG']+'/error.png)no-repeat').html('账号或密码错误');
+                            setTimeout(function(){
+                                $('#loading').dialog('close');
+                                $('#loading').dialog('option','width',180).css('background','url('+ThinkPHP['IMG']+'/loading.gif)no-repeat').html('数据交互中。。。');
+                            },2000);
+                        }else{
+                            $('#loading').dialog('option','width',240).css('background','url('+ThinkPHP['IMG']+'/success.gif)no-repeat').html('登录成功，正在跳转中。。。');
+                            setTimeout(function(){
+                                location.href = 'www.baidu.com';
+                            },1000);
+                        }
+                    },
+                });
+            }
+
         },
         errorLabelContainer : 'ol.ver_error',
         wrapper : 'li',
@@ -263,6 +322,12 @@ $(function(){
             $('.verifyimg').attr('src', verifyimg + '?random=' + Math.random());
         }
     });
+
+    //自定义验证不包含@
+    $.validator.addMethod('inAt',function(value,element){
+        var text = /^[^@]+$/i;
+        return this.optional(element) || (text.test(value));
+    },'存在@符号');
 
     //loding
     $('#loading').dialog({
