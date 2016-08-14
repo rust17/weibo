@@ -64,5 +64,17 @@
         <span class="star">*</span>
     </p>
 </form>
+
+<form id="verify_register">
+    <ol class="ver_error"></ol>
+    <p>
+        <label for="verify">验证码：</label>
+        <input type="text" name="verify" class="text" id="verify" />
+        <span class="star">*</span>
+        <a href="javascript:void (0)" class="changeimg">换一换</a>
+    </p>
+    <p><img src="<?php echo U('verify');?>" class="changeimg verifyimg" /></p>
+</form>
+<div id="loading">数据交互中。。。</div>
 </body>
 </html>

@@ -13,7 +13,7 @@ class UserController extends Controller{
     public function register(){
         if(IS_POST) {
             $User = D('User');
-            $uid = $User->register(I('post.username'), I('post.password'),I('post.repassword'), I('post.email'));
+            $uid = $User->register(I('post.username'), I('post.password'),I('post.repassword'), I('post.email'),I('post.verify'));
             print_r($uid);
         }else{
             $this->error('非法访问');
@@ -33,6 +33,15 @@ class UserController extends Controller{
             $User = D('User');
             $uid = $User->checkField(I('post.email'),'email');
             echo $uid['email'] ? 'false': 'true';
+        }
+    }
+
+    //Ajax验证数据，验证码返回给Ajax
+    public function checkVerify(){
+        if(IS_AJAX){
+            $User = D('User');
+            $uid = $User->checkField(I('post.verify'),'verify');
+            echo $uid['verify'] ? 'false' : 'true';
         }
     }
 }
