@@ -269,7 +269,7 @@ $(function(){
                         }else{
                             $('#loading').dialog('option','width',240).css('background','url('+ThinkPHP['IMG']+'/success.gif)no-repeat').html('登录成功，正在跳转中。。。');
                             setTimeout(function(){
-                                location.href = 'www.baidu.com';
+                                //location.href = ThinkPHP['INDEX'];
                             },1000);
                         }
                     },

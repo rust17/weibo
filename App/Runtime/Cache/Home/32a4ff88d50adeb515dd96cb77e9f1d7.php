@@ -14,6 +14,7 @@
         var ThinkPHP={
             'MODULE' : '/weibo/Home',
             'IMG' : '/weibo/Public/<?php echo MODULE_NAME;?>/img',
+            'INDEX' : '<?php echo U("Index/index");?>',
         };
     </script>
 </head>
@@ -29,6 +30,7 @@
             </span>
             <span class="password">
                 <input type="password" name="password" placeholder="密码">
+                <label class="auto" for="auto"><input type="checkbox" name="auto" id="auto"/>自动登陆</label>
             </span>
             <input type="submit" name="submit" value="登录">
         </div>

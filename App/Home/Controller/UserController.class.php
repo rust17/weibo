@@ -6,9 +6,8 @@
  * Time: 9:02
  */
 namespace Home\Controller;
-use Think\Controller;
 
-class UserController extends Controller{
+class UserController extends HomeController{
     //注册行为返回给Ajax
     public function register(){
         if(IS_POST) {
@@ -23,7 +22,7 @@ class UserController extends Controller{
     public function login(){
         if(IS_AJAX) {
             $User = D('User');
-            $uid = $User->login(I('post.username'), I('post.password'));
+            $uid = $User->login(I('post.username'), I('post.password'),I('post.auto'));
             echo $uid;
         }else{
             $this->error('非法访问');

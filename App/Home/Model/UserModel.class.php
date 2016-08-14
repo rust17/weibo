@@ -77,7 +77,7 @@ class UserModel extends Model{
     }
 
     //登录用户
-    public function login($username,$password){
+    public function login($username,$password,$auto){
         $data = array(
             'login_username'=>$username,
             'password'=>$password,
@@ -96,7 +96,7 @@ class UserModel extends Model{
             }
         }
         //验证密码
-        $user = $this->field('id,password')->where($map)->find();
+        $user = $this->field('id,username,password,last_login')->where($map)->find();
         if($user['password'] == sha1($password)){
             //登录验证后写入登录消息
             $update = array(
@@ -104,6 +104,23 @@ class UserModel extends Model{
                 'last_login'=>NOW_TIME,
                 'last_ip'=>get_client_ip(1),
             );
+            $this->save($update);
+
+            //将记录写入到cookies和session中
+            $auth = array(
+                'id'=>$user['id'],
+                'username'=>$user['username'],
+                'last_login'=>$user['last_login'],
+            );
+            //写入到session
+            session('user_auth',$auth);
+
+            //将用户名加密写入cookie
+            if($auto == 'on'){
+                cookie('auto',encryption($user['username']),3600 * 24 * 30);
+            }
+
+            return $user['id'];
         }else{
             return -9;
         }
