@@ -96,7 +96,7 @@ class UserModel extends Model{
             }
         }
         //验证密码
-        $user = $this->field('id,username,password,last_login')->where($map)->find();
+        $user = $this->field('id,username,password')->where($map)->find();
         if($user['password'] == sha1($password)){
             //登录验证后写入登录消息
             $update = array(
@@ -110,14 +110,14 @@ class UserModel extends Model{
             $auth = array(
                 'id'=>$user['id'],
                 'username'=>$user['username'],
-                'last_login'=>$user['last_login'],
+                'last_login'=>NOW_TIME,
             );
             //写入到session
             session('user_auth',$auth);
 
             //将用户名加密写入cookie
             if($auto == 'on'){
-                cookie('auto',encryption($user['username']),3600 * 24 * 30);
+                cookie('auto',encryption($user['username'].'|'.get_client_ip()),3600 * 24 * 30);
             }
 
             return $user['id'];

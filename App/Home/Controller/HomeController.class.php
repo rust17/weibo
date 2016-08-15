@@ -13,19 +13,31 @@ class HomeController extends Controller{
     protected function login(){
         //处理自动登陆，当cookie存在，且session不存在的情况下
         if(!is_null(cookie('auto')) && !session('?user_auth')){
-            $username = encryption(cookie('auto'),1);
-            $map['username'] = $username;
-            $User = D('User');
-            $userObj = $User->field('id,username,last_login')->where($map)->find();
 
-            //将记录写入到cookie和session中
-            $auth = array(
-                'id' => $userObj['id'],
-                'username' => $userObj['username'],
-                'last_login' => $userObj['last_login'],
-            );
-            //写入session
-            session('user_auth',$auth);
+            $value = explode('|',encryption(cookie('auto'),1));
+            list($username,$ip) = $value;
+            if($ip == get_client_ip()) {
+                $map['username'] = $username;
+                $User = D('User');
+                $userObj = $User->field('id,username')->where($map)->find();
+
+                //自动登陆验证后写入登录信息
+                $update = array(
+                    'id' => $userObj['id'],
+                    'last_login' => NOW_TIME,
+                    //'last_ip'=>get_client_ip(1),
+                );
+                $User->save($update);
+
+                //将记录写入到cookie和session中
+                $auth = array(
+                    'id' => $userObj['id'],
+                    'username' => $userObj['username'],
+                    'last_login' => NOW_TIME,
+                );
+                //写入session
+                session('user_auth', $auth);
+            }
         }
 
         //检测session是否存在
