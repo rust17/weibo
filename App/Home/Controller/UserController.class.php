@@ -15,7 +15,7 @@ class UserController extends HomeController{
             $uid = $User->register(I('post.username'), I('post.password'),I('post.repassword'), I('post.email'),I('post.verify'));
             print_r($uid);
         }else{
-            $this->error('非法访问');
+            $this->error('非法访问!');
         }
     }
     //登录行为返回给Ajax
@@ -25,7 +25,7 @@ class UserController extends HomeController{
             $uid = $User->login(I('post.username'), I('post.password'),I('post.auto'));
             echo $uid;
         }else{
-            $this->error('非法访问');
+            $this->error('非法访问!');
         }
     }
     //Ajax验证数据，账号返回给Ajax
@@ -35,7 +35,7 @@ class UserController extends HomeController{
             $uid = $User->checkField(I('post.username'),'username');
             echo $uid >0 ? 'true' : 'false';
         }else{
-            $this->error('非法访问');
+            $this->error('非法访问!');
         }
     }
     //Ajax验证数据，邮箱返回给Ajax
@@ -60,5 +60,13 @@ class UserController extends HomeController{
         }
     }
 
-    //
+    //退出登录
+    public function logout(){
+        //清理session
+        session(null);
+        //清除自动登录的cookie
+        cookie('auto',null);
+        //跳转到正确跳转页
+        $this->success('退出成功',U('Login/index'));
+    }
 }
