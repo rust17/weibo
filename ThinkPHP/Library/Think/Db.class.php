@@ -54,7 +54,7 @@ class Db {
     /**
      * 取得数据库类实例
      * @static
-     * @access public
+     * @access Public
      * @return mixed 返回数据库驱动类
      */
     public static function getInstance($db_config='') {
@@ -69,7 +69,7 @@ class Db {
 
     /**
      * 加载数据库 支持配置文件或者 DSN
-     * @access public
+     * @access Public
      * @param mixed $db_config 数据库配置信息
      * @return string
      */
@@ -211,7 +211,7 @@ class Db {
      * DSN解析
      * 格式： mysql://username:passwd@localhost:3306/DbName#charset
      * @static
-     * @access public
+     * @access Public
      * @param string $dsnStr
      * @return array
      */
@@ -676,7 +676,7 @@ class Db {
 
     /**
      * 插入记录
-     * @access public
+     * @access Public
      * @param mixed $data 数据
      * @param array $options 参数表达式
      * @param boolean $replace 是否replace
@@ -708,7 +708,7 @@ class Db {
 
     /**
      * 通过Select方式插入记录
-     * @access public
+     * @access Public
      * @param string $fields 要插入的数据表字段名
      * @param string $table 要插入的数据表名
      * @param array $option  查询数据参数
@@ -725,7 +725,7 @@ class Db {
 
     /**
      * 更新记录
-     * @access public
+     * @access Public
      * @param mixed $data 数据
      * @param array $options 表达式
      * @return false | integer
@@ -745,7 +745,7 @@ class Db {
 
     /**
      * 删除记录
-     * @access public
+     * @access Public
      * @param array $options 表达式
      * @return false | integer
      */
@@ -763,7 +763,7 @@ class Db {
 
     /**
      * 查找记录
-     * @access public
+     * @access Public
      * @param array $options 表达式
      * @return mixed
      */
@@ -776,7 +776,7 @@ class Db {
 
     /**
      * 生成查询SQL
-     * @access public
+     * @access Public
      * @param array $options 表达式
      * @return string
      */
@@ -806,7 +806,7 @@ class Db {
 
     /**
      * 替换SQL语句中表达式
-     * @access public
+     * @access Public
      * @param array $options 表达式
      * @return string
      */
@@ -832,7 +832,7 @@ class Db {
     /**
      * 获取最近一次查询的sql语句 
      * @param string $model  模型名
-     * @access public
+     * @access Public
      * @return string
      */
     public function getLastSql($model='') {
@@ -841,7 +841,7 @@ class Db {
 
     /**
      * 获取最近插入的ID
-     * @access public
+     * @access Public
      * @return string
      */
     public function getLastInsID() {
@@ -850,7 +850,7 @@ class Db {
 
     /**
      * 获取最近的错误信息
-     * @access public
+     * @access Public
      * @return string
      */
     public function getError() {
@@ -859,7 +859,7 @@ class Db {
 
     /**
      * SQL指令安全过滤
-     * @access public
+     * @access Public
      * @param string $str  SQL字符串
      * @return string
      */
@@ -869,7 +869,7 @@ class Db {
 
     /**
      * 设置当前操作模型
-     * @access public
+     * @access Public
      * @param string $model  模型名
      * @return void
      */
@@ -879,7 +879,7 @@ class Db {
 
    /**
      * 析构方法
-     * @access public
+     * @access Public
      */
     public function __destruct() {
         // 释放查询

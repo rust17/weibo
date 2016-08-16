@@ -59,4 +59,6 @@ class UserController extends HomeController{
             $this->error('非法访问');
         }
     }
+
+    //
 }

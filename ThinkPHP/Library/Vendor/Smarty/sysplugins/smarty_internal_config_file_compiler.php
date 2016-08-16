@@ -56,7 +56,7 @@ class Smarty_Internal_Config_File_Compiler {
     /**
      * Initialize compiler
      *
-     * @param Smarty $smarty base instance
+     * @param Smarty $smarty Base instance
      */
     public function __construct($smarty)
     {

@@ -95,7 +95,7 @@ class Spyc {
   var $delayedPath = array();
 
   /**#@+
-  * @access public
+  * @access Public
   * @var mixed
   */
   var $_nodeId;
@@ -129,7 +129,7 @@ class Spyc {
      *   $array = Spyc::YAMLLoad('lucky.yaml');
      *   print_r($array);
      *  </code>
-     * @access public
+     * @access Public
      * @return array
      * @param string $input Path of YAML file or string containing YAML
      */
@@ -153,7 +153,7 @@ class Spyc {
      *   $array = Spyc::YAMLLoadString("---\n0: hello world\n");
      *   print_r($array);
      *  </code>
-     * @access public
+     * @access Public
      * @return array
      * @param string $input String containing YAML
      */
@@ -176,7 +176,7 @@ class Spyc {
      * Indent's Default is 2 spaces, wordwrap's Default is 40 characters.  And
      * you can turn off wordwrap by passing in 0.
      *
-     * @access public
+     * @access Public
      * @return string
      * @param array $array PHP array
      * @param int $indent Pass in false to use the Default, which is 2
@@ -202,7 +202,7 @@ class Spyc {
      * Indent's Default is 2 spaces, wordwrap's Default is 40 characters.  And
      * you can turn off wordwrap by passing in 0.
      *
-     * @access public
+     * @access Public
      * @return string
      * @param array $array PHP array
      * @param int $indent Pass in false to use the Default, which is 2
@@ -228,7 +228,7 @@ class Spyc {
     // New YAML document
     $string = "---\n";
 
-    // Start at the base of the array and move through it.
+    // Start at the Base of the array and move through it.
     if ($array) {
       $array = (array)$array;
       $first_key = key($array);

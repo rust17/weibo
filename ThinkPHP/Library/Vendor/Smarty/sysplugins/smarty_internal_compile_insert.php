@@ -19,21 +19,21 @@
 class Smarty_Internal_Compile_Insert extends Smarty_Internal_CompileBase {
 
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites Base class.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
      */
     public $required_attributes = array('name');
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites Base class.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
      */
     public $shorttag_order = array('name');
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites Base class.
      *
      * @var array
      * @see Smarty_Internal_CompileBase

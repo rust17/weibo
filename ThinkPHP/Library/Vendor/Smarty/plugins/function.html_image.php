@@ -20,7 +20,7 @@
  * - file        - (required) - file (and path) of image
  * - height      - (optional) - image height (Default actual height)
  * - width       - (optional) - image width (Default actual width)
- * - basedir     - (optional) - base directory for absolute paths, Default is environment variable DOCUMENT_ROOT
+ * - basedir     - (optional) - Base directory for absolute paths, Default is environment variable DOCUMENT_ROOT
  * - path_prefix - prefix for path output (optional, Default empty)
  * </pre>
  * 

@@ -18,7 +18,7 @@ class Sqlite extends Db {
 
     /**
      * 架构函数 读取数据库配置信息
-     * @access public
+     * @access Public
      * @param array $config 数据库配置数组
      */
     public function __construct($config='') {
@@ -38,7 +38,7 @@ class Sqlite extends Db {
 
     /**
      * 连接数据库方法
-     * @access public
+     * @access Public
      */
     public function connect($config='',$linkNum=0) {
         if ( !isset($this->linkID[$linkNum]) ) {
@@ -59,7 +59,7 @@ class Sqlite extends Db {
 
     /**
      * 释放查询结果
-     * @access public
+     * @access Public
      */
     public function free() {
         $this->queryID = null;
@@ -67,7 +67,7 @@ class Sqlite extends Db {
 
     /**
      * 执行查询 返回数据集
-     * @access public
+     * @access Public
      * @param string $str  sql指令
      * @return mixed
      */
@@ -93,7 +93,7 @@ class Sqlite extends Db {
 
     /**
      * 执行语句
-     * @access public
+     * @access Public
      * @param string $str  sql指令
      * @return integer
      */
@@ -120,7 +120,7 @@ class Sqlite extends Db {
 
     /**
      * 启动事务
-     * @access public
+     * @access Public
      * @return void
      */
     public function startTrans() {
@@ -136,7 +136,7 @@ class Sqlite extends Db {
 
     /**
      * 用于非自动提交状态下面的查询提交
-     * @access public
+     * @access Public
      * @return boolen
      */
     public function commit() {
@@ -153,7 +153,7 @@ class Sqlite extends Db {
 
     /**
      * 事务回滚
-     * @access public
+     * @access Public
      * @return boolen
      */
     public function rollback() {
@@ -188,7 +188,7 @@ class Sqlite extends Db {
 
     /**
      * 取得数据表的字段信息
-     * @access public
+     * @access Public
      * @return array
      */
     public function getFields($tableName) {
@@ -211,7 +211,7 @@ class Sqlite extends Db {
 
     /**
      * 取得数据库的表信息
-     * @access public
+     * @access Public
      * @return array
      */
     public function getTables($dbName='') {
@@ -227,7 +227,7 @@ class Sqlite extends Db {
 
     /**
      * 关闭数据库
-     * @access public
+     * @access Public
      */
     public function close() {
         if ($this->_linkID){
@@ -239,7 +239,7 @@ class Sqlite extends Db {
     /**
      * 数据库错误信息
      * 并显示当前的SQL语句
-     * @access public
+     * @access Public
      * @return string
      */
     public function error() {
@@ -254,7 +254,7 @@ class Sqlite extends Db {
 
     /**
      * SQL指令安全过滤
-     * @access public
+     * @access Public
      * @param string $str  SQL指令
      * @return string
      */
@@ -264,7 +264,7 @@ class Sqlite extends Db {
 
     /**
      * limit
-     * @access public
+     * @access Public
      * @return string
      */
     public function parseLimit($limit) {

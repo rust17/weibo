@@ -18,7 +18,7 @@ class Mssql extends Db{
     protected $selectSql  =     'SELECT T1.* FROM (SELECT thinkphp.*, ROW_NUMBER() OVER (%ORDER%) AS ROW_NUMBER FROM (SELECT %DISTINCT% %FIELD% FROM %TABLE%%JOIN%%WHERE%%GROUP%%HAVING%) AS thinkphp) AS T1 %LIMIT%%COMMENT%';
     /**
      * 架构函数 读取数据库配置信息
-     * @access public
+     * @access Public
      * @param array $config 数据库配置数组
      */
     public function __construct($config=''){
@@ -35,7 +35,7 @@ class Mssql extends Db{
 
     /**
      * 连接数据库方法
-     * @access public
+     * @access Public
      */
     public function connect($config='',$linkNum=0) {
         if ( !isset($this->linkID[$linkNum]) ) {
@@ -60,7 +60,7 @@ class Mssql extends Db{
 
     /**
      * 释放查询结果
-     * @access public
+     * @access Public
      */
     public function free() {
         mssql_free_result($this->queryID);
@@ -69,7 +69,7 @@ class Mssql extends Db{
 
     /**
      * 执行查询  返回数据集
-     * @access public
+     * @access Public
      * @param string $str  sql指令
      * @return mixed
      */
@@ -95,7 +95,7 @@ class Mssql extends Db{
 
     /**
      * 执行语句
-     * @access public
+     * @access Public
      * @param string $str  sql指令
      * @return integer
      */
@@ -122,7 +122,7 @@ class Mssql extends Db{
 
     /**
      * 用于获取最后插入的ID
-     * @access public
+     * @access Public
      * @return integer
      */
     public function mssql_insert_id() {
@@ -135,7 +135,7 @@ class Mssql extends Db{
 
     /**
      * 启动事务
-     * @access public
+     * @access Public
      * @return void
      */
     public function startTrans() {
@@ -151,7 +151,7 @@ class Mssql extends Db{
 
     /**
      * 用于非自动提交状态下面的查询提交
-     * @access public
+     * @access Public
      * @return boolen
      */
     public function commit() {
@@ -168,7 +168,7 @@ class Mssql extends Db{
 
     /**
      * 事务回滚
-     * @access public
+     * @access Public
      * @return boolen
      */
     public function rollback() {
@@ -200,7 +200,7 @@ class Mssql extends Db{
 
     /**
      * 取得数据表的字段信息
-     * @access public
+     * @access Public
      * @return array
      */
     public function getFields($tableName) {
@@ -229,7 +229,7 @@ class Mssql extends Db{
 
     /**
      * 取得数据表的字段信息
-     * @access public
+     * @access Public
      * @return array
      */
     public function getTables($dbName='') {
@@ -256,7 +256,7 @@ class Mssql extends Db{
 
     /**
      * limit
-     * @access public
+     * @access Public
      * @return string
      */
     public function parseLimit($limit) {
@@ -271,7 +271,7 @@ class Mssql extends Db{
 
    /**
      * 更新记录
-     * @access public
+     * @access Public
      * @param mixed $data 数据
      * @param array $options 表达式
      * @return false | integer
@@ -289,7 +289,7 @@ class Mssql extends Db{
 
     /**
      * 删除记录
-     * @access public
+     * @access Public
      * @param array $options 表达式
      * @return false | integer
      */
@@ -305,7 +305,7 @@ class Mssql extends Db{
 
     /**
      * 关闭数据库
-     * @access public
+     * @access Public
      */
     public function close() {
         if ($this->_linkID){
@@ -317,7 +317,7 @@ class Mssql extends Db{
     /**
      * 数据库错误信息
      * 并显示当前的SQL语句
-     * @access public
+     * @access Public
      * @return string
      */
     public function error() {

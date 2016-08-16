@@ -22,7 +22,7 @@ class Oracle extends Db{
 
     /**
      * 架构函数 读取数据库配置信息
-     * @access public
+     * @access Public
      * @param array $config 数据库配置数组
      */
     public function __construct($config=''){
@@ -40,7 +40,7 @@ class Oracle extends Db{
 
     /**
      * 连接数据库方法
-     * @access public
+     * @access Public
      */
     public function connect($config='',$linkNum=0) {
         if ( !isset($this->linkID[$linkNum]) ) {
@@ -62,7 +62,7 @@ class Oracle extends Db{
 
     /**
      * 释放查询结果
-     * @access public
+     * @access Public
      */
      public function free() {
         oci_free_statement($this->queryID);
@@ -71,7 +71,7 @@ class Oracle extends Db{
 
     /**
      * 执行查询 返回数据集
-     * @access public
+     * @access Public
      * @param string $str  sql指令
      * @return mixed
      */
@@ -98,7 +98,7 @@ class Oracle extends Db{
 
     /**
      * 执行语句
-     * @access public
+     * @access Public
      * @param string $str  sql指令
      * @return integer
      */
@@ -134,7 +134,7 @@ class Oracle extends Db{
 
     /**
      * 启动事务
-     * @access public
+     * @access Public
      * @return void
      */
      public function startTrans() {
@@ -150,7 +150,7 @@ class Oracle extends Db{
 
     /**
      * 用于非自动提交状态下面的查询提交
-     * @access public
+     * @access Public
      * @return boolen
      */
     public function commit(){
@@ -167,7 +167,7 @@ class Oracle extends Db{
 
     /**
      * 事务回滚
-     * @access public
+     * @access Public
      * @return boolen
      */
      public function rollback(){
@@ -203,7 +203,7 @@ class Oracle extends Db{
 
     /**
      * 取得数据表的字段信息
-     * @access public
+     * @access Public
      */
      public function getFields($tableName) {
         $result = $this->query("select a.column_name,data_type,decode(nullable,'Y',0,1) notnull,data_default,decode(a.column_name,b.column_name,1,0) pk "
@@ -228,7 +228,7 @@ class Oracle extends Db{
 
     /**
      * 取得数据库的表信息（暂时实现取得用户表信息）
-     * @access public
+     * @access Public
      */
     public function getTables($dbName='') {
         $result = $this->query("select table_name from user_tables");
@@ -241,7 +241,7 @@ class Oracle extends Db{
 
     /**
      * 关闭数据库
-     * @access public
+     * @access Public
      */
     public function close() {
         if($this->_linkID){
@@ -253,7 +253,7 @@ class Oracle extends Db{
     /**
      * 数据库错误信息
      * 并显示当前的SQL语句
-     * @access public
+     * @access Public
      * @return string
      */
      public function error($result = true) {
@@ -274,7 +274,7 @@ class Oracle extends Db{
 
     /**
      * SQL指令安全过滤
-     * @access public
+     * @access Public
      * @param string $str  SQL指令
      * @return string
      */
@@ -303,7 +303,7 @@ class Oracle extends Db{
      begin
      select "TS_USER".nextval into :NEW.ID from dual;
      end;
-     * @access public
+     * @access Public
      * @return integer
      */
     public function insertLastId() {
@@ -317,7 +317,7 @@ class Oracle extends Db{
 
     /**
      * limit
-     * @access public
+     * @access Public
      * @return string
      */
 	public function parseLimit($limit) {

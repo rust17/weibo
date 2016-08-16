@@ -21,7 +21,7 @@ class Pdo extends Db{
 
     /**
      * 架构函数 读取数据库配置信息
-     * @access public
+     * @access Public
      * @param array $config 数据库配置数组
      */
     public function __construct($config=''){
@@ -37,7 +37,7 @@ class Pdo extends Db{
 
     /**
      * 连接数据库方法
-     * @access public
+     * @access Public
      */
     public function connect($config='',$linkNum=0) {
         if ( !isset($this->linkID[$linkNum]) ) {
@@ -71,7 +71,7 @@ class Pdo extends Db{
 
     /**
      * 释放查询结果
-     * @access public
+     * @access Public
      */
     public function free() {
         $this->PDOStatement = null;
@@ -79,7 +79,7 @@ class Pdo extends Db{
 
     /**
      * 执行查询 返回数据集
-     * @access public
+     * @access Public
      * @param string $str  sql指令
      * @param array $bind 参数绑定
      * @return mixed
@@ -113,7 +113,7 @@ class Pdo extends Db{
 
     /**
      * 执行语句
-     * @access public
+     * @access Public
      * @param string $str  sql指令
      * @param array $bind 参数绑定
      * @return integer
@@ -176,7 +176,7 @@ class Pdo extends Db{
 
     /**
      * 启动事务
-     * @access public
+     * @access Public
      * @return void
      */
     public function startTrans() {
@@ -192,7 +192,7 @@ class Pdo extends Db{
 
     /**
      * 用于非自动提交状态下面的查询提交
-     * @access public
+     * @access Public
      * @return boolen
      */
     public function commit() {
@@ -209,7 +209,7 @@ class Pdo extends Db{
 
     /**
      * 事务回滚
-     * @access public
+     * @access Public
      * @return boolen
      */
     public function rollback() {
@@ -238,7 +238,7 @@ class Pdo extends Db{
 
     /**
      * 取得数据表的字段信息
-     * @access public
+     * @access Public
      */
     public function getFields($tableName) {
         $this->initConnect(true);
@@ -300,7 +300,7 @@ class Pdo extends Db{
 
     /**
      * 取得数据库的表信息
-     * @access public
+     * @access Public
      */
     public function getTables($dbName='') {
         if(C('DB_FETCH_TABLES_SQL')) {
@@ -317,7 +317,7 @@ class Pdo extends Db{
                 $sql   = "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_TYPE = 'BASE TABLE'";
                 break;
             case 'PGSQL':
-                $sql   = "select tablename as Tables_in_test from pg_tables where  schemaname ='public'";
+                $sql   = "select tablename as Tables_in_test from pg_tables where  schemaname ='Public'";
                 break;
             case 'IBASE':
                 // 暂时不支持
@@ -402,7 +402,7 @@ class Pdo extends Db{
 
     /**
      * 关闭数据库
-     * @access public
+     * @access Public
      */
     public function close() {
         $this->_linkID = null;
@@ -411,7 +411,7 @@ class Pdo extends Db{
     /**
      * 数据库错误信息
      * 并显示当前的SQL语句
-     * @access public
+     * @access Public
      * @return string
      */
     public function error() {
@@ -430,7 +430,7 @@ class Pdo extends Db{
 
     /**
      * SQL指令安全过滤
-     * @access public
+     * @access Public
      * @param string $str  SQL指令
      * @return string
      */
@@ -472,7 +472,7 @@ class Pdo extends Db{
 
     /**
      * 获取最后插入id
-     * @access public
+     * @access Public
      * @return integer
      */
     public function getLastInsertId() {

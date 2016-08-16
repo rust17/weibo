@@ -33,7 +33,7 @@ class MongoModel extends Model{
 
     /**
      * 利用__call方法实现一些特殊的Model方法
-     * @access public
+     * @access Public
      * @param string $method 方法名称
      * @param array $args 调用参数
      * @return mixed
@@ -61,7 +61,7 @@ class MongoModel extends Model{
 
     /**
      * 获取字段信息并缓存 主键和自增信息直接配置
-     * @access public
+     * @access Public
      * @return void
      */
     public function flush() {
@@ -97,7 +97,7 @@ class MongoModel extends Model{
 
     /**
      * count统计 配合where连贯操作
-     * @access public
+     * @access Public
      * @return integer
      */
     public function count(){
@@ -108,7 +108,7 @@ class MongoModel extends Model{
 
     /**
      * 获取下一ID 用于自动增长型
-     * @access public
+     * @access Public
      * @param string $pk 字段名 默认为主键
      * @return mixed
      */
@@ -121,7 +121,7 @@ class MongoModel extends Model{
 
     /**
      * 新增数据
-     * @access public
+     * @access Public
      * @param mixed $data 数据
      * @param array $options 表达式
      * @param boolean $replace 是否replace
@@ -200,7 +200,7 @@ class MongoModel extends Model{
 
     /**
      * 查询数据
-     * @access public
+     * @access Public
      * @param mixed $options 表达式参数
      * @return mixed
      */
@@ -229,7 +229,7 @@ class MongoModel extends Model{
 
     /**
      * 字段值增长
-     * @access public
+     * @access Public
      * @param string $field  字段名
      * @param integer $step  增长值
      * @return boolean
@@ -240,7 +240,7 @@ class MongoModel extends Model{
 
     /**
      * 字段值减少
-     * @access public
+     * @access Public
      * @param string $field  字段名
      * @param integer $step  减少值
      * @return boolean
@@ -251,7 +251,7 @@ class MongoModel extends Model{
 
     /**
      * 获取一条记录的某个字段值
-     * @access public
+     * @access Public
      * @param string $field  字段名
      * @param string $spea  字段数据间隔符号
      * @return mixed
@@ -301,7 +301,7 @@ class MongoModel extends Model{
 
     /**
      * 执行Mongo指令
-     * @access public
+     * @access Public
      * @param array $command  指令
      * @return mixed
      */
@@ -311,7 +311,7 @@ class MongoModel extends Model{
 
     /**
      * 执行MongoCode
-     * @access public
+     * @access Public
      * @param string $code  MongoCode
      * @param array $args   参数
      * @return mixed
@@ -328,7 +328,7 @@ class MongoModel extends Model{
 
     /**
      * 得到完整的数据表名 Mongo表名不带dbName
-     * @access public
+     * @access Public
      * @return string
      */
     public function getTableName() {

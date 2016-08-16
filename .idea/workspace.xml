@@ -2,16 +2,128 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddafb10a-f7c3-4f37-9661-dc61b7c2f468" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/img/header_bg.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/img/search_btn.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/img/weibo_bg.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/img/weibo_logo.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/css/index.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/Home/View/Default/Index/index.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/Controller/HomeController.class.php" afterPath="$PROJECT_DIR$/App/Home/Controller/HomeController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/Controller/IndexController.class.php" afterPath="$PROJECT_DIR$/App/Home/Controller/IndexController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/Model/UserModel.class.php" afterPath="$PROJECT_DIR$/App/Home/Model/UserModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/Home/View/Default/Public/body.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/Home/View/Default/Base/common.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/Home/View/Default/Public/footer.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/Home/View/Default/Public/head.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/Home/View/Default/Public/header.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Runtime/Logs/Home/16_08_15.log" afterPath="$PROJECT_DIR$/App/Runtime/Logs/Home/16_08_15.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/php4/5to4.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/php4/5to4.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Model/AdvModel.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Model/AdvModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Apachenote.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Apachenote.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Apc.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Apc.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/App.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/App.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Mode/Api/App.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Mode/Api/App.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Org/Util/ArrayList.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Org/Util/ArrayList.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Behavior.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Behavior.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Build.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Build.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Behavior/ChromeShowPageTraceBehavior.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Behavior/ChromeShowPageTraceBehavior.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Org/Util/CodeSwitch.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Org/Util/CodeSwitch.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Boris/ColoredInspector.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Boris/ColoredInspector.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Controller.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Controller.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Mode/Api/Controller.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Mode/Api/Controller.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/TagLib/Cx.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Org/Util/Date.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Org/Util/Date.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Db.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Db.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Session/Driver/Db.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Session/Driver/Db.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Dispatcher.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Dispatcher.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Mode/Api/Dispatcher.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Mode/Api/Dispatcher.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Eaccelerator.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Eaccelerator.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/Driver/Ease.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/Driver/Ease.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/File.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/File.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Log/Driver/File.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Log/Driver/File.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Storage/Driver/File.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Storage/Driver/File.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Behavior/FireShowPageTraceBehavior.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Controller/HproseController.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Controller/HproseController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Hprose/HproseHttpServer.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Hprose/HproseHttpServer.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/TagLib/Html.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/TagLib/Html.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Org/Net/Http.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Org/Net/Http.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Ibase.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Ibase.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Org/Net/IpLocation.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Org/Net/IpLocation.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Controller/JsonRpcController.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Controller/JsonRpcController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/Driver/Lite.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/Driver/Lite.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Log.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Log.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Memcache.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Memcache.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Memcached.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Memcached.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Memcachesae.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Memcachesae.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/Driver/Mobile.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/Driver/Mobile.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Model.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Mongo.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Mongo.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Model/MongoModel.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Model/MongoModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Mssql.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Mssql.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Mysql.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Mysqli.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Mysqli.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Oracle.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Oracle.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Behavior/ParseTemplateBehavior.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Behavior/ParseTemplateBehavior.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/tests/ParseTest.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/tests/ParseTest.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Pdo.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Pdo.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Pgsql.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Org/Util/Rbac.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Org/Util/Rbac.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Behavior/ReadHtmlCacheBehavior.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Behavior/ReadHtmlCacheBehavior.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Redis.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Redis.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Model/RelationModel.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Model/RelationModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Controller/RestController.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Controller/RestController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Controller/RpcController.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Controller/RpcController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Log/Driver/Sae.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Log/Driver/Sae.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Storage/Driver/Sae.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Storage/Driver/Sae.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Shmop.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Shmop.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/Driver/Smart.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/Driver/Smart.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/Driver/Smarty.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/Driver/Smarty.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/Spyc.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/Spyc.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Sqlite.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Sqlite.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Sqlite.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Sqlite.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Sqlsrv.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Db/Driver/Sqlsrv.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Org/Util/Stack.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Org/Util/Stack.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Storage.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Storage.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Org/Util/String.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Org/Util/String.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/TagLib.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template/TagLib.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Template.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Think.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Think.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/Controller/UserController.class.php" afterPath="$PROJECT_DIR$/App/Home/Controller/UserController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Verify.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Verify.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/View.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/View.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Model/ViewModel.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Model/ViewModel.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Wincache.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Wincache.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Xcache.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Cache/Driver/Xcache.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Controller/YarController.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Controller/YarController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Think/Upload/Driver/Bcs/bcs.class.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Think/Upload/Driver/Bcs/bcs.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Runtime/Cache/Home/cdac79174c15306e6d18489b52381cb2.php" afterPath="$PROJECT_DIR$/App/Runtime/Cache/Home/cdac79174c15306e6d18489b52381cb2.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/TemplateLite/class.compiler.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/TemplateLite/class.compiler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/SmartTemplate/class.smarttemplate.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/SmartTemplate/class.smarttemplate.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/SmartTemplate/class.smarttemplateparser.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/SmartTemplate/class.smarttemplateparser.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/TemplateLite/class.template.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/TemplateLite/class.template.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Mode/Sae/convention.php" afterPath="$PROJECT_DIR$/ThinkPHP/Mode/Sae/convention.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.html_image.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/plugins/function.html_image.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/css/index.css" afterPath="$PROJECT_DIR$/Public/Home/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/View/Default/Index/index.html" afterPath="$PROJECT_DIR$/App/Home/View/Default/Index/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/index.js" afterPath="$PROJECT_DIR$/Public/Home/js/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/phpRPC/phprpc_date.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/phpRPC/phprpc_date.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_block.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_block.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_break.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_break.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_call.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_call.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_capture.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_capture.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_config_load.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_config_load.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_continue.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_continue.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_eval.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_eval.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_extends.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_extends.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_foreach.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_foreach.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_function.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_function.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_include.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_include.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_include_php.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_include_php.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_insert.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_insert.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_block_plugin.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_block_plugin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_function_plugin.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_function_plugin.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_object_block_function.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_object_block_function.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_object_function.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_object_function.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_print_expression.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_print_expression.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_registered_block.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_registered_block.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_registered_function.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_private_registered_function.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_section.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_compile_section.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_config_file_compiler.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_internal_config_file_compiler.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_security.php" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/Smarty/sysplugins/smarty_security.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/php4/spyc.php4" afterPath="$PROJECT_DIR$/ThinkPHP/Library/Vendor/spyc/php4/spyc.php4" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="weibo.iws" />
@@ -34,21 +146,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Index/index.html">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Home/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6761566">
-              <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+              <folding>
+                <element signature="e#0#42#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/Home/css/index.css">
+      <file leaf-file-name="UserController.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/App/Home/Controller/UserController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.82206404">
+              <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -59,9 +173,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Html5" />
         <option value="JavaScript File" />
         <option value="CSS File" />
+        <option value="Html5" />
       </list>
     </option>
   </component>
@@ -84,7 +198,6 @@
         <option value="$PROJECT_DIR$/App/Home/View/Default/Login/index.html" />
         <option value="$PROJECT_DIR$/Public/Home/css/login.css" />
         <option value="$PROJECT_DIR$/Public/Home/js/login.js" />
-        <option value="$PROJECT_DIR$/App/Home/Controller/UserController.class.php" />
         <option value="$PROJECT_DIR$/App/Home/Controller/LoginController.class.php" />
         <option value="$PROJECT_DIR$/App/Home/Model/UserModel.class.php" />
         <option value="$PROJECT_DIR$/App/Home/Controller/HomeController.class.php" />
@@ -92,7 +205,13 @@
         <option value="$PROJECT_DIR$/App/Home/View/Default/Index.html" />
         <option value="$PROJECT_DIR$/Public/Home/js/index.js" />
         <option value="$PROJECT_DIR$/Public/Home/css/index.css" />
+        <option value="$PROJECT_DIR$/App/Home/View/Default/Public/header.html" />
+        <option value="$PROJECT_DIR$/App/Home/View/Default/Public/footer.html" />
+        <option value="$PROJECT_DIR$/App/Home/View/Default/Public/head.html" />
+        <option value="$PROJECT_DIR$/App/Home/View/Default/Base/common.html" />
+        <option value="$PROJECT_DIR$/App/Home/View/Default/Public/body.html" />
         <option value="$PROJECT_DIR$/App/Home/View/Default/Index/index.html" />
+        <option value="$PROJECT_DIR$/App/Home/Controller/UserController.class.php" />
       </list>
     </option>
   </component>
@@ -273,6 +392,36 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="Public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="Login" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -304,6 +453,36 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Base" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -419,8 +598,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -431,6 +610,22 @@
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth0" value="58" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth1" value="77" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth2" value="78" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatWidth3" value="715" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth0" value="58" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth1" value="77" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth2" value="78" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeWidth3" value="715" />
+    <property name="FileHistory.git4idea.history.GitHistoryProvider_treeOrder3" value="3" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -489,12 +684,13 @@
     <frame x="952" y="0" width="976" height="1038" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23590814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23590814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932165" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -504,30 +700,9 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
-    <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23590814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32932165" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
@@ -545,48 +720,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Login/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="28" column="15" selection-start-line="28" selection-start-column="15" selection-end-line="28" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/login.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="46" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/css/login.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -773,7 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.6144722">
           <caret line="268" column="9" selection-start-line="268" selection-start-column="9" selection-end-line="268" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -781,7 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34875444">
           <caret line="1372" column="20" selection-start-line="1372" selection-start-column="20" selection-end-line="1372" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -796,7 +927,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34875444">
           <caret line="112" column="20" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -818,7 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.4341637">
           <caret line="21" column="3" selection-start-line="21" selection-start-column="3" selection-end-line="21" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -833,7 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.6049822">
           <caret line="17" column="19" selection-start-line="17" selection-start-column="19" selection-end-line="17" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -841,7 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.21352313">
           <caret line="6" column="29" selection-start-line="6" selection-start-column="29" selection-end-line="6" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -849,9 +976,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.846154">
           <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -859,17 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.1282053">
           <caret line="11" column="14" selection-start-line="11" selection-start-column="14" selection-end-line="11" selection-end-column="14" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/Controller/UserController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.461538">
-          <caret line="32" column="20" selection-start-line="32" selection-start-column="20" selection-end-line="32" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -877,9 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.846154">
           <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#86#0#PHP" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -887,7 +997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.2846975">
           <caret line="13" column="29" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -895,15 +1004,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.1743772">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -911,24 +1011,79 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="271" column="34" selection-start-line="271" selection-start-column="34" selection-end-line="271" selection-end-column="34" />
-          <folding>
-            <element signature="e#0#41#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/Home/css/index.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="83" column="16" selection-start-line="83" selection-start-column="16" selection-end-line="83" selection-end-column="16" />
+          <caret line="129" column="16" selection-start-line="129" selection-start-column="16" selection-end-line="129" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Public/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.076923">
+          <caret line="41" column="6" selection-start-line="41" selection-start-column="6" selection-end-line="41" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6761566">
-          <caret line="34" column="43" selection-start-line="34" selection-start-column="43" selection-end-line="34" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.14234875">
+          <caret line="4" column="8" selection-start-line="4" selection-start-column="8" selection-end-line="4" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Public/footer.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10676157">
+          <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Public/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21352313">
+          <caret line="6" column="50" selection-start-line="6" selection-start-column="50" selection-end-line="6" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Public/body.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.035587188">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Base/common.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3202847">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/js/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="12" column="26" selection-start-line="12" selection-start-column="26" selection-end-line="12" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/Controller/UserController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.82206404">
+          <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
           <folding />
         </state>
       </provider>

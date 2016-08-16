@@ -19,7 +19,7 @@ class Ibase extends Db{
     protected $selectSql  =     'SELECT %LIMIT% %DISTINCT% %FIELD% FROM %TABLE%%JOIN%%WHERE%%GROUP%%HAVING%%ORDER%';
     /**
      * 架构函数 读取数据库配置信息
-     * @access public
+     * @access Public
      * @param array $config 数据库配置数组
      */
     public function __construct($config='') {
@@ -36,7 +36,7 @@ class Ibase extends Db{
 
     /**
      * 连接数据库方法
-     * @access public
+     * @access Public
      * @throws Think\Execption
      */
     public function connect($config='',$linkNum=0) {
@@ -60,7 +60,7 @@ class Ibase extends Db{
 
     /**
      * 释放查询结果
-     * @access public
+     * @access Public
      */
     public function free() {
         ibase_free_result($this->queryID);
@@ -69,7 +69,7 @@ class Ibase extends Db{
 
     /**
      * 执行查询 返回数据集
-     * @access public
+     * @access Public
      * @param string $str  sql指令
      * @return mixed
      */
@@ -94,7 +94,7 @@ class Ibase extends Db{
 
     /**
      * 执行语句
-     * @access public
+     * @access Public
      * @param string $str  sql指令
      * @return integer
      */
@@ -132,7 +132,7 @@ class Ibase extends Db{
 
     /**
      * 用于非自动提交状态下面的查询提交
-     * @access public
+     * @access Public
      * @return boolen
      */
     public function commit() {
@@ -149,7 +149,7 @@ class Ibase extends Db{
 
     /**
      * 事务回滚
-     * @access public
+     * @access Public
      * @return boolen
      */
     public function rollback() {
@@ -166,7 +166,7 @@ class Ibase extends Db{
 
     /**
      * BLOB字段解密函数 Firebird特有
-     * @access public
+     * @access Public
      * @param $blob 待解密的BLOB
      * @return 二进制数据
      */
@@ -222,7 +222,7 @@ class Ibase extends Db{
 
     /**
      * 取得数据表的字段信息
-     * @access public
+     * @access Public
      */
     public function getFields($tableName) {
         $result   =  $this->query('SELECT RDB$FIELD_NAME AS FIELD, RDB$DEFAULT_VALUE AS DEFAULT1, RDB$NULL_FLAG AS NULL1 FROM RDB$RELATION_FIELDS WHERE RDB$RELATION_NAME=UPPER(\''.$tableName.'\') ORDER By RDB$FIELD_POSITION');
@@ -266,7 +266,7 @@ where a.rdb$constraint_type=\'PRIMARY KEY\' and a.rdb$relation_name=UPPER(\''.$t
 
     /**
      * 取得数据库的表信息
-     * @access public
+     * @access Public
      */
     public function getTables($dbName='') {
         $sql='SELECT DISTINCT RDB$RELATION_NAME FROM RDB$RELATION_FIELDS WHERE RDB$SYSTEM_FLAG=0';
@@ -280,7 +280,7 @@ where a.rdb$constraint_type=\'PRIMARY KEY\' and a.rdb$relation_name=UPPER(\''.$t
 
     /**
      * 关闭数据库
-     * @access public
+     * @access Public
      */
     public function close() {
         if ($this->_linkID){
@@ -292,7 +292,7 @@ where a.rdb$constraint_type=\'PRIMARY KEY\' and a.rdb$relation_name=UPPER(\''.$t
     /**
      * 数据库错误信息
      * 并显示当前的SQL语句
-     * @access public
+     * @access Public
      * @return string
      */
     public function error() {
@@ -306,7 +306,7 @@ where a.rdb$constraint_type=\'PRIMARY KEY\' and a.rdb$relation_name=UPPER(\''.$t
 
     /**
      * SQL指令安全过滤
-     * @access public
+     * @access Public
      * @param string $str  SQL指令
      * @return string
      */
@@ -316,7 +316,7 @@ where a.rdb$constraint_type=\'PRIMARY KEY\' and a.rdb$relation_name=UPPER(\''.$t
 
     /**
      * limit
-     * @access public
+     * @access Public
      * @param $limit limit表达式
      * @return string
      */

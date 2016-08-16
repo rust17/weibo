@@ -18,21 +18,21 @@
 class Smarty_Internal_Compile_Section extends Smarty_Internal_CompileBase {
 
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites Base class.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
      */
     public $required_attributes = array('name', 'loop');
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites Base class.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
      */
     public $shorttag_order = array('name', 'loop');
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites Base class.
      *
      * @var array
      * @see Smarty_Internal_CompileBase

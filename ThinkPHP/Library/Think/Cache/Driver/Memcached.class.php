@@ -47,7 +47,7 @@ class Memcached extends Cache
 
     /**
      * 读取缓存
-     * @access public
+     * @access Public
      * @param string $name 缓存变量名
      * @return mixed
      */
@@ -60,7 +60,7 @@ class Memcached extends Cache
 
     /**
      * 写入缓存
-     * @access public
+     * @access Public
      * @param string $name 缓存变量名
      * @param mixed $value  存储数据
      * @param integer $expire  有效时间（秒）
@@ -85,7 +85,7 @@ class Memcached extends Cache
 
     /**
      * 删除缓存
-     * @access public
+     * @access Public
      * @param string $name 缓存变量名
      * @return boolean
      */
@@ -98,7 +98,7 @@ class Memcached extends Cache
 
     /**
      * 清除缓存
-     * @access public
+     * @access Public
      * @return boolean
      */
     public function clear() {

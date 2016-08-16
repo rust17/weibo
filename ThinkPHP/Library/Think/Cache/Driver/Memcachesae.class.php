@@ -24,7 +24,7 @@ class Memcachesae extends Cache {
     /**
      * 架构函数
      * @param array $options 缓存参数
-     * @access public
+     * @access Public
      */
     function __construct($options=array()) {
         if(empty($options)) {
@@ -59,7 +59,7 @@ class Memcachesae extends Cache {
 
     /**
      * 读取缓存
-     * @access public
+     * @access Public
      * @param string $name 缓存变量名
      * @return mixed
      */
@@ -70,7 +70,7 @@ class Memcachesae extends Cache {
 
     /**
      * 写入缓存
-     * @access public
+     * @access Public
      * @param string $name 缓存变量名
      * @param mixed $value  存储数据
      * @param integer $expire  有效时间（秒）
@@ -94,7 +94,7 @@ class Memcachesae extends Cache {
 
     /**
      * 删除缓存
-     * @access public
+     * @access Public
      * @param string $name 缓存变量名
      * @return boolean
      */
@@ -107,7 +107,7 @@ class Memcachesae extends Cache {
 
     /**
      * 清除缓存
-     * @access public
+     * @access Public
      * @return boolean
      */
     public function clear() {

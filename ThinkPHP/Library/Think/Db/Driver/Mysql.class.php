@@ -19,7 +19,7 @@ class Mysql extends Db{
 
     /**
      * 架构函数 读取数据库配置信息
-     * @access public
+     * @access Public
      * @param array $config 数据库配置数组
      */
     public function __construct($config=''){
@@ -36,7 +36,7 @@ class Mysql extends Db{
 
     /**
      * 连接数据库方法
-     * @access public
+     * @access Public
      * @throws ThinkExecption
      */
     public function connect($config='',$linkNum=0,$force=false) {
@@ -71,7 +71,7 @@ class Mysql extends Db{
 
     /**
      * 释放查询结果
-     * @access public
+     * @access Public
      */
     public function free() {
         mysql_free_result($this->queryID);
@@ -80,7 +80,7 @@ class Mysql extends Db{
 
     /**
      * 执行查询 返回数据集
-     * @access public
+     * @access Public
      * @param string $str  sql指令
      * @return mixed
      */
@@ -110,7 +110,7 @@ class Mysql extends Db{
 
     /**
      * 执行语句
-     * @access public
+     * @access Public
      * @param string $str  sql指令
      * @return integer|false
      */
@@ -137,7 +137,7 @@ class Mysql extends Db{
 
     /**
      * 启动事务
-     * @access public
+     * @access Public
      * @return void
      */
     public function startTrans() {
@@ -153,7 +153,7 @@ class Mysql extends Db{
 
     /**
      * 用于非自动提交状态下面的查询提交
-     * @access public
+     * @access Public
      * @return boolen
      */
     public function commit() {
@@ -170,7 +170,7 @@ class Mysql extends Db{
 
     /**
      * 事务回滚
-     * @access public
+     * @access Public
      * @return boolen
      */
     public function rollback() {
@@ -204,7 +204,7 @@ class Mysql extends Db{
 
     /**
      * 取得数据表的字段信息
-     * @access public
+     * @access Public
      * @return array
      */
     public function getFields($tableName) {
@@ -227,7 +227,7 @@ class Mysql extends Db{
 
     /**
      * 取得数据库的表信息
-     * @access public
+     * @access Public
      * @return array
      */
     public function getTables($dbName='') {
@@ -246,7 +246,7 @@ class Mysql extends Db{
 
     /**
      * 替换记录
-     * @access public
+     * @access Public
      * @param mixed $data 数据
      * @param array $options 参数表达式
      * @return false | integer
@@ -265,7 +265,7 @@ class Mysql extends Db{
 
     /**
      * 插入记录
-     * @access public
+     * @access Public
      * @param mixed $datas 数据
      * @param array $options 参数表达式
      * @param boolean $replace 是否replace
@@ -292,7 +292,7 @@ class Mysql extends Db{
 
     /**
      * 关闭数据库
-     * @access public
+     * @access Public
      * @return void
      */
     public function close() {
@@ -305,7 +305,7 @@ class Mysql extends Db{
     /**
      * 数据库错误信息
      * 并显示当前的SQL语句
-     * @access public
+     * @access Public
      * @return string
      */
     public function error() {
@@ -319,7 +319,7 @@ class Mysql extends Db{
 
     /**
      * SQL指令安全过滤
-     * @access public
+     * @access Public
      * @param string $str  SQL字符串
      * @return string
      */

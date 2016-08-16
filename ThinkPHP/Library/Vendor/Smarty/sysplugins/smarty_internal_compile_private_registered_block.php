@@ -18,7 +18,7 @@
 class Smarty_Internal_Compile_Private_Registered_Block extends Smarty_Internal_CompileBase {
 
     /**
-     * Attribute definition: Overwrites base class.
+     * Attribute definition: Overwrites Base class.
      *
      * @var array
      * @see Smarty_Internal_CompileBase
