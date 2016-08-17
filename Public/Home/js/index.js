@@ -38,6 +38,12 @@ $(function(){
 
     //微博输入内容计算字个数
     $('.weibo_text').on('keyup',weibo_num);
+    //微博输入内容得到交单计算字个数
+    $('.weibo_text').on('focus',function(){
+        setTimeout(function(){
+            weibo_num()
+        },50);
+    });
 
     //140字检测
     function weibo_num(){

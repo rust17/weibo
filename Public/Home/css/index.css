@@ -177,6 +177,30 @@ ul,ol{
     float: right;
     margin: 5px 0 0 0;
 }
+#main .main_left .weibo_face{
+    float: left;
+    font-size: 13px;
+    color: #666;
+    text-decoration: none;
+    outline: none;
+    background: url("../img/weibo_face.png")no-repeat left 3px;
+    text-indent: 16px;
+    margin: 5px 0 0 0;
+    position: relative;
+}
+#main .main_left .weibo_face:hover{
+    text-decoration: underline;
+}
+#main .main_left .arrow_top{
+    width: 19px;
+    height: 12px;
+    display: none;
+    background: url("../img/arrow_top.png")no-repeat;
+    position: absolute;
+    top: 15px;
+    left: 13px;
+    z-index: 9998;
+}
 #main .main_right{
     float: right;
     width: 269px;
