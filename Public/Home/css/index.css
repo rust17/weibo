@@ -1,4 +1,14 @@
 @charset "UTF-8";
+/*自定义UI */
+.ui-button{
+    background: url("../img/button.png") !important;
+    border: none !important;
+    color: #fff !important;
+    height: 35px !important;
+}
+.ui-button:hover{
+    background: url("../img/button_hover.png") !important;
+}
 body,h1,h2,h3,h4,h5,h6,ul,ol,p,form,dl,dd{
     padding: 0;
     margin: 0;
@@ -16,6 +26,7 @@ ul,ol{
     background: url("../img/header_bg.png");
     position: fixed;
     top: 0;
+    z-index: 9999;
 }
 #header .header_main{
     width: 960px;
@@ -120,6 +131,66 @@ ul,ol{
     margin: 58px auto 0 auto;
     background: #FFFFFF;
     box-shadow:0 0 5px #ccc;
+}
+#main .main_left{
+    float: left;
+    width: 650px;
+    padding: 0 20px;
+    min-height: 800px;
+}
+#main .main_left .left{
+    float: left;
+    color: #666;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 30px 0 0 0;
+}
+#main .main_left .right{
+    float: right;
+    color: #cccccc;
+    font-size: 13px;
+    padding: 30px 0 0 0;
+}
+#main .main_left .right strong{
+    font-size: 22px;
+    color: #049;
+    font-family:  Constantia, Georgia;
+    position: relative;
+    top: -1px;
+    padding: 0 5px;
+}
+#main .main_left .right strong.red{
+    color: red;
+}
+#main .main_left .weibo_text{
+    width: 632px;
+    height: 80px;
+    background: #FFFFFF;
+    resize: none;
+    padding: 9px;
+    color: #666;
+    font-size: 16px;
+}
+#main .main_left .weibo_button{
+    font-size: 14px;
+    width: 90px;
+    float: right;
+    margin: 5px 0 0 0;
+}
+#main .main_right{
+    float: right;
+    width: 269px;
+    border-left: 1px solid #dddddd;
+    background: #f7f7f7;
+    min-height: 800px;
+}
+#error{
+    background: url("../img/error.png")no-repeat 20px center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    line-height: 20px;
+    text-indent: 35px;
 }
 #footer{
     width: 960px;
