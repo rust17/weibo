@@ -87,6 +87,9 @@
             </div>
             <input class="weibo_button" type="button" value="发布"/>
         </div>
+        <div class="weibo_content">
+            123
+        </div>
     </div>
     <div class="main_right">
         right
@@ -95,6 +98,7 @@
 </div>
 
 <div id="error">...</div>
+<div id="loading">...</div>
 <div id="foot">
     <div class="footer_left">&copy; 2016 Ycku.com All Rights Reserved.</div>
     <div class="footer_right">Powered by ThinkPHP</div>

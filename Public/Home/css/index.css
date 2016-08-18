@@ -216,6 +216,14 @@ ul,ol{
     line-height: 20px;
     text-indent: 35px;
 }
+#loading{
+    background: url("../img/loading.gif")no-repeat 20px center;
+    font-size: 14px;
+    font-weight: bold;
+    color: #666;
+    line-height: 18px;
+    text-indent: 35px;
+}
 #footer{
     width: 960px;
     height: 40px;
