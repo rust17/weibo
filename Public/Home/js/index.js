@@ -86,6 +86,17 @@ $(function(){
         }
     }
 
+    //文件上传测试
+    $('#file').uploadify({
+        swf : ThinkPHP['UPLOADIFY'] + '/uploadify.swf',
+        uploader : ThinkPHP['UPLOADER'],
+        fileTypeDesc : '图片类型',
+        fileTypeExts : '*.jpeg; *.jpg; *.png; *.gif',
+        onUploadSuccess : function(file, data, response){
+
+        }
+    });
+
     //error
     $('#error').dialog({
         width:190,

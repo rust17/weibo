@@ -191,7 +191,33 @@ ul,ol{
 #main .main_left .weibo_face:hover{
     text-decoration: underline;
 }
-#main .main_left .arrow_top{
+#main .main_left .weibo_pic{
+    float: left;
+    font-size: 13px;
+    color: #666;
+    text-decoration: none;
+    outline: none;
+    background: url("../img/weibo_pic.png")no-repeat left 3px;
+    text-indent: 17px;
+    margin: 5px 0 0 12px;
+    position: relative;
+}
+#main .main_left .weibo_face:hover{
+    text-decoration: underline;
+}
+#main .main_left .weibo_pic_box{
+    margin:0 auto;
+    position:absolute;
+    width:350px;
+    padding:20px;
+    border: 1px solid #D0D0D0;
+    box-shadow: 0 0 5px #ccc,1px 1px 0 rgba(127,127,127,0.1);
+    overflow: hidden;
+    background: none repeat scroll 0 0 white;
+    zoom:1;
+    z-index:100;
+}
+#main .main_left .face_arrow_top{
     width: 19px;
     height: 12px;
     display: none;
