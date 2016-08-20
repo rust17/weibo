@@ -9,6 +9,7 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 	margin-bottom: 1em;
 }
 .uploadify-button {
+	/*
 	background-color: #505050;
 	background-image: linear-gradient(bottom, #505050 0%, #707070 100%);
 	background-image: -o-linear-gradient(bottom, #505050 0%, #707070 100%);
@@ -24,10 +25,14 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 	);
 	background-position: center top;
 	background-repeat: no-repeat;
-	-webkit-border-radius: 30px;
-	-moz-border-radius: 30px;
-	border-radius: 30px;
+	*/
+	background: url("../img/button.png");
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	/*
 	border: 2px solid #808080;
+	*/
 	color: #FFF;
 	font: bold 12px Arial, Helvetica, sans-serif;
 	text-align: center;
@@ -35,6 +40,7 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 	width: 100%;
 }
 .uploadify:hover .uploadify-button {
+	/*
 	background-color: #606060;
 	background-image: linear-gradient(top, #606060 0%, #808080 100%);
 	background-image: -o-linear-gradient(top, #606060 0%, #808080 100%);
@@ -49,6 +55,8 @@ Released under the MIT License <http://www.opensource.org/licenses/mit-license.p
 		color-stop(1, #808080)
 	);
 	background-position: center bottom;
+	*/
+	background: url("../img/button_hover.png");
 }
 .uploadify-button.disabled {
 	background-color: #D0D0D0;

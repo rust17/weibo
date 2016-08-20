@@ -6,20 +6,21 @@
 <script type="text/javascript" src="/weibo/Public/Home/js/jquery.js"></script>
 <script type="text/javascript" src="/weibo/Public/Home/js/jquery.ui.js"></script>
 <script type="text/javascript" src="/weibo/Public/Home/js/rl_exp.js"></script>
+<script type="text/javascript" src="/weibo/Public/Home/js/jie_pic.js"></script>
 <script type="text/javascript" src="/weibo/Public/Home/uploadify/jquery.uploadify.min.js"></script>
 <script type="text/javascript" src="/weibo/Public/Home/js/index.js"></script>
-<link rel="stylesheet" href="/weibo/Public/Home/Css/jquery.ui.css" />
-<link rel="stylesheet" href="/weibo/Public/Home/Css/rl_exp.css" />
+<link rel="stylesheet" href="/weibo/Public/Home/css/jquery.ui.css" />
+<link rel="stylesheet" href="/weibo/Public/Home/css/rl_exp.css" />
 <link rel="stylesheet" href="/weibo/Public/Home/uploadify/uploadify.css" />
-<link rel="stylesheet" href="/weibo/Public/Home/Css/index.css" />
+<link rel="stylesheet" href="/weibo/Public/Home/css/index.css" />
 <script type="text/javascript">
     var ThinkPHP={
         'MODULE' : '/weibo/Home',
         'IMG' : '/weibo/Public/<?php echo MODULE_NAME;?>/img',
         'FACE' : '/weibo/Public/<?php echo MODULE_NAME;?>/face',
-        'INDEX' : '<?php echo U("Index/index");?>',
         'UPLOADER' : '<?php echo U("File/upload");?>',
-        'UPLOADIFY' : '/weibo/Public/<?php echo MODULE_NAME;?>/uploadify',
+        'UPLOADIFY' : '/weibo/Public/Home/uploadify',
+        'INDEX' : '<?php echo U("Index/index");?>',
     };
 </script>
 </head>
@@ -90,8 +91,13 @@
                 <a href="javascript:void(0);" class="close">×</a>
             </div>
             <a href="javascript:void(0);" class="weibo_pic" id="pic_btn">图片<span class="pic_arrow_top"></span></a>
-            <div class="weibo_pic_box" id="pic_box" style="display:block;">
-                123
+            <div class="weibo_pic_box" id="pic_box" style="display:none;">
+                <div class="weibo_pic_header">
+                    <span class="weibo_pic_info">共<span class="weibo_pic_total">0</span>张，还能上传<span class="weibo_pic_limit">8</span>张（按住ctrl可选择多张）</span>
+                    <a href="javascript:void(0);" class="close">×</a>
+                </div>
+                <div class="weibo_pic_list"></div>
+                <input type="file" name="file" id="file" />
             </div>
             <input class="weibo_button" type="button" value="发布"/>
         </div>
