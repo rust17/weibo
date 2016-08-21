@@ -37,31 +37,36 @@ $(function(){
                         setTimeout(function(){
                             $('#error').dialog('close').html('...');
                         },1000);
+                    }else{
+                        $('.weibo_pic_list').append('<div class="weibo_pic_content"><span class="remove"></span><span class="text">删除</span><img src="'+ ThinkPHP['IMG'] +'/loading_100.png' +'" class="weibo_pic_img"/></div>');
                     }
                 },
                 onUploadSuccess : function(file, data, response){
-                    $('.weibo_pic_list').append('<div class="weibo_pic_content"><span class="remove"></span><span class="text">删除</span><img src="'+ data +'" class="weibo_pic_img"/></div>');
-                    setTimeout(function(){
-                        jie_pic.thumb();
-                        jie_pic.hover();
-                        jie_pic.remove();
-                    },100);
+                    $('.weibo_pic_list').append('<input type="hidden" name="image" value='+ data +' />');
+                    var imageUrl = $.parseJSON(data);
+                    jie_pic.thumb(imageUrl['thumb']);
+                    jie_pic.hover();
+                    jie_pic.remove();
                     jie_pic.uploadTotal++;
                     jie_pic.uploadLimit--;
-                    $('.weibo_pic_total').text(lee_pic.uploadTotal);
-                    $('.weibo_pic_limit').text(lee_pic.uploadLimit);
+                    $('.weibo_pic_total').text(jie_pic.uploadTotal);
+                    $('.weibo_pic_limit').text(jie_pic.uploadLimit);
                 }
             });
         },
-        thumb : function(){
+        thumb : function(src){
             var img = $('.weibo_pic_img');
             var len = img.length;
-            if($(img[len - 1]).width() > 100){
-                $(img[len - 1]).css('left',-($(img[len - 1]).width()-100)/2);
-            }
-            if($(img[len - 1]).height() > 100){
-                $(img[len - 1]).css('top',-($(img[len - 1]).height()-100)/2);
-            }
+            $(img[len - 1]).attr('src',src).hide();
+            setTimeout(function(){
+                if($(img[len - 1]).width() > 100){
+                    $(img[len - 1]).css('left',-($(img[len - 1]).width()-100)/2);
+                }
+                if($(img[len - 1]).height() > 100){
+                    $(img[len - 1]).css('top',-($(img[len - 1]).height()-100)/2);
+                }
+                $(img[len - 1]).attr('src',src).fadeIn();
+            },50);
         },
         hover : function(){
             var content = $('.weibo_pic_content');
@@ -78,11 +83,12 @@ $(function(){
             var remove = $('.weibo_pic_content .text');
             var len = remove.length;
             $(remove[len - 1]).on('click',function(){
+                $(this).parent().next('input[name = "image"]').remove();
                 $(this).parent().remove();
                 jie_pic.uploadTotal--;
                 jie_pic.uploadLimit++;
-                $('.weibo_pic_total').text(lee_pic.uploadTotal);
-                $('.weibo_pic_limit').text(lee_pic.uploadLimit);
+                $('.weibo_pic_total').text(jie_pic.uploadTotal);
+                $('.weibo_pic_limit').text(jie_pic.uploadLimit);
             });
         },
         init : function(){
@@ -98,6 +104,7 @@ $(function(){
                 $('.pic_arrow_top').hide();
             });
             //点击空白区域关闭
+            /*
             $(document).on('click',function(e){
                 var target = $(e.target);
                 if(target.closest("#pic_btn").length == 1 || target.closest(".weibo_pic_content .text").length == 1)
@@ -107,6 +114,7 @@ $(function(){
                     $('.pic_arrow_top').hide();
                 }
             });
+            */
         },
 
     };

@@ -8,8 +8,8 @@
     <script type="text/javascript" src="/weibo/Public/Home/js/jquery.validate.js"></script>
     <script type="text/javascript" src="/weibo/Public/Home/js/jquery.form.js"></script>
     <script type="text/javascript" src="/weibo/Public/Home/js/login.js"></script>
-    <link rel="stylesheet" href="/weibo/Public/Home/Css/jquery.ui.css">
-    <link rel="stylesheet" href="/weibo/Public/Home/Css/login.css">
+    <link rel="stylesheet" href="/weibo/Public/Home/css/jquery.ui.css">
+    <link rel="stylesheet" href="/weibo/Public/Home/css/login.css">
     <script type="text/javascript">
         var ThinkPHP={
             'MODULE' : '/weibo/Home',

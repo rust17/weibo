@@ -20,13 +20,13 @@ class TopicModel extends Model{
     );
 
     //发布微博
-    public function publish($allContent,$uid){
+    public function publish($allContent,$uid,$iid){
         //微博内容分离
         $len = mb_strlen($allContent,'utf8');
-        $content = $content_over = '';
+        $content = $contentOver = '';
         if($len > 255){
             $content = mb_substr($allContent,0,255,'utf8');
-            $content_over = mb_substr($allContent,255,25,'utf8');
+            $contentOver = mb_substr($allContent,255,25,'utf8');
         }else{
             $content = $allContent;
         }
@@ -36,12 +36,14 @@ class TopicModel extends Model{
             'content'=>$content,
             'uid'=>$uid,
             'ip'=>get_client_ip(1),
+            'iid'=>$iid,
         );
-        if(!empty($contentover)){
-            $data['content_over'] = $contentover;
+        if(!empty($contentOver)){
+            $data['content_over'] = $contentOver;
         }
         if($this->create($data)){
             $uid = $this->add();
+            return $uid ? $uid : 0;
         }else{
             return $this->getError();
         }

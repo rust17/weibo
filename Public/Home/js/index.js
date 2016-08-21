@@ -32,17 +32,30 @@ $(function(){
             },1000);
         }else{
             if(weibo_num()) {
+                var img = [];
+                var images = $('input[name=image]');
+                var len = images.length;
+                for (var i = 0; i < len; i ++){
+                    img[i] = images.eq(i).val();
+
+                }
                 $.ajax({
                     url : ThinkPHP['MODULE'] + '/Topic/publish',
                     type : 'POST',
                     data : {
                         content : $('.weibo_text').val(),
+                        img : img,
                     },
                     beforeSend : function(){
                         $('#loading').html('微博发布中...').dialog('open');
                     },
                     success : function(response,status){
                         $('#loading').css('background','url('+ThinkPHP['IMG']+'/success.gif)no-repeat 20px center').html('微博发布成功');
+                        $('.weibo_pic_content,input[name="image"]').remove();
+                        $('#pic_box').hide();
+                        $('.pic_arrow_top').hide();
+                        $('.weibo_pic_total').text(0);
+                        $('.weibo_pic_limit').text(8);
                         setTimeout(function(){
                             $('.weibo_text').val('');
                             $('#loading').css('background','url('+ThinkPHP['IMG']+'/loading.gif)no-repeat 20px center').html('...').dialog('close');
