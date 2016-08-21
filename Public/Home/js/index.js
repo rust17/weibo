@@ -21,6 +21,14 @@ $(function(){
         $('#main').height($('.main_left').height() + 30);
     }
 
+    //显示多图配图的居中方案
+    if($('.imgs img').width() > 120){
+        $('.imgs img').css('left',-($('.imgs img').width()-120)/2);
+    }
+    if($('.imgs img').height() > 120){
+        $('.imgs img').css('top',-($('.imgs img').height()-120)/2);
+    }
+
     //微博发布的按钮
     $('.weibo_button').button().click(function(e){
         var img = [];
@@ -107,6 +115,47 @@ $(function(){
             }
         }
     }
+
+    //单独点击放大
+    $('.img img').click(function(){
+        $(this).parent().hide();
+        var img_zoom = $(this).parent().next('.img_zoom');
+        var img = img_zoom.find('img');
+        img_zoom.show();
+        img.attr('src',img.attr('data'));
+        });
+
+    //点击单独缩小
+    $('.img_zoom img').click(function(){
+        $(this).parent().hide();
+        $(this).parent().prev('.img').show();
+    });
+    $(' .img_zoom .in a').click(function(){
+        $(this).parent().parent().parent().hide();
+        $(this).parent().parent().parent().prev('.img').show();
+    });
+
+    //多图点击放大
+    $('.imgs img').click(function(){
+        $('#imgs').dialog('open');
+        $('#imgs img').attr('src',$(this).attr('unfold-src'));
+    });
+
+    //多张图片的dialog
+    $('#imgs').dialog({
+        width : 600,
+        closeonEscape:false,
+        modal:true,
+        resizable:false,
+        draggable:false,
+        autoOpen:false,
+    }).parent().find('.ui-widget-header').hide();
+
+    $('#imgs').dialog('widget').css({
+        background : '#fafafa',
+        border : '1px solid #ccc',
+        position : 'fixed',
+    });
 
     //error
     $('#error').dialog({

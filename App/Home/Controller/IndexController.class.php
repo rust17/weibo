@@ -12,7 +12,7 @@ class IndexController extends HomeController {
                                 ->order('a.create DESC')
                                 ->where('a.uid=b.id')
                                 ->select();
-            $this->assign('topicList',$topicList);
+            $this->assign('topicList',$Topic->format($topicList));
             $this->display();
         }
     }

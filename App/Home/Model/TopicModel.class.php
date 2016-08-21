@@ -25,6 +25,7 @@ class TopicModel extends Model\RelationModel{
             'mapping_type'=>self::HAS_MANY,
             'class_name'=>'Image',
             'foreign_key'=>'tid',
+            'mapping_fields'=>'data',
         ),
     );
 
@@ -56,5 +57,33 @@ class TopicModel extends Model\RelationModel{
         }else{
             return $this->getError();
         }
+    }
+    //格式化配图JSON
+    public function format($list){
+        foreach ($list as $key => $value) {
+            if(!is_null($value['images'])) {
+                foreach ($value['images'] as $key2 => $value2) {
+                    $value['images'][$key2] = json_decode($value2['data'], true);
+                }
+            }
+            $list[$key] = $value;
+            $list[$key]['count'] = count($value['images']);
+            $time = NOW_TIME - $list[$key]['create'];
+            if($time<60){
+                $list[$key]['time'] = '刚刚发布';
+            }else if($time < 60 * 60){
+                $list[$key]['time'] = floor($time/60).'分钟之前';
+            }else if($time < 60 * 60 * 24){
+                $list[$key]['time'] = '今天'.date('H:i',$list[$key]['create']);
+            }else if($time < 60 * 60 * 48){
+                $list[$key]['time'] = '昨天'.date('H:i',$list[$key]['create']);
+            }else if($time < 60 * 60 * 365){
+                $list[$key]['time'] = date('m月d日H:i',$list[$key]['create']);
+            }else{
+                $list[$key]['time'] = date('Y年m月d日H:i',$list[$key]['create']);
+            }
+        }
+
+        return $list;
     }
 }

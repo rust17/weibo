@@ -249,11 +249,59 @@ ul,ol{
     font-size: 14px;
     line-height: 150%;
 }
-#main .weibo_content_data dd img{
+#main .weibo_content_data dd .img img{
     display: block;
     border: 1px solid #EEEEEE;
     cursor: pointer;
     margin: 10px 0 0 0;
+}
+#main .weibo_content_data dd .imgs{
+    width: 120px;
+    height: 120px;
+    float: left;
+    border: 1px solid #EEEEEE;
+    margin: 10px 10px 0 0;
+    overflow: hidden;
+    position: relative;
+}
+#main .weibo_content_data dd .imgs img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+}
+#main .weibo_content_data dd .img_zoom{
+    background: #fafafa;
+    border: 1px solid #EEEEEE;
+    margin: 10px 0 0 0;
+    border-radius:4px;
+}
+#main .weibo_content_data dd .img_zoom img{
+    display: block;
+    margin: 0 auto 20px auto;
+    cursor: pointer;
+}
+#main .weibo_content_data dd .img_zoom ol{
+    height: 35px;
+    line-height: 35px;
+    font-size: 13px;
+    padding: 0 0 0 20px;
+}
+#main .weibo_content_data dd .img_zoom ol li{
+    float: left;
+    margin: 0 10px 0 0;
+}
+#main .weibo_content_data dd .img_zoom ol li a{
+    color: #5e7c85;
+    text-decoration: none;
+}
+#main .weibo_content_data dd .img_zoom ol li.in{
+    background: url("../img/img_zoom_in.png")no-repeat left center;
+    padding: 0 0 0 12px;
+}
+#main .weibo_content_data dd .img_zoom ol li.source{
+    background: url("../img/img_zoom_source.png")no-repeat left center;
+    padding: 0 0 0 18px;
 }
 #main .weibo_content_data dd .footer{
     height: 35px;
@@ -261,6 +309,7 @@ ul,ol{
     font-size: 13px;
     color: #5e7c85;
     border-bottom: 1px solid #EEEEEE;
+    clear: both;
 }
 #main .weibo_content_data dd .footer .time{
     float: left;
@@ -400,6 +449,11 @@ ul,ol{
     border-left: 1px solid #dddddd;
     background: #f7f7f7;
     min-height: 800px;
+}
+#imgs img{
+    display : block;
+    margin: 10px auto;
+    cursor: pointer;
 }
 #error{
     background: url("../img/error.png")no-repeat 20px center;
