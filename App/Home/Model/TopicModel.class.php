@@ -8,7 +8,7 @@
 namespace Home\Model;
 use Think\Model;
 
-class TopicModel extends Model{
+class TopicModel extends Model\RelationModel{
     //微博表自动验证
     protected $_validate = array(
         //-1，微博长度不合法
@@ -19,8 +19,17 @@ class TopicModel extends Model{
         array('create','time',self::MODEL_INSERT,'function'),
     );
 
+    //一对多微博关联
+    protected $_link = array(
+        'images'=>array(
+            'mapping_type'=>self::HAS_MANY,
+            'class_name'=>'Image',
+            'foreign_key'=>'tid',
+        ),
+    );
+
     //发布微博
-    public function publish($allContent,$uid,$iid){
+    public function publish($allContent,$uid){
         //微博内容分离
         $len = mb_strlen($allContent,'utf8');
         $content = $contentOver = '';
@@ -36,7 +45,7 @@ class TopicModel extends Model{
             'content'=>$content,
             'uid'=>$uid,
             'ip'=>get_client_ip(1),
-            'iid'=>$iid,
+
         );
         if(!empty($contentOver)){
             $data['content_over'] = $contentOver;

@@ -17,54 +17,63 @@ $(function(){
 
     //微博高度保持一致
     if($('.main_left').height()>800){
-        $('.main_right').height($('.main_left').height());
-        $('#main').height($('.main_left').height());
+        $('.main_right').height($('.main_left').height() + 30);
+        $('#main').height($('.main_left').height() + 30);
     }
 
     //微博发布的按钮
     $('.weibo_button').button().click(function(e){
+        var img = [];
+        var images = $('input[name=image]');
+        var len = images.length;
+        for (var i = 0; i < len; i ++){
+            img[i] = images.eq(i).val();
 
-        if($('.weibo_text').val().length == 0){
+        }
+        //如果没有上传图片，并且文本框也没有内容
+        if(img.length == 0 && $('.weibo_text').val().length == 0){
             $('#error').html('请输入微博内容...').dialog('open');
             setTimeout(function(){
                 $('#error').html('').dialog('close');
                 $('.weibo_text').focus();
             },1000);
+        }else if(img.length > 0 && $('.weibo_text').val().length == 0){
+            $('.weibo_text').val('分享图片');
+            weibo_ajax_send(img);
         }else{
             if(weibo_num()) {
-                var img = [];
-                var images = $('input[name=image]');
-                var len = images.length;
-                for (var i = 0; i < len; i ++){
-                    img[i] = images.eq(i).val();
-
-                }
-                $.ajax({
-                    url : ThinkPHP['MODULE'] + '/Topic/publish',
-                    type : 'POST',
-                    data : {
-                        content : $('.weibo_text').val(),
-                        img : img,
-                    },
-                    beforeSend : function(){
-                        $('#loading').html('微博发布中...').dialog('open');
-                    },
-                    success : function(response,status){
-                        $('#loading').css('background','url('+ThinkPHP['IMG']+'/success.gif)no-repeat 20px center').html('微博发布成功');
-                        $('.weibo_pic_content,input[name="image"]').remove();
-                        $('#pic_box').hide();
-                        $('.pic_arrow_top').hide();
-                        $('.weibo_pic_total').text(0);
-                        $('.weibo_pic_limit').text(8);
-                        setTimeout(function(){
-                            $('.weibo_text').val('');
-                            $('#loading').css('background','url('+ThinkPHP['IMG']+'/loading.gif)no-repeat 20px center').html('...').dialog('close');
-                        },500);
-                    },
-                });
+                weibo_ajax_send(img);
             }
         }
     });
+
+    //ajax提交微博
+    function weibo_ajax_send(img){
+        $.ajax({
+            url : ThinkPHP['MODULE'] + '/Topic/publish',
+            type : 'POST',
+            data : {
+                content : $('.weibo_text').val(),
+                img : img,
+            },
+            beforeSend : function(){
+                $('#loading').html('微博发布中...').dialog('open');
+            },
+            success : function(response,status){
+                $('#loading').css('background','url('+ThinkPHP['IMG']+'/success.gif)no-repeat 20px center').html('微博发布成功');
+                $('.weibo_pic_content,input[name="image"]').remove();
+                $('#pic_box').hide();
+                $('.pic_arrow_top').hide();
+                $('.weibo_pic_total').text(0);
+                $('.weibo_pic_limit').text(8);
+                window.uploadCount.clear();
+                setTimeout(function(){
+                    $('.weibo_text').val('');
+                    $('#loading').css('background','url('+ThinkPHP['IMG']+'/loading.gif)no-repeat 20px center').html('...').dialog('close');
+                },500);
+            },
+        });
+    }
 
     //微博输入内容计算字个数
     $('.weibo_text').on('keyup',weibo_num);

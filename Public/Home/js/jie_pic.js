@@ -57,7 +57,7 @@ $(function(){
         thumb : function(src){
             var img = $('.weibo_pic_img');
             var len = img.length;
-            $(img[len - 1]).attr('src',src).hide();
+            $(img[len - 1]).attr('src',ThinkPHP['ROOT']+src).hide();
             setTimeout(function(){
                 if($(img[len - 1]).width() > 100){
                     $(img[len - 1]).css('left',-($(img[len - 1]).width()-100)/2);
@@ -65,7 +65,7 @@ $(function(){
                 if($(img[len - 1]).height() > 100){
                     $(img[len - 1]).css('top',-($(img[len - 1]).height()-100)/2);
                 }
-                $(img[len - 1]).attr('src',src).fadeIn();
+                $(img[len - 1]).attr('src',ThinkPHP['ROOT']+src).fadeIn();
             },50);
         },
         hover : function(){
@@ -119,4 +119,10 @@ $(function(){
 
     };
     jie_pic.init();
+    window.uploadCount = {
+        clear : function(){
+            jie_pic.uploadTotal = 0;
+            jie_pic.uploadLimit = 8;
+        }
+    }
 });

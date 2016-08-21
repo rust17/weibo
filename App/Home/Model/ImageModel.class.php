@@ -10,18 +10,16 @@ use Think\Model;
 
 class ImageModel extends Model{
     //配图入库
-    public function storage($img){
-        $iid = '';
+    public function storage($img,$tid){
         foreach($img as $key=>$value){
             $data = array(
                 'data'=>$value,
+                'tid'=>$tid,
             );
-            if(!!$iid .=$this->add($data)){
-                $iid .= ',';
-            }else{
+            if(!$this->add($data)){
                 return 0;
             }
         }
-        return substr($iid,0,strlen($iid)-1);
+        return 1;
     }
 }

@@ -15,6 +15,7 @@
 <link rel="stylesheet" href="/weibo/Public/Home/css/index.css" />
 <script type="text/javascript">
     var ThinkPHP={
+        'ROOT' : '/weibo',
         'MODULE' : '/weibo/Home',
         'IMG' : '/weibo/Public/<?php echo MODULE_NAME;?>/img',
         'FACE' : '/weibo/Public/<?php echo MODULE_NAME;?>/face',
@@ -101,8 +102,24 @@
             </div>
             <input class="weibo_button" type="button" value="发布"/>
         </div>
-        <div class="weibo_content" style="clear: both;">
 
+        <div class="weibo_content">
+            <ul>
+                <li><a href="javascript:void(0)" class="selected">我关注的<i class="nav_arrow"></i></a></li>
+                <li><a href="javascript:void(0)">互听的</a></li>
+            </ul>
+            <?php if(is_array($topicList)): $i = 0; $__LIST__ = $topicList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$obj): $mod = ($i % 2 );++$i;?><dl class="weibo_content_data">
+                <dt><a href="javascript:void (0)"><img src="/weibo/Public/Home/img/small_face.jpg" alt="" /></a></dt>
+                <dd>
+                    <h4><a href="javascript:void (0)"><?php echo ($obj["username"]); ?></a></h4>
+                    <p><?php echo ($obj["content"]); echo ($obj["content_over"]); ?></p>
+                    <div class="img"><img src="./Uploads/2016-08-21/180_57b9570b24395.jpg" alt=""></div>
+                    <div class="footer">
+                        <span class="time"><?php echo ($obj["create"]); ?></span>
+                        <span class="handler">赞(0) | 转播 | 评论 | 收藏</span>
+                    </div>
+                </dd>
+            </dl><?php endforeach; endif; else: echo "" ;endif; ?>
         </div>
     </div>
     <div class="main_right">
@@ -113,7 +130,7 @@
 
 <div id="error">...</div>
 <div id="loading">...</div>
-<div id="foot">
+<div id="footer">
     <div class="footer_left">&copy; 2016 Ycku.com All Rights Reserved.</div>
     <div class="footer_right">Powered by ThinkPHP</div>
 </div>
