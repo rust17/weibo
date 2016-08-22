@@ -123,7 +123,7 @@
                                 <img data="/weibo/<?php echo ($obj['images'][0]['unfold']); ?>" src="/weibo/Public/Home/img/loading_100.png" alt="">
                             </div><?php break;?>
                         <?php Default: ?>
-                        <?php $__FOR_START_4773__=0;$__FOR_END_4773__=8;for($i=$__FOR_START_4773__;$i < $__FOR_END_4773__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
+                        <?php $__FOR_START_10233__=0;$__FOR_END_10233__=$obj['count'];for($i=$__FOR_START_10233__;$i < $__FOR_END_10233__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
                     <div class="footer">
                         <span class="time"><?php echo ($obj["time"]); ?></span>
                         <span class="handler">赞(0) | 转播 | 评论 | 收藏</span>
@@ -131,8 +131,12 @@
                 </dd>
             </dl><?php endforeach; endif; else: echo "" ;endif; ?>
             <div id="imgs">
+                <ol>
+                    <li class="source"><a href="javascript:void(0)" target="_blank">查看原图</a></li>
+                </ol>
                 <img src="/weibo/Public/Home/img/loading_100.png" alt="">
             </div>
+            <img src="/weibo/Public/Home/img/close.png" class="imgs_close" style="display: none;" alt="">
         </div>
     </div>
     <div class="main_right">

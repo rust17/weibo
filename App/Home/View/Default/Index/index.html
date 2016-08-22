@@ -56,8 +56,8 @@
                             </div>
                         </case>
                         <default/>
-                        <for start="0" end="8">
-                            <div class="imgs"><img src="__ROOT__/{$obj['images'][$i]['thumb']}" unfold="__ROOT__/{$obj['images'][$i]['unfold']}" source-src="__ROOT__/{$obj['images'][$i]['source']}" alt=""></div>
+                        <for start="0" end="$obj['count']">
+                            <div class="imgs"><img src="__ROOT__/{$obj['images'][$i]['thumb']}" unfold-src="__ROOT__/{$obj['images'][$i]['unfold']}" source-src="__ROOT__/{$obj['images'][$i]['source']}" alt=""></div>
                         </for>
                     </switch>
                     <div class="footer">
@@ -68,8 +68,12 @@
             </dl>
             </volist>
             <div id="imgs">
+                <ol>
+                    <li class="source"><a href="javascript:void(0)" target="_blank">查看原图</a></li>
+                </ol>
                 <img src="__IMG__/loading_100.png" alt="">
             </div>
+            <img src="__IMG__/close.png" class="imgs_close" style="display: none;" alt="">
         </div>
     </div>
     <div class="main_right">

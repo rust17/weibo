@@ -455,6 +455,33 @@ ul,ol{
     margin: 10px auto;
     cursor: pointer;
 }
+#imgs ol{
+    height: 35px;
+    line-height: 35px;
+    font-size: 13px;
+    padding: 0 0 0 20px;
+}
+#imgs ol li{
+    float: left;
+    margin: 0 10px 0 0;
+}
+#imgs ol li a{
+    color: #5e7c85;
+    text-decoration: none;
+}
+#imgs ol li.in{
+    background: url("../img/img_zoom_in.png")no-repeat left center;
+    padding: 0 0 0 12px;
+}
+#imgs ol li.source{
+    background: url("../img/img_zoom_source.png")no-repeat left center;
+    padding: 0 0 0 18px;
+}
+.imgs_close{
+    position: fixed;
+    cursor: pointer;
+    display: block;
+}
 #error{
     background: url("../img/error.png")no-repeat 20px center;
     font-size: 14px;

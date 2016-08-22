@@ -22,11 +22,17 @@ $(function(){
     }
 
     //显示多图配图的居中方案
-    if($('.imgs img').width() > 120){
-        $('.imgs img').css('left',-($('.imgs img').width()-120)/2);
-    }
-    if($('.imgs img').height() > 120){
-        $('.imgs img').css('top',-($('.imgs img').height()-120)/2);
+    for(var i = 0; i < $('.imgs img').length; i++) {
+        if ($('.imgs img').eq(i).width() > 120) {
+            $('.imgs img').eq(i).css('left', -($('.imgs img').eq(i).width() - 120) / 2);
+        }else{
+            $('.imgs img').eq(i).width(120);
+        }
+        if ($('.imgs img').eq(i).height() > 120) {
+            $('.imgs img').eq(i).css('top', -($('.imgs img').eq(i).height() - 120) / 2);
+        }else{
+            $('.imgs img').eq(i).height(120);
+        }
     }
 
     //微博发布的按钮
@@ -137,8 +143,29 @@ $(function(){
 
     //多图点击放大
     $('.imgs img').click(function(){
-        $('#imgs').dialog('open');
-        $('#imgs img').attr('src',$(this).attr('unfold-src'));
+        var _this = this;
+        imgLoadEvent(function(obj){
+            $('#imgs').dialog('open').dialog('option','height',obj['h'] + 90);
+            $('#imgs img').attr('src',$(_this).attr('unfold-src'));
+            $('#imgs .source a').click(function(){
+                $(this).attr('href',$(_this).attr('source-src'));
+            });
+            var top = $('#imgs').dialog('widget').position().top;
+            var left = $('#imgs').dialog('widget').position().left;
+            $('.imgs_close').css({
+                top : top - 18,
+                left : left + 588,
+                zIndex : 1001,
+                display : 'block',
+            }).click(function(){
+                $('#imgs').dialog('close');
+                $(this).hide();
+            });
+            $('#imgs img').click(function(){
+                $('#imgs').dialog('close');
+                $('.imgs_close').hide();
+            });
+        },$(_this).attr('unfold-src'));
     });
 
     //多张图片的dialog
@@ -155,6 +182,7 @@ $(function(){
         background : '#fafafa',
         border : '1px solid #ccc',
         position : 'fixed',
+        zIndex : 1000,
     });
 
     //error
@@ -178,4 +206,21 @@ $(function(){
         draggable:false,
         autoOpen:false,
     }).parent().find('.ui-widget-header').hide();
+    //通过URL得到图片的长和高
+    function imgLoadEvent(callback,url){
+        var img = new Image();
+        img.onreadystatechange = function(){
+            if(this.readyState == "complete"){
+                callback({"w":img.width,"h":img.height});
+            }
+        }
+        img.onload = function(){
+            if(this.complete == true)
+            callback({"w":img.width,"h":img.height});
+        }
+        img.onerror = function () {
+            callback({"w":0,"h":0});
+        }
+        img.src = url;
+    }
 })
