@@ -73,18 +73,44 @@ $(function(){
             beforeSend : function(){
                 $('#loading').html('微博发布中...').dialog('open');
             },
-            success : function(response,status){
-                $('#loading').css('background','url('+ThinkPHP['IMG']+'/success.gif)no-repeat 20px center').html('微博发布成功');
-                $('.weibo_pic_content,input[name="image"]').remove();
-                $('#pic_box').hide();
-                $('.pic_arrow_top').hide();
-                $('.weibo_pic_total').text(0);
-                $('.weibo_pic_limit').text(8);
-                window.uploadCount.clear();
-                setTimeout(function(){
-                    $('.weibo_text').val('');
-                    $('#loading').css('background','url('+ThinkPHP['IMG']+'/loading.gif)no-repeat 20px center').html('...').dialog('close');
-                },500);
+            success : function(data,response,status){
+                if(data) {
+                    $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/success.gif)no-repeat 20px center').html('微博发布成功');
+                    $('.weibo_pic_content,input[name="image"]').remove();
+                    $('#pic_box').hide();
+                    $('.pic_arrow_top').hide();
+                    $('.weibo_pic_total').text(0);
+                    $('.weibo_pic_limit').text(8);
+                    window.uploadCount.clear();
+
+                    var html = '';
+
+                    switch (img.length){
+                        case 0:
+                            html = $('#ajax_html1').html();
+                            break;
+                        case 1:
+                            html = $('#ajax_html2').html();
+                            img = $.parseJSON(img);
+                            break;
+                        default :
+
+                    }if(html.indexOf('#内容#')){
+                        html = html.replace(/#内容#/g,$('.weibo_text').val());
+                    }if(html.indexOf('#缩略图#')) {
+                        html = html.replace(/#缩略图#/g, img['thumb']);
+                    }if(html.indexOf('#放大图#')) {
+                        html = html.replace(/#放大图#/g, img['unfold']);
+                    }if(html.indexOf('#原图#')) {
+                        html = html.replace(/#原图#/g, img['source']);
+                    }
+
+                    setTimeout(function () {
+                        $('.weibo_text').val('');
+                        $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/loading.gif)no-repeat 20px center').html('...').dialog('close');
+                        $('.weibo_content ul').after(html);
+                    }, 500);
+                }
             },
         });
     }
@@ -123,7 +149,7 @@ $(function(){
     }
 
     //单独点击放大
-    $('.img img').click(function(){
+    $('.weibo_content').on('click','.img img',function(){
         $(this).parent().hide();
         var img_zoom = $(this).parent().next('.img_zoom');
         var img = img_zoom.find('img');
@@ -132,11 +158,11 @@ $(function(){
         });
 
     //点击单独缩小
-    $('.img_zoom img').click(function(){
+    $('.weibo_content').on('click','.img_zoom img',function(){
         $(this).parent().hide();
         $(this).parent().prev('.img').show();
     });
-    $(' .img_zoom .in a').click(function(){
+    $('.weibo_content').on('click',' .img_zoom .in a',function(){
         $(this).parent().parent().parent().hide();
         $(this).parent().parent().parent().prev('.img').show();
     });
