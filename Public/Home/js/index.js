@@ -94,21 +94,42 @@ $(function(){
                             img = $.parseJSON(img);
                             break;
                         default :
+                            for(var i = img.length-1; i >=0 ; i--){
+                                img_arr = $.parseJSON(img[i]);
+                                $('#ajax_html3').find('p').after('<div class="imgs"><img src="' + ThinkPHP['ROOT'] + '/' + img_arr['thumb'] + '" unfold-src="' + ThinkPHP['ROOT'] + '/' + img_arr['unfold'] + '" source-src="' + ThinkPHP['ROOT'] + '/' + img_arr['source'] + '" /></div>');
+                            }
+                            html = $('#ajax_html3').html();
+
 
                     }if(html.indexOf('#内容#')){
                         html = html.replace(/#内容#/g,$('.weibo_text').val());
                     }if(html.indexOf('#缩略图#')) {
-                        html = html.replace(/#缩略图#/g, img['thumb']);
+                        html = html.replace(/#缩略图#/g, ThinkPHP['ROOT'] + '/' + img['thumb']);
                     }if(html.indexOf('#放大图#')) {
-                        html = html.replace(/#放大图#/g, img['unfold']);
+                        html = html.replace(/#放大图#/g, ThinkPHP['ROOT'] + '/' + img['unfold']);
                     }if(html.indexOf('#原图#')) {
-                        html = html.replace(/#原图#/g, img['source']);
+                        html = html.replace(/#原图#/g, ThinkPHP['ROOT'] + '/' + img['source']);
                     }
+
+                    //表情解析
+                    html = html.replace(/\[(a|b|c|d)_([0-9])+\]/g,'<img src="'+ ThinkPHP['FACE'] + '/$1/$2.gif" border="0">');
 
                     setTimeout(function () {
                         $('.weibo_text').val('');
                         $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/loading.gif)no-repeat 20px center').html('...').dialog('close');
                         $('.weibo_content ul').after(html);
+                        for(var i = 0; i < $('.imgs img').length; i++) {
+                            if ($('.imgs img').eq(i).width() > 120) {
+                                $('.imgs img').eq(i).css('left', -($('.imgs img').eq(i).width() - 120) / 2);
+                            }else{
+                                $('.imgs img').eq(i).width(120);
+                            }
+                            if ($('.imgs img').eq(i).height() > 120) {
+                                $('.imgs img').eq(i).css('top', -($('.imgs img').eq(i).height() - 120) / 2);
+                            }else{
+                                $('.imgs img').eq(i).height(120);
+                            }
+                        }
                     }, 500);
                 }
             },
@@ -168,7 +189,7 @@ $(function(){
     });
 
     //多图点击放大
-    $('.imgs img').click(function(){
+    $('.weibo_content').on('click','.imgs img',function(){
         var _this = this;
         imgLoadEvent(function(obj){
             $('#imgs').dialog('open').dialog('option','height',obj['h'] + 90);

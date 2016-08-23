@@ -73,15 +73,18 @@ class TopicModel extends Model\RelationModel{
                 $list[$key]['time'] = '刚刚发布';
             }else if($time < 60 * 60){
                 $list[$key]['time'] = floor($time/60).'分钟之前';
-            }else if($time < 60 * 60 * 24){
+            }else if(date('Y-m-d')==date('Y-m-d',$list[$key]['create'])){
                 $list[$key]['time'] = '今天'.date('H:i',$list[$key]['create']);
-            }else if($time < 60 * 60 * 48){
+            }else if(date("Y-m-d",strtotime("-1 day")) == date('Y-m-d',$list[$key]['create'])){
                 $list[$key]['time'] = '昨天'.date('H:i',$list[$key]['create']);
             }else if($time < 60 * 60 * 365){
                 $list[$key]['time'] = date('m月d日H:i',$list[$key]['create']);
             }else{
                 $list[$key]['time'] = date('Y年m月d日H:i',$list[$key]['create']);
             }
+            //表情解析
+            $list[$key]['content'] .= $list[$key]['content_over'];
+            $list[$key]['content'] = preg_replace('/\[(a|b|c|d)_([0-9])+\]/i','<img src="Public/'.MODULE_NAME.'/face/$1/$2.gif" border="0">',$list[$key]['content']);
         }
 
         return $list;

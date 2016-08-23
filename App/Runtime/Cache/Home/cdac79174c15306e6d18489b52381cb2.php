@@ -112,7 +112,7 @@
                 <dt><a href="javascript:void (0)"><img src="/weibo/Public/Home/img/small_face.jpg" alt="" /></a></dt>
                 <dd>
                     <h4><a href="javascript:void (0)"><?php echo ($obj["username"]); ?></a></h4>
-                    <p><?php echo ($obj["content"]); echo ($obj["content_over"]); ?></p>
+                    <p><?php echo ($obj["content"]); ?></p>
                     <?php switch($obj["count"]): case "0": break;?>
                         <?php case "1": ?><div class="img" style="display: block;"><img src="/weibo/<?php echo ($obj['images'][0]['thumb']); ?>" alt=""></div>
                             <div class="img_zoom" style="display: none;">
@@ -123,7 +123,7 @@
                                 <img data="/weibo/<?php echo ($obj['images'][0]['unfold']); ?>" src="/weibo/Public/Home/img/loading_100.png" alt="">
                             </div><?php break;?>
                         <?php Default: ?>
-                        <?php $__FOR_START_17636__=0;$__FOR_END_17636__=$obj['count'];for($i=$__FOR_START_17636__;$i < $__FOR_END_17636__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
+                        <?php $__FOR_START_28437__=0;$__FOR_END_28437__=$obj['count'];for($i=$__FOR_START_28437__;$i < $__FOR_END_28437__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
                     <div class="footer">
                         <span class="time"><?php echo ($obj["time"]); ?></span>
                         <span class="handler">赞(0) | 转播 | 评论 | 收藏</span>
@@ -166,6 +166,21 @@
                             </ol>
                             <img data="/weibo/#放大图#" src="/weibo/Public/Home/img/loading_100.png" alt="">
                         </div>
+                        <div class="footer">
+                            <span class="time">刚刚发布</span>
+                            <span class="handler">赞(0) | 转播 | 评论 | 收藏</span>
+                        </div>
+                    </dd>
+                </dl>
+            </div>
+
+            <!--多张配图-->
+            <div id="ajax_html3" style="display: none;">
+                <dl class="weibo_content_data">
+                    <dt><a href="javascript:void (0)"><img src="/weibo/Public/Home/img/small_face.jpg" alt=""/></a></dt>
+                    <dd>
+                        <h4><a href="javascript:void (0)"><?php echo session('user_auth')['username'];?></a></h4>
+                        <p>#内容#</p>
                         <div class="footer">
                             <span class="time">刚刚发布</span>
                             <span class="handler">赞(0) | 转播 | 评论 | 收藏</span>
