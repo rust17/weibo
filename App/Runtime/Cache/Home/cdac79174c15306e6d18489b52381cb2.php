@@ -7,6 +7,7 @@
 <script type="text/javascript" src="/weibo/Public/Home/js/jquery.ui.js"></script>
 <script type="text/javascript" src="/weibo/Public/Home/js/rl_exp.js"></script>
 <script type="text/javascript" src="/weibo/Public/Home/js/jie_pic.js"></script>
+<script type="text/javascript" src="/weibo/Public/Home/js/jquery.scrollUp.js"></script>
 <script type="text/javascript" src="/weibo/Public/Home/uploadify/jquery.uploadify.min.js"></script>
 <script type="text/javascript" src="/weibo/Public/Home/js/index.js"></script>
 <link rel="stylesheet" href="/weibo/Public/Home/css/jquery.ui.css" />
@@ -123,7 +124,7 @@
                                 <img data="/weibo/<?php echo ($obj['images'][0]['unfold']); ?>" src="/weibo/Public/Home/img/loading_100.png" alt="">
                             </div><?php break;?>
                         <?php Default: ?>
-                        <?php $__FOR_START_24570__=0;$__FOR_END_24570__=$obj['count'];for($i=$__FOR_START_24570__;$i < $__FOR_END_24570__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
+                        <?php $__FOR_START_29041__=0;$__FOR_END_29041__=$obj['count'];for($i=$__FOR_START_29041__;$i < $__FOR_END_29041__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
                     <div class="footer">
                         <span class="time"><?php echo ($obj["time"]); ?></span>
                         <span class="handler">赞(0) | 转播 | 评论 | 收藏</span>

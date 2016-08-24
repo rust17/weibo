@@ -2,6 +2,11 @@
  * Created by lenovo on 2016/8/15.
  */
 $(function(){
+    $(window).load(function(){
+        allHeight();
+        centerimg();
+    });
+
     //消息和账号的下拉菜单
     $('.app').hover(function(){
         $(this).css({
@@ -16,22 +21,26 @@ $(function(){
     });
 
     //微博高度保持一致
-    if($('.main_left').height()>800){
-        $('.main_right').height($('.main_left').height() + 30);
-        $('#main').height($('.main_left').height() + 30);
+    function allHeight() {
+        if ($('.main_left').height() > 800) {
+            $('.main_right').height($('.main_left').height() + 30);
+            $('#main').height($('.main_left').height() + 30);
+        }
     }
 
     //显示多图配图的居中方案
-    for(var i = 0; i < $('.imgs img').length; i++) {
-        if ($('.imgs img').eq(i).width() > 120) {
-            $('.imgs img').eq(i).css('left', -($('.imgs img').eq(i).width() - 120) / 2);
-        }else{
-            $('.imgs img').eq(i).width(120);
-        }
-        if ($('.imgs img').eq(i).height() > 120) {
-            $('.imgs img').eq(i).css('top', -($('.imgs img').eq(i).height() - 120) / 2);
-        }else{
-            $('.imgs img').eq(i).height(120);
+    function centerimg() {
+        for (var i = 0; i < $('.imgs img').length; i++) {
+            if ($('.imgs img').eq(i).width() > 120) {
+                $('.imgs img').eq(i).css('left', -($('.imgs img').eq(i).width() - 120) / 2);
+            } else {
+                $('.imgs img').eq(i).width(120);
+            }
+            if ($('.imgs img').eq(i).height() > 120) {
+                $('.imgs img').eq(i).css('top', -($('.imgs img').eq(i).height() - 120) / 2);
+            } else {
+                $('.imgs img').eq(i).height(120);
+            }
         }
     }
 
@@ -130,6 +139,7 @@ $(function(){
                                 $('.imgs img').eq(i).height(120);
                             }
                         }
+                        allHeight();
                     }, 500);
                 }
             },
@@ -176,16 +186,19 @@ $(function(){
         var img = img_zoom.find('img');
         img_zoom.show();
         img.attr('src',img.attr('data'));
+        allHeight();
         });
 
     //点击单独缩小
     $('.weibo_content').on('click','.img_zoom img',function(){
         $(this).parent().hide();
         $(this).parent().prev('.img').show();
+        allHeight();
     });
     $('.weibo_content').on('click',' .img_zoom .in a',function(){
         $(this).parent().parent().parent().hide();
         $(this).parent().parent().parent().prev('.img').show();
+        allHeight();
     });
 
     //多图点击放大
@@ -300,6 +313,7 @@ $(function(){
                             },
                             success: function (data, response, status) {
                                 $('#loadmore').before(data);
+                                allHeight();
                             }
                         });
                         window.scrollFlag = true;
@@ -313,4 +327,14 @@ $(function(){
             $('#loadmore').html('没有更多数据');
         }
     })
+
+    $.scrollUp({
+        scrollName: 'scrollUp',
+        topDistance: '300',
+        animation: 'fade',
+        animationInSpeed: 200,
+        animationOutSpeed: 200,
+        scrollText: '',
+        activeOverlay: false,
+    });
 })

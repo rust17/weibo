@@ -95,7 +95,7 @@ class TopicModel extends Model\RelationModel{
             }
             //表情解析
             $list[$key]['content'] .= $list[$key]['content_over'];
-            $list[$key]['content'] = preg_replace('/\[(a|b|c|d)_([0-9])+\]/i','<img src="Public/'.MODULE_NAME.'/face/$1/$2.gif" border="0">',$list[$key]['content']);
+            $list[$key]['content'] = preg_replace('/\[(a|b|c|d)_([0-9])+\]/i','<img src="'.__ROOT__.'/Public/'.MODULE_NAME.'/face/$1/$2.gif" border="0">',$list[$key]['content']);
         }
 
         return $list;

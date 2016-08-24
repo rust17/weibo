@@ -490,6 +490,14 @@ ul,ol{
     line-height: 20px;
     text-indent: 35px;
 }
+#scrollUp{
+    bottom: 20px;
+    right: 20px;
+    padding: 0 20px;
+    height: 38px;
+    width: 38px;
+    background: url("../img/top.png")no-repeat;
+}
 #loadmore{
     color: #666;
     text-align: center;
