@@ -270,4 +270,47 @@ $(function(){
         }
         img.src = url;
     }
+
+    //得到总页码
+    $.ajax({
+        url: ThinkPHP['MODULE'] + '/Topic/ajaxCount',
+        type: 'POST',
+        data: {
+
+        },
+        success: function (data, response, status) {
+            window.count = parseInt(data);
+        }
+    });
+
+    //滚动条拖动
+    window.scrollFlag = true;
+    window.first = 10;
+    window.page = 1;
+    $(window).scroll(function(){
+        if(window.page < window.count) {
+            if (window.scrollFlag) {
+                if ($(document).scrollTop() >= $('#loadmore').offset().top + $('#loadmore').outerHeight() - $(window).height() - 20) {
+                    setTimeout(function () {
+                        $.ajax({
+                            url: ThinkPHP['MODULE'] + '/Topic/ajaxlist',
+                            type: 'POST',
+                            data: {
+                                first: window.first,
+                            },
+                            success: function (data, response, status) {
+                                $('#loadmore').before(data);
+                            }
+                        });
+                        window.scrollFlag = true;
+                        window.first += 10;
+                        window.page += 1;
+                    }, 500);
+                    window.scrollFlag = false;
+                }
+            }
+        }else{
+            $('#loadmore').html('没有更多数据');
+        }
+    })
 })

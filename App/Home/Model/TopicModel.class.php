@@ -58,6 +58,17 @@ class TopicModel extends Model\RelationModel{
             return $this->getError();
         }
     }
+    //获取微博列表
+    public function getList($first,$total){
+        return $this->format($this->relation(true)
+                        ->table('__TOPIC__ a,__USER__ b')
+                        ->field('a.id,a.content,a.content_over,a.create,b.username')
+                        ->limit($first, $total)
+                        ->order('a.create DESC')
+                        ->where('a.uid=b.id')
+                        ->select());
+    }
+
     //格式化配图JSON
     public function format($list){
         foreach ($list as $key => $value) {
