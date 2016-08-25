@@ -8,7 +8,7 @@
 namespace Home\Model;
 use Think\Model;
 
-class UserModel extends Model{
+class UserModel extends Model\RelationModel{
     //批量验证
     //protected $patchValidate = true;
 
@@ -38,6 +38,16 @@ class UserModel extends Model{
     protected $_auto = array(
         array('password','sha1',self::MODEL_BOTH,'function'),
         array('create','time',self::MODEL_INSERT,'function'),
+    );
+
+    //一对一关联用户
+    protected $_link = array(
+        'extend'=>array(
+            'mapping_type'=>self::HAS_ONE,
+            'class_name'=>'UserExtend',
+            'foreign_key'=>'uid',
+            'mapping_fields'=>'intro',
+        ),
     );
 
     //验证占用字段
@@ -124,5 +134,31 @@ class UserModel extends Model{
         }else{
             return -9;
         }
+    }
+
+    //通过一对一关联获取用户信息
+    public function getUser(){
+        $map['id'] = session('user_auth')['id'];
+        $user = $this->relation(true)->field('id,username,email')->where($map)->find();
+        if(!is_array($user['extend'])){
+            $UserExtend = M('UserExtend');
+            $data = array(
+                'uid'=>$map['id'],
+            );
+            $UserExtend->add($data);
+        }
+        return $user;
+    }
+
+    //通过一对一修改关联用户资料
+    public function updateUser($email,$intro){
+        $map['id'] = session('user_auth')['id'];
+        $data = array(
+            'email'=>$email,
+            'extend'=>array(
+                'intro'=>$intro,
+            ),
+        );
+        return $this->relation(true)->where($map)->save($data);
     }
 }
