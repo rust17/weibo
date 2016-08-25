@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ddafb10a-f7c3-4f37-9661-dc61b7c2f468" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/img/top.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/jquery.scrollUp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Runtime/Logs/Home/16_08_24.log" afterPath="$PROJECT_DIR$/App/Runtime/Logs/Home/16_08_24.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/Model/TopicModel.class.php" afterPath="$PROJECT_DIR$/App/Home/Model/TopicModel.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/Home/Controller/SettingController.class.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/css/base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/base.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/App/Home/View/Default/Setting/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/css/setting.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Public/Home/js/setting.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Runtime/Cache/Home/cdac79174c15306e6d18489b52381cb2.php" afterPath="$PROJECT_DIR$/App/Runtime/Cache/Home/cdac79174c15306e6d18489b52381cb2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/Conf/config.php" afterPath="$PROJECT_DIR$/App/Home/Conf/config.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/View/Default/Public/head.html" afterPath="$PROJECT_DIR$/App/Home/View/Default/Public/head.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/View/Default/Public/header.html" afterPath="$PROJECT_DIR$/App/Home/View/Default/Public/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/css/index.css" afterPath="$PROJECT_DIR$/Public/Home/css/index.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/View/Default/Index/index.html" afterPath="$PROJECT_DIR$/App/Home/View/Default/Index/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/index.js" afterPath="$PROJECT_DIR$/Public/Home/js/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -33,58 +36,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Index/index.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.461538">
-              <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="68" selection-end-column="21" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#block#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#2;n#div#0;n#div#0;n#div#0;n#block#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#3;n#div#0;n#div#0;n#div#0;n#block#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#ul#4;n#div#0;n#div#0;n#div#0;n#block#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#block#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#volist#0;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#volist#0;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#dd#0;n#dl#0;n#div#3;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#dd#0;n#dl#0;n#div#3;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/Home/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="498" column="46" selection-start-line="498" selection-start-column="46" selection-end-line="498" selection-end-column="46" />
+              <caret line="352" column="0" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ajaxlist.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Topic/ajaxlist.html">
+      <file leaf-file-name="base.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Home/css/base.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="22" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="22" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="148" column="22" selection-start-line="148" selection-start-column="22" selection-end-line="148" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="head.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Public/head.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Setting/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.846154">
+              <caret line="18" column="118" selection-start-line="18" selection-start-column="118" selection-end-line="18" selection-end-column="118" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#volist#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#volist#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#strong#0;n#dd#1;n#dl#0;n#div#1;n#block#1;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="jie_pic.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/Home/js/jie_pic.js">
+      <file leaf-file-name="setting.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Home/css/setting.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+              <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="setting.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Public/Home/js/setting.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.20408164">
+              <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
               <folding>
                 <element signature="e#0#42#0" expanded="false" />
               </folding>
@@ -92,42 +100,34 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/Home/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.6938776">
-              <caret line="336" column="21" selection-start-line="336" selection-start-column="21" selection-end-line="336" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="252" column="5" selection-start-line="252" selection-start-column="5" selection-end-line="252" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopicController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Home/Controller/TopicController.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.4615383">
-              <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Home/Controller/IndexController.class.php">
+      <file leaf-file-name="SettingController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Home/Controller/SettingController.class.php">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TopicModel.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Home/Model/TopicModel.class.php">
+      <file leaf-file-name="base.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Public/Home/js/base.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#42#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -147,9 +147,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Html5" />
         <option value="CSS File" />
         <option value="JavaScript File" />
-        <option value="Html5" />
       </list>
     </option>
   </component>
@@ -177,7 +177,6 @@
         <option value="$PROJECT_DIR$/App/Home/View/Default/Index.html" />
         <option value="$PROJECT_DIR$/App/Home/View/Default/Base/common.html" />
         <option value="$PROJECT_DIR$/App/Home/View/Default/Public/body.html" />
-        <option value="$PROJECT_DIR$/App/Home/View/Default/Public/header.html" />
         <option value="$PROJECT_DIR$/App/Home/Controller/UserController.class.php" />
         <option value="$PROJECT_DIR$/App/Home/View/Default/Public/jump.html" />
         <option value="$PROJECT_DIR$/Public/Home/css/rl_exp.css" />
@@ -189,14 +188,21 @@
         <option value="$PROJECT_DIR$/Public/Home/js/jie_pic.js" />
         <option value="$PROJECT_DIR$/App/Home/Model/ImageModel.class.php" />
         <option value="$PROJECT_DIR$/App/Home/Controller/IndexController.class.php" />
-        <option value="$PROJECT_DIR$/App/Home/View/Default/Index/index.html" />
         <option value="$PROJECT_DIR$/App/Home/View/Default/Topic/ajaxlist.html" />
         <option value="$PROJECT_DIR$/App/Home/Controller/TopicController.class.php" />
         <option value="$PROJECT_DIR$/App/Home/Model/TopicModel.class.php" />
         <option value="$PROJECT_DIR$/App/Home/Conf/config.php" />
-        <option value="$PROJECT_DIR$/App/Home/View/Default/Public/head.html" />
+        <option value="$PROJECT_DIR$/App/Home/Controller/SettingController.class.php" />
+        <option value="$PROJECT_DIR$/App/Home/View/Default/Public/header.html" />
+        <option value="$PROJECT_DIR$/App/Home/View/Default/Index/index.html" />
         <option value="$PROJECT_DIR$/Public/Home/css/index.css" />
+        <option value="$PROJECT_DIR$/Public/Home/css/base.css" />
+        <option value="$PROJECT_DIR$/Public/Home/js/base.js" />
         <option value="$PROJECT_DIR$/Public/Home/js/index.js" />
+        <option value="$PROJECT_DIR$/App/Home/View/Default/Public/head.html" />
+        <option value="$PROJECT_DIR$/App/Home/View/Default/Setting/index.html" />
+        <option value="$PROJECT_DIR$/Public/Home/css/setting.css" />
+        <option value="$PROJECT_DIR$/Public/Home/js/setting.js" />
       </list>
     </option>
   </component>
@@ -239,7 +245,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -308,7 +313,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
+              <option name="myItemId" value="js" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -387,8 +392,34 @@
               <option name="myItemId" value="Default" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Topic" />
+              <option name="myItemId" value="weibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="weibo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Home" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="View" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Default" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Setting" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -447,6 +478,10 @@
               <option name="myItemId" value="Default" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Index" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -474,7 +509,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Index" />
+              <option name="myItemId" value="Base" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -586,6 +621,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -616,11 +652,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="G:\php\www\weibo\App\Home\Controller" />
       <recent name="G:\php\www\weibo\Public\Home\img" />
       <recent name="G:\php\www\weibo\Public\Home\js" />
       <recent name="G:\php\www\weibo\Public\Home" />
       <recent name="G:\php\www\weibo\Public\Home\face" />
-      <recent name="G:\php\www\weibo\Public\Home\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="G:\php\www\weibo\App\Admin\View\Default\Index" />
@@ -669,7 +705,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="952" y="0" width="976" height="1038" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23590814" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -727,55 +763,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/typescriptCompiler/external/lib.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33333334">
-          <caret line="579" column="4" selection-start-line="579" selection-start-column="4" selection-end-line="579" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/jquery.form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/jquery.ui.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.2690952">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Verify.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.34875444">
-          <caret line="112" column="20" selection-start-line="112" selection-start-column="20" selection-end-line="112" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/js/jquery.validate.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.97959185">
-          <caret line="773" column="0" selection-start-line="773" selection-start-column="0" selection-end-line="773" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/Common/function.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.846154">
-          <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Public/body.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.035587188">
-          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ThinkPHP/Library/Think/Controller.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34875444">
@@ -823,13 +810,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Base/common.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3202847">
-          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Login/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.42704627">
@@ -848,13 +828,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46263346">
           <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Public/header.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0320284">
-          <caret line="29" column="53" selection-start-line="29" selection-start-column="53" selection-end-line="29" selection-end-column="53" />
         </state>
       </provider>
     </entry>
@@ -981,10 +954,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="34" column="39" selection-start-line="34" selection-start-column="39" selection-end-line="34" selection-end-column="39" />
-          <folding>
-            <element signature="e#6#86#0#PHP" expanded="false" />
-            <element signature="e#115#131#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -992,9 +961,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
-          <folding>
-            <element signature="e#6#87#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1002,9 +968,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1012,7 +975,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34875444">
           <caret line="428" column="9" selection-start-line="428" selection-start-column="9" selection-end-line="428" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1020,48 +982,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="8" column="48" selection-start-line="8" selection-start-column="48" selection-end-line="8" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Index/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.461538">
-          <caret line="39" column="12" selection-start-line="39" selection-start-column="12" selection-end-line="68" selection-end-column="21" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#block#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#2;n#div#0;n#div#0;n#div#0;n#block#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#3;n#div#0;n#div#0;n#div#0;n#block#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#ul#4;n#div#0;n#div#0;n#div#0;n#block#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#div#0;n#div#0;n#block#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#volist#0;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#volist#0;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#dd#0;n#dl#0;n#div#3;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#dd#0;n#dl#0;n#div#3;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#block#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Topic/ajaxlist.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="22" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="22" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#volist#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#volist#0;n#!!top" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Home/Controller/TopicController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.4615383">
+        <state vertical-scroll-proportion="0.0">
           <caret line="36" column="55" selection-start-line="36" selection-start-column="55" selection-end-line="36" selection-end-column="55" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1069,7 +996,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49822065">
           <caret line="14" column="26" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1077,7 +1003,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3558719">
           <caret line="10" column="6" selection-start-line="10" selection-start-column="6" selection-end-line="10" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1085,14 +1010,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Public/head.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21352313">
-          <caret line="6" column="61" selection-start-line="6" selection-start-column="61" selection-end-line="6" selection-end-column="61" />
           <folding />
         </state>
       </provider>
@@ -1105,19 +1022,116 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/css/index.css">
+    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Base/common.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3202847">
+          <caret line="9" column="26" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Public/body.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.035587188">
+          <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/Controller/SettingController.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="498" column="46" selection-start-line="498" selection-start-column="46" selection-end-line="498" selection-end-column="46" />
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.3558719">
+          <caret line="10" column="54" selection-start-line="10" selection-start-column="54" selection-end-line="10" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Public/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/js/base.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Public/Home/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.6938776">
-          <caret line="336" column="21" selection-start-line="336" selection-start-column="21" selection-end-line="336" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="252" column="5" selection-start-line="252" selection-start-column="5" selection-end-line="252" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Topic/ajaxlist.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="0" column="22" selection-start-line="0" selection-start-column="14" selection-end-line="0" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Public/head.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="4" column="50" selection-start-line="4" selection-start-column="50" selection-end-line="4" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/css/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="148" column="22" selection-start-line="148" selection-start-column="22" selection-end-line="148" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="352" column="0" selection-start-line="352" selection-start-column="0" selection-end-line="352" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Setting/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.846154">
+          <caret line="18" column="118" selection-start-line="18" selection-start-column="118" selection-end-line="18" selection-end-column="118" />
+          <folding>
+            <element signature="n#style#0;n#strong#0;n#dd#1;n#dl#0;n#div#1;n#block#1;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/css/setting.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="76" column="23" selection-start-line="76" selection-start-column="23" selection-end-line="76" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/js/setting.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.20408164">
+          <caret line="8" column="3" selection-start-line="8" selection-start-column="3" selection-end-line="8" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#42#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

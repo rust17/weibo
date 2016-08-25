@@ -5,15 +5,22 @@
 <title>微博系统--我的首页</title>
 <script type="text/javascript" src="/weibo/Public/Home/js/jquery.js"></script>
 <script type="text/javascript" src="/weibo/Public/Home/js/jquery.ui.js"></script>
-<script type="text/javascript" src="/weibo/Public/Home/js/rl_exp.js"></script>
-<script type="text/javascript" src="/weibo/Public/Home/js/jie_pic.js"></script>
-<script type="text/javascript" src="/weibo/Public/Home/js/jquery.scrollUp.js"></script>
-<script type="text/javascript" src="/weibo/Public/Home/uploadify/jquery.uploadify.min.js"></script>
-<script type="text/javascript" src="/weibo/Public/Home/js/index.js"></script>
+<script type="text/javascript" src="/weibo/Public/Home/js/base.js"></script>
 <link rel="stylesheet" href="/weibo/Public/Home/css/jquery.ui.css" />
-<link rel="stylesheet" href="/weibo/Public/Home/css/rl_exp.css" />
-<link rel="stylesheet" href="/weibo/Public/Home/uploadify/uploadify.css" />
-<link rel="stylesheet" href="/weibo/Public/Home/css/index.css" />
+<link rel="stylesheet" href="/weibo/Public/Home/css/base.css" />
+
+
+
+    <script type="text/javascript" src="/weibo/Public/Home/js/rl_exp.js"></script>
+    <script type="text/javascript" src="/weibo/Public/Home/js/jie_pic.js"></script>
+    <script type="text/javascript" src="/weibo/Public/Home/js/jquery.scrollUp.js"></script>
+    <script type="text/javascript" src="/weibo/Public/Home/uploadify/jquery.uploadify.min.js"></script>
+    <script type="text/javascript" src="/weibo/Public/Home/js/index.js"></script>
+    <link rel="stylesheet" href="/weibo/Public/Home/css/rl_exp.css" />
+    <link rel="stylesheet" href="/weibo/Public/Home/uploadify/uploadify.css" />
+    <link rel="stylesheet" href="/weibo/Public/Home/css/index.css" />
+
+
 <script type="text/javascript">
     var ThinkPHP={
         'ROOT' : '/weibo',
@@ -33,7 +40,7 @@
         <div class="logo">微博系统</div>
         <div class="nav">
             <ul>
-                <li><a href="#" class="selected">首页</a></li>
+                <li><a href="<?php echo U('Index/index');?>" class="selected">首页</a></li>
                 <li><a href="#">广场</a></li>
                 <li><a href="#">图片</a></li>
                 <li><a href="#">找人</a></li>
@@ -54,7 +61,7 @@
                 </li>
                 <li class="app">账号
                     <dl class="list">
-                        <dd><a href="#">个人设置</a></dd>
+                        <dd><a href="<?php echo U('Setting/index');?>">个人设置</a></dd>
                         <dd><a href="#">排行榜</a></dd>
                         <dd><a href="#">申请认证</a></dd>
                         <dd><a href="<?php echo U('User/logout');?>" class="line">退出》</a></dd>
@@ -124,7 +131,7 @@
                                 <img data="/weibo/<?php echo ($obj['images'][0]['unfold']); ?>" src="/weibo/Public/Home/img/loading_100.png" alt="">
                             </div><?php break;?>
                         <?php Default: ?>
-                        <?php $__FOR_START_29041__=0;$__FOR_END_29041__=$obj['count'];for($i=$__FOR_START_29041__;$i < $__FOR_END_29041__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
+                        <?php $__FOR_START_24098__=0;$__FOR_END_24098__=$obj['count'];for($i=$__FOR_START_24098__;$i < $__FOR_END_24098__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
                     <div class="footer">
                         <span class="time"><?php echo ($obj["time"]); ?></span>
                         <span class="handler">赞(0) | 转播 | 评论 | 收藏</span>
