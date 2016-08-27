@@ -22,4 +22,12 @@ class FileController extends HomeController{
         $this->ajaxReturn($File->face());
 
     }
+    //保存头像
+    public function crop(){
+        $File = D('File');
+        $img = $File->crop(I('post.url'),I('post.x'),I('post.y'),I('post.w'),I('post.h'));
+        $User = D('User');
+        $User->updateFace(json_encode($img));
+        echo json_encode($img);
+    }
 }

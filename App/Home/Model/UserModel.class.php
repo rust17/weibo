@@ -161,4 +161,19 @@ class UserModel extends Model\RelationModel{
         );
         return $this->relation(true)->where($map)->save($data);
     }
+
+    //更新个人头像
+    public function updateFace($face){
+        $data = array(
+            'face'=>$face,
+        );
+        $map['id'] = session('user_auth')['id'];
+        return $this->where($map)->save($data);
+    }
+
+    //获取个人头像
+    public function getFace(){
+        $map['id'] = session('user_auth')['id'];
+        return json_decode($this->field('face')->where($map)->find()['face'])->big;
+    }
 }

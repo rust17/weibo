@@ -28,12 +28,12 @@ class FileModel extends Model{
             $image ->open($imgPath);
             $unfoldPath = C('UPLOAD_PATH').$savePath.'550_'.$saveName;
             $image ->thumb(550,550)->save($unfoldPath);
-            $imgArr = array(
+            $imageArr = array(
                 'thumb'=>$thumbPath,
                 'unfold'=>$unfoldPath,
                 'source'=>$imgPath,
             );
-            return $imgArr;
+            return $imageArr;
         }else{
             return $Upload->getError();
         }
@@ -55,5 +55,20 @@ class FileModel extends Model{
         }else{
             return $Upload->getError();
         }
+    }
+    //保存头像
+    public function crop($url,$x,$y,$w,$h){
+        $bigPath = C('FACE_PATH').session('user_auth')['id'].'.jpg';
+        $smallPath = C('FACE_PATH').session('user_auth')['id'].'_small.jpg';
+        $image = new Image();
+        $image->open($url);
+        $image->crop($w,$h,$x,$y)->save($url);
+        $image->thumb(200,200,Image::IMAGE_THUMB_FIXED)->save($bigPath);
+        $image->thumb(200,200,Image::IMAGE_THUMB_FIXED)->save($smallPath);
+        $imageArr = array(
+            'big' => $bigPath,
+            'small' => $smallPath,
+        );
+        return $imageArr;
     }
 }

@@ -91,11 +91,19 @@
         <h2>头像设置</h2>
         <p class="face_info">请上传一张头像图片，尺寸不低于200px*200px</p>
         <div class="face">
-            <img id="face" src="/weibo/Public/Home/img/big.jpg"/>
+            <?php if(empty($bigFace)): ?><img id="face" src="/weibo/Public/Home/img/big.jpg">
+                <?php else: ?>
+                <img id="face" src="/weibo<?php echo ($bigFace); ?>"/><?php endif; ?>
+
             <span id="preview_box" class="crop_preview"><img id="crop_preview" src="/weibo/Public/Home/img/big.jpg"></span>
             <a href="javascript:void (0)" class="save" style="display: none;margin: 10px 0 0 0;">保存</a>
             <a href="javascript:void (0)" class="cancel" style="display: none;margin: 10px 0 0 0;">取消</a>
-            <input type="file" name="file" id="file">
+            <input type="hidden" id="x" name="x" />
+            <input type="hidden" id="y" name="y" />
+            <input type="hidden" id="w" name="w" />
+            <input type="hidden" id="h" name="h" />
+            <input type="hidden" id="url" name="url" />
+            <input type="file" name="file" id="file" />
         </div>
     </div>
 

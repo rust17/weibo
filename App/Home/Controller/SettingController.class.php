@@ -11,9 +11,11 @@ class SettingController extends HomeController {
         }
     }
 
-    //显示资料
+    //显示头像
     public function avatar(){
         if($this->login()){
+            $User = D('User');
+            $this->assign('bigFace',$User->getFace());
             $this->display();
         }
     }

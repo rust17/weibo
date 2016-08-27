@@ -17,4 +17,6 @@ return array(
     'TMPL_ACTION_SUCCESS'=>'Public/jump',
     //图片上传路径
     'UPLOAD_PATH'=>'./Uploads/',
+    //头像上传路径
+    'FACE_PATH'=>'./Uploads/face/',
 );
