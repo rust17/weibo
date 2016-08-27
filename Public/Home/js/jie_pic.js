@@ -10,7 +10,7 @@ $(function(){
             //文件上传测试
             $('#file').uploadify({
                 swf : ThinkPHP['UPLOADIFY'] + '/uploadify.swf',
-                uploader : ThinkPHP['UPLOADER'],
+                uploader : ThinkPHP['IMAGEURL'],
                 width : 120,
                 height : 35,
                 fileTypeDesc : '图片类型',

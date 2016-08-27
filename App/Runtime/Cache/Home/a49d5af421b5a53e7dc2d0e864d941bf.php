@@ -11,8 +11,14 @@
 
 
 
+    <script type="text/javascript" src="/weibo/Public/Home/uploadify/jquery.uploadify.min.js"></script>
+    <script type="text/javascript" src="/weibo/Public/Home/js/jquery-migrate-1.2.1.js"></script>
+    <script type="text/javascript" src="/weibo/Public/Home/js/jquery.Jcrop.js"></script>
     <script type="text/javascript" src="/weibo/Public/Home/js/setting.js"></script>
+    <link rel="stylesheet" href="/weibo/Public/Home/uploadify/uploadify.css">
     <link rel="stylesheet" href="/weibo/Public/Home/css/setting.css">
+    <link rel="stylesheet" href="/weibo/Public/Home/css/jquery.Jcrop.css">
+
 
 
 <script type="text/javascript">
@@ -77,19 +83,20 @@
     
     <div class="main_left">
         <ul>
-            <li><a href="<?php echo U('Setting/index');?>" class="selected">个人设置</a></li>
-            <li><a href="<?php echo U('Setting/avatar');?>">头像设置</a></li>
+            <li><a href="<?php echo U('Setting/index');?>">个人设置</a></li>
+            <li><a href="<?php echo U('Setting/avatar');?>" class="selected">头像设置</a></li>
         </ul>
     </div>
     <div class="main_right">
-        <h2>个人设置</h2>
-        <dl>
-            <dd>账号名称：<?php echo ($user["username"]); ?></dd>
-            <dd>电子邮箱：<input type="text" name="email" value="<?php echo ($user["email"]); ?>" class="text" /><strong style="color: red;">*</strong></dd>
-            <dd><span>个人简介：</span><textarea name="intro"><?php echo ($user["extend"]["intro"]); ?></textarea></dd>
-            <dd><input type="submit" class="submit" value="修改" /></dd>
-        </dl>
-        <p style="margin: 20px 0;font-size: 13px;color: red;text-align: center;">(PS：这里为了不再重复，不做前后端验证)</p>
+        <h2>头像设置</h2>
+        <p class="face_info">请上传一张头像图片，尺寸不低于200px*200px</p>
+        <div class="face">
+            <img id="face" src="/weibo/Public/Home/img/big.jpg"/>
+            <span id="preview_box" class="crop_preview"><img id="crop_preview" src="/weibo/Public/Home/img/big.jpg"></span>
+            <a href="javascript:void (0)" class="save" style="display: none;margin: 10px 0 0 0;">保存</a>
+            <a href="javascript:void (0)" class="cancel" style="display: none;margin: 10px 0 0 0;">取消</a>
+            <input type="file" name="file" id="file">
+        </div>
     </div>
 
 </div>

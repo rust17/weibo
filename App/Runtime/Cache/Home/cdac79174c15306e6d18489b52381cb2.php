@@ -27,7 +27,8 @@
         'MODULE' : '/weibo/Home',
         'IMG' : '/weibo/Public/<?php echo MODULE_NAME;?>/img',
         'FACE' : '/weibo/Public/<?php echo MODULE_NAME;?>/face',
-        'UPLOADER' : '<?php echo U("File/upload");?>',
+        'IMAGEURL' : '<?php echo U("File/image");?>',
+        'FACEURL' : '<?php echo U("File/face");?>',
         'UPLOADIFY' : '/weibo/Public/Home/uploadify',
         'INDEX' : '<?php echo U("Index/index");?>',
     };
@@ -131,7 +132,7 @@
                                 <img data="/weibo/<?php echo ($obj['images'][0]['unfold']); ?>" src="/weibo/Public/Home/img/loading_100.png" alt="">
                             </div><?php break;?>
                         <?php Default: ?>
-                        <?php $__FOR_START_19898__=0;$__FOR_END_19898__=$obj['count'];for($i=$__FOR_START_19898__;$i < $__FOR_END_19898__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
+                        <?php $__FOR_START_30891__=0;$__FOR_END_30891__=$obj['count'];for($i=$__FOR_START_30891__;$i < $__FOR_END_30891__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
                     <div class="footer">
                         <span class="time"><?php echo ($obj["time"]); ?></span>
                         <span class="handler">赞(0) | 转播 | 评论 | 收藏</span>
