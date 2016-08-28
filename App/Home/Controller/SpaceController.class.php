@@ -30,4 +30,21 @@ class SpaceController extends HomeController {
         }
     }
 
+    //设置URL
+    public function setUrl($username = ''){
+        if(IS_AJAX && $username != ''){
+            $User = D('User');
+            $getUser = $User->getUser3($username);
+            if(is_array($getUser)) {
+                if (empty($getUser['domain'])) {
+                    echo U('Space/index', array('id' => $getUser['id']));
+                } else {
+                    echo __ROOT__ . '/i/' . $getUser['domain'];
+                }
+            }
+        }else{
+            $this->error('非法访问!');
+        }
+    }
+
 }

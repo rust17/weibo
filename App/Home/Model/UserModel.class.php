@@ -162,6 +162,13 @@ class UserModel extends Model\RelationModel{
         return $user;
     }
 
+    //通过一对一关联获取用户信息
+    public function getUser3($username){
+        $map['username'] = $username;
+        $user = $this->relation(true)->field('id,domain')->where($map)->find();
+        return $user;
+    }
+
     //通过一对一修改关联用户资料
     public function updateUser($email,$intro){
         $map['id'] = session('user_auth')['id'];

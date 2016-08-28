@@ -30,7 +30,7 @@ class TopicModel extends Model\RelationModel{
     );
 
     //发布微博
-    public function publish($allContent,$uid){
+    public function publish($allContent,$uid,$reid = 0){
         //微博内容分离
         $len = mb_strlen($allContent,'utf8');
         $content = $contentOver = '';
@@ -51,13 +51,29 @@ class TopicModel extends Model\RelationModel{
         if(!empty($contentOver)){
             $data['content_over'] = $contentOver;
         }
+        if($reid > 0){
+            $data['reid'] = $reid;
+        }
         if($this->create($data)){
             $uid = $this->add();
-            return $uid ? $uid : 0;
+            if($uid){
+                if($reid > 0)$this->reCount($reid);
+                return $uid;
+            }else{
+                return 0;
+            }
+            //return $uid ? $uid : 0;
         }else{
             return $this->getError();
         }
     }
+
+    //被转发的微博加1
+    private function reCount($reid){
+        $map['id'] = $reid;
+        $this->where($map)->setInc('recount');
+    }
+
     //获取微博列表
     public function getList($first,$total){
         return $this->format($this->relation(true)
@@ -96,6 +112,11 @@ class TopicModel extends Model\RelationModel{
             //表情解析
             $list[$key]['content'] .= $list[$key]['content_over'];
             $list[$key]['content'] = preg_replace('/\[(a|b|c|d)_([0-9])+\]/i','<img src="'.__ROOT__.'/Public/'.MODULE_NAME.'/face/$1/$2.gif" border="0">',$list[$key]['content']);
+
+            //解析@符号
+            $list[$key]['content'] .=' ';
+            $pattern = '/(@\S+)\s/i';
+            $list[$key]['content'] = preg_replace($pattern,'<a href="'.__ROOT__.'/$1" class="space" target="_blank">$1</a>',$list[$key]['content']);
 
             //头像解析
             $list[$key]['face'] = json_decode($list[$key]['face'])->small;

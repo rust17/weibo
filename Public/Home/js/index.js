@@ -271,7 +271,7 @@ $(function(){
     $(window).scroll(function(){
         if(window.page < window.count) {
             if (window.scrollFlag) {
-                if ($(document).scrollTop() >= $('#loadmore').offset().top + $('#loadmore').outerHeight() - $(window).height() - 20) {
+                if ($(document).scrollTop() >= ($('#loadmore').offset().top + $('#loadmore').outerHeight() - $(window).height() - 20)) {
                     setTimeout(function () {
                         $.ajax({
                             url: ThinkPHP['MODULE'] + '/Topic/ajaxlist',
@@ -282,6 +282,7 @@ $(function(){
                             success: function (data, response, status) {
                                 $('#loadmore').before(data);
                                 allHeight();
+                                setUrl();
                             }
                         });
                         window.scrollFlag = true;
@@ -295,6 +296,71 @@ $(function(){
             $('#loadmore').html('没有更多数据');
         }
     })
+
+    //设置@账号的URL
+    setUrl();
+    function setUrl(){
+        for(var i = 0; i < $('.space').length; i++){
+            var username = $('.space').eq(i).text().substr(1);
+            if($('.space').eq(i).attr('flag') != 'true') {
+                $.ajax({
+                    url: ThinkPHP['MODULE'] + '/Space/setUrl',
+                    type: 'POST',
+                    async: false,
+                    data: {
+                        username: username,
+                    },
+                    success: function (data, response, status) {
+                        if (data) {
+                            $('.space').eq(i).attr('href', data);
+                            $('.space').eq(i).attr('flag', 'true');
+                        }else{
+                            $('.space').eq(i).after('@' + username);
+                            $('.space').eq(i).hide();
+                        }
+                    }
+                });
+            }
+        }
+    }
+
+    //切换转播
+    $('.re').click(function(){
+        if($(this).parent().parent().find('.re_box').is(':hidden')){
+            $(this).parent().parent().find('.re_box').show();
+        }else{
+            $(this).parent().parent().find('.re_box').hide();
+        }
+    });
+
+    //转播按钮
+    $('.re_button').button().clean(function(){
+        var reid = $(this).parent().find('input[name="reid"]').val();
+        var content = $(this).parent().find('textarea[name="commend"]').val();
+        var commend = $(this).parent().find('textarea[name="commend"]');
+        $.ajax({
+            url: ThinkPHP['MODULE'] + '/Topic/reBoardCast',
+            type: 'POST',
+            data: {
+                reid: reid,
+                content: content,
+            },
+            beforeSend : function(){
+                $('#loading').html('微博转发中...').dialog('open');
+            },
+            success: function (data, response, status) {
+                if (data) {
+                    $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/success.gif)no-repeat 20px center').html('微博转发成功');
+                    setTimeout(function () {
+                        $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/loading.gif)no-repeat 20px center').html('...').dialog('close');
+                        commend.val('');
+                    },500);
+                    }else{
+
+                }
+            }
+        });
+    });
 
     $.scrollUp({
         scrollName: 'scrollUp',

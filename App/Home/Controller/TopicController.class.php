@@ -42,6 +42,16 @@ class TopicController extends HomeController{
         }
     }
 
+    //转发微博
+    public function reBoardCast(){
+        if (IS_AJAX) {
+            $Topic = D('Topic');
+            $tid = $Topic->publish(I('post.content'), session('user_auth')['id'],I('post.reid'));
+        }else{
+            $this->error('非法访问');
+        }
+    }
+
     //Ajax获取总页码
     public function ajaxCount(){
         if(IS_AJAX){
