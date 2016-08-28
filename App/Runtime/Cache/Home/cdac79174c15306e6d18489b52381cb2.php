@@ -119,7 +119,7 @@
                 <li><a href="javascript:void(0)">互听的</a></li>
             </ul>
             <!--这里插入一个DOM节点-->
-            <?php if(is_array($topicList)): $i = 0; $__LIST__ = $topicList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$obj): $mod = ($i % 2 );++$i;?><dl class="weibo_content_data">
+            <?php if(is_array($topicList)): $i = 0; $__LIST__ = $topicList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$obj): $mod = ($i % 2 );++$i; if(empty($obj["reid"])): ?><dl class="weibo_content_data">
                 <dt><a href="javascript:void (0)">
                     <?php if(empty($obj["face"])): if(empty($obj["domain"])): ?><a href="<?php echo U('Space/index',array('id'=>$obj['uid']));?>"><img src="/weibo/Public/Home/img/small_face.jpg" alt="" /></a>
                         <?php else: ?>
@@ -147,7 +147,7 @@
                                 <img data="/weibo/<?php echo ($obj['images'][0]['unfold']); ?>" src="/weibo/Public/Home/img/loading_100.png" alt="">
                             </div><?php break;?>
                         <?php Default: ?>
-                        <?php $__FOR_START_22705__=0;$__FOR_END_22705__=$obj['count'];for($i=$__FOR_START_22705__;$i < $__FOR_END_22705__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
+                        <?php $__FOR_START_31833__=0;$__FOR_END_31833__=$obj['count'];for($i=$__FOR_START_31833__;$i < $__FOR_END_31833__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
                     <div class="footer">
                         <span class="time"><?php echo ($obj["time"]); ?></span>
                         <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播</a> | 评论 | 收藏</span>
@@ -159,7 +159,57 @@
                         </div>
                     </div>
                 </dd>
-            </dl><?php endforeach; endif; else: echo "" ;endif; ?>
+            </dl>
+            <?php else: ?>
+                <dl class="weibo_content_data">
+                    <dt><a href="javascript:void (0)">
+                        <?php if(empty($obj["face"])): if(empty($obj["domain"])): ?><a href="<?php echo U('Space/index',array('id'=>$obj['uid']));?>"><img src="/weibo/Public/Home/img/small_face.jpg" alt="" /></a>
+                                <?php else: ?>
+                                <a href="/weibo/i/<?php echo ($obj["domain"]); ?>"><img src="/weibo/Public/Home/img/small_face.jpg" alt="" /></a><?php endif; ?>
+                            <?php else: ?>
+                            <?php if(empty($obj["domain"])): ?><a href="<?php echo U('Space/index',array('id'=>$obj['uid']));?>"><img src="/weibo/<?php echo ($obj["face"]); ?>" alt=""></a>
+                                <?php else: ?>
+                                <a href="/weibo/i/<?php echo ($obj["domain"]); ?>"><img src="/weibo/<?php echo ($obj["face"]); ?>" alt=""></a><?php endif; endif; ?>
+
+                    </a></dt>
+                    <dd>
+                        <h4>
+                            <?php if(empty($obj["domain"])): ?><a href="<?php echo U('Space/index',array('id'=>$obj['uid']));?>"><?php echo ($obj["username"]); ?></a>
+                                <?php else: ?>
+                                <a href="/weibo/i/<?php echo ($obj["domain"]); ?>"><?php echo ($obj["username"]); ?></a><?php endif; ?>
+                        </h4>
+                        <p><?php echo ($obj["content"]); ?></p>
+                        <div class="re_content" style="overflow: auto;">
+                            <h5>
+                                <?php if(empty($obj["recontent"]["domain"])): ?><a href="<?php echo U('Space/index',array('id'=>$obj['recontent']['uid']));?>">@<?php echo ($obj["recontent"]["username"]); ?></a>
+                                    <?php else: ?>
+                                    <a href="/weibo/i/<?php echo ($obj["recontent"]["domain"]); ?>">@<?php echo ($obj["recontent"]["username"]); ?></a><?php endif; ?>
+                            </h5>
+                            <p><?php echo ($obj["recontent"]["content"]); ?></p>
+                            <?php switch($obj["recontent"]["count"]): case "0": break;?>
+                                <?php case "1": ?><div class="img" style="display: block;"><img src="/weibo/<?php echo ($obj['recontent']['images'][0]['thumb']); ?>" alt=""></div>
+                                    <div class="img_zoom" style="display: none;">
+                                        <ol>
+                                            <li class="in"><a href="javascript:void(0)">收起</a></li>
+                                            <li class="source"><a href="/weibo/<?php echo ($obj['recontent']['images'][0]['source']); ?>" target="_blank">查看原图</a></li>
+                                        </ol>
+                                        <img data="/weibo/<?php echo ($obj['recontent']['images'][0]['unfold']); ?>" src="/weibo/Public/Home/img/loading_100.png" alt="">
+                                    </div><?php break;?>
+                                <?php Default: ?>
+                                <?php $__FOR_START_16414__=0;$__FOR_END_16414__=$obj['recontent']['count'];for($i=$__FOR_START_16414__;$i < $__FOR_END_16414__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['recontent']['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
+                        </div>
+                        <div class="footer">
+                            <span class="time"><?php echo ($obj["time"]); ?></span>
+                            <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播</a> | 评论 | 收藏</span>
+                            <div class="re_box" style="display: none;">
+                                <p>表情、字数限制自行完成</p>
+                                <textarea class="re_text" name="commend"></textarea>
+                                <input type="text" name="reid" value="<?php echo ($obj["id"]); ?>"/>
+                                <input class="re_button" type="button" value="转播"/>
+                            </div>
+                        </div>
+                    </dd>
+                </dl><?php endif; endforeach; endif; else: echo "" ;endif; ?>
 
             <div id="loadmore">加载更多<img src="/weibo/Public/Home/img/loadmore.gif" /></div>
             <div id="imgs">

@@ -345,6 +345,20 @@
     left: 13px;
     z-index: 99;
 }
+#main .weibo_content_data dd .re_content{
+    margin: 10px 0 0 0;
+    border: 1px solid #cccccc;
+    background: #fafafa;
+    border-radius: 4px;
+    padding: 10px;
+}
+#main .weibo_content_data dd .re_content p{
+    margin: 5px 0 0 0;
+}
+#main .weibo_content_data dd a{
+    color: #049;
+    text-decoration: none;
+}
 #main .main_right{
     float: right;
     width: 269px;

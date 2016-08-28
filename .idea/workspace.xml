@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ddafb10a-f7c3-4f37-9661-dc61b7c2f468" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Runtime/Logs/Home/16_08_28.log" afterPath="$PROJECT_DIR$/App/Runtime/Logs/Home/16_08_28.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/Controller/SpaceController.class.php" afterPath="$PROJECT_DIR$/App/Home/Controller/SpaceController.class.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/Controller/HomeController.class.php" afterPath="$PROJECT_DIR$/App/Home/Controller/HomeController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/Controller/TopicController.class.php" afterPath="$PROJECT_DIR$/App/Home/Controller/TopicController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/Model/TopicModel.class.php" afterPath="$PROJECT_DIR$/App/Home/Model/TopicModel.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/Model/UserModel.class.php" afterPath="$PROJECT_DIR$/App/Home/Model/UserModel.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Runtime/Cache/Home/cdac79174c15306e6d18489b52381cb2.php" afterPath="$PROJECT_DIR$/App/Runtime/Cache/Home/cdac79174c15306e6d18489b52381cb2.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/css/index.css" afterPath="$PROJECT_DIR$/Public/Home/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/View/Default/Index/index.html" afterPath="$PROJECT_DIR$/App/Home/View/Default/Index/index.html" />
@@ -33,6 +32,16 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Home/Controller/IndexController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-7.6923075">
+              <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="UserModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Home/Model/UserModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
@@ -63,16 +72,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="domain.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Setting/domain.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.076923">
-              <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="setting.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Public/Home/js/setting.js">
           <provider selected="true" editor-type-id="text-editor">
@@ -88,13 +87,17 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.923077">
-              <caret line="97" column="65" selection-start-line="97" selection-start-column="65" selection-end-line="97" selection-end-column="65" />
+            <state vertical-scroll-proportion="-6.1538463">
+              <caret line="137" column="120" selection-start-line="137" selection-start-column="120" selection-end-line="137" selection-end-column="120" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#1;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#dd#0;n#dl#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#0;n#dd#0;n#dl#0;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#dd#0;n#dl#1;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#case#1;n#switch#0;n#div#0;n#dd#0;n#dl#1;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#case#1;n#switch#0;n#div#0;n#dd#0;n#dl#1;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#div#1;n#dd#0;n#dl#1;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
@@ -110,7 +113,7 @@
         <entry file="file://$PROJECT_DIR$/Public/Home/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="355" column="40" selection-start-line="355" selection-start-column="40" selection-end-line="355" selection-end-column="40" />
+              <caret line="335" column="10" selection-start-line="335" selection-start-column="10" selection-end-line="335" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -119,8 +122,8 @@
       <file leaf-file-name="TopicModel.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Home/Model/TopicModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.78647685">
-              <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.53736657">
+              <caret line="129" column="20" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
               <folding />
             </state>
           </provider>
@@ -129,8 +132,8 @@
       <file leaf-file-name="TopicController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Home/Controller/TopicController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-11.846154">
-              <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+            <state vertical-scroll-proportion="-18.538462">
+              <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
               <folding />
             </state>
           </provider>
@@ -140,7 +143,7 @@
         <entry file="file://$PROJECT_DIR$/Public/Home/css/index.css">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="219" column="26" selection-start-line="219" selection-start-column="26" selection-end-line="219" selection-end-column="26" />
+              <caret line="350" column="24" selection-start-line="350" selection-start-column="24" selection-end-line="350" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -175,7 +178,6 @@
         <option value="$PROJECT_DIR$/Public/Home/css/login.css" />
         <option value="$PROJECT_DIR$/Public/Home/js/login.js" />
         <option value="$PROJECT_DIR$/App/Home/Controller/LoginController.class.php" />
-        <option value="$PROJECT_DIR$/App/Home/Controller/HomeController.class.php" />
         <option value="$PROJECT_DIR$/App/Home/View/Default/Index.html" />
         <option value="$PROJECT_DIR$/App/Home/View/Default/Base/common.html" />
         <option value="$PROJECT_DIR$/App/Home/View/Default/Public/body.html" />
@@ -209,10 +211,11 @@
         <option value="$PROJECT_DIR$/App/Home/Model/UserModel.class.php" />
         <option value="$PROJECT_DIR$/App/Home/Controller/SettingController.class.php" />
         <option value="$PROJECT_DIR$/App/Home/Controller/SpaceController.class.php" />
-        <option value="$PROJECT_DIR$/Public/Home/css/index.css" />
-        <option value="$PROJECT_DIR$/App/Home/View/Default/Index/index.html" />
+        <option value="$PROJECT_DIR$/App/Home/Controller/HomeController.class.php" />
         <option value="$PROJECT_DIR$/Public/Home/js/index.js" />
+        <option value="$PROJECT_DIR$/Public/Home/css/index.css" />
         <option value="$PROJECT_DIR$/App/Home/Controller/TopicController.class.php" />
+        <option value="$PROJECT_DIR$/App/Home/View/Default/Index/index.html" />
         <option value="$PROJECT_DIR$/App/Home/Model/TopicModel.class.php" />
       </list>
     </option>
@@ -668,7 +671,7 @@
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../新建文件夹/weibo" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../新建文件夹/weibo1" />
     <property name="FullScreen" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
@@ -804,13 +807,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Public/Home/uploadify/uploadify.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.42704627">
@@ -1053,21 +1049,13 @@
         <state vertical-scroll-proportion="-6.4358974">
           <caret line="126" column="29" selection-start-line="126" selection-start-column="29" selection-end-line="126" selection-end-column="29" />
           <folding>
-            <marker date="1472374087932" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1472374087932" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1472374087932" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1472374087932" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1472374087932" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1472374087932" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1472391711585" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1472391711585" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1472391711585" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1472391711585" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1472391711585" expanded="true" signature="-1:-1" placeholder="..." />
+            <marker date="1472391711585" expanded="true" signature="-1:-1" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.6923075">
-          <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1134,10 +1122,42 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/Controller/SpaceController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.076923">
+          <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/Controller/HomeController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.0676156">
+          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/App/Home/Model/UserModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-15.461538">
           <caret line="167" column="48" selection-start-line="167" selection-start-column="48" selection-end-line="167" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Public/Home/css/index.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="350" column="24" selection-start-line="350" selection-start-column="24" selection-end-line="350" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.6923075">
+          <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
           <folding />
         </state>
       </provider>
@@ -1150,23 +1170,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/Controller/SpaceController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.076923">
-          <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.923077">
-          <caret line="97" column="65" selection-start-line="97" selection-start-column="65" selection-end-line="97" selection-end-column="65" />
+        <state vertical-scroll-proportion="-6.1538463">
+          <caret line="137" column="120" selection-start-line="137" selection-start-column="120" selection-end-line="137" selection-end-column="120" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#1;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#dd#0;n#dl#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#0;n#dd#0;n#dl#0;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#dd#0;n#dl#1;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#case#1;n#switch#0;n#div#0;n#dd#0;n#dl#1;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#case#1;n#switch#0;n#div#0;n#dd#0;n#dl#1;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#div#1;n#dd#0;n#dl#1;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
@@ -1177,34 +1193,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Public/Home/css/index.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="219" column="26" selection-start-line="219" selection-start-column="26" selection-end-line="219" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Public/Home/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="355" column="40" selection-start-line="355" selection-start-column="40" selection-end-line="355" selection-end-column="40" />
+          <caret line="335" column="10" selection-start-line="335" selection-start-column="10" selection-end-line="335" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Home/Controller/TopicController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-11.846154">
-          <caret line="49" column="0" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
+        <state vertical-scroll-proportion="-18.538462">
+          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Home/Model/TopicModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.78647685">
-          <caret line="73" column="38" selection-start-line="73" selection-start-column="38" selection-end-line="73" selection-end-column="38" />
+        <state vertical-scroll-proportion="0.53736657">
+          <caret line="129" column="20" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
           <folding />
         </state>
       </provider>

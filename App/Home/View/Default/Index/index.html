@@ -49,6 +49,7 @@
             </ul>
             <!--这里插入一个DOM节点-->
             <volist name="topicList" id="obj">
+            <empty name="obj.reid">
             <dl class="weibo_content_data">
                 <dt><a href="javascript:void (0)">
                     <empty name="obj.face">
@@ -104,6 +105,73 @@
                     </div>
                 </dd>
             </dl>
+            <else/>
+                <dl class="weibo_content_data">
+                    <dt><a href="javascript:void (0)">
+                        <empty name="obj.face">
+                            <empty name="obj.domain">
+                                <a href="{:U('Space/index',array('id'=>$obj['uid']))}"><img src="__IMG__/small_face.jpg" alt="" /></a>
+                                <else/>
+                                <a href="__ROOT__/i/{$obj.domain}"><img src="__IMG__/small_face.jpg" alt="" /></a>
+                            </empty>
+                            <else/>
+                            <empty name="obj.domain">
+                                <a href="{:U('Space/index',array('id'=>$obj['uid']))}"><img src="__ROOT__/{$obj.face}" alt=""></a>
+                                <else/>
+                                <a href="__ROOT__/i/{$obj.domain}"><img src="__ROOT__/{$obj.face}" alt=""></a>
+                            </empty>
+                        </empty>
+
+                    </a></dt>
+                    <dd>
+                        <h4>
+                            <empty name="obj.domain">
+                                <a href="{:U('Space/index',array('id'=>$obj['uid']))}">{$obj.username}</a>
+                                <else/>
+                                <a href="__ROOT__/i/{$obj.domain}">{$obj.username}</a>
+                            </empty>
+                        </h4>
+                        <p>{$obj.content}</p>
+                        <div class="re_content" style="overflow: auto;">
+                            <h5>
+                                <empty name="obj.recontent.domain">
+                                    <a href="{:U('Space/index',array('id'=>$obj['recontent']['uid']))}">@{$obj.recontent.username}</a>
+                                    <else/>
+                                    <a href="__ROOT__/i/{$obj.recontent.domain}">@{$obj.recontent.username}</a>
+                                </empty>
+                            </h5>
+                            <p>{$obj.recontent.content}</p>
+                            <switch name="obj.recontent.count">
+                                <case value="0"></case>
+                                <case value="1">
+                                    <div class="img" style="display: block;"><img src="__ROOT__/{$obj['recontent']['images'][0]['thumb']}" alt=""></div>
+                                    <div class="img_zoom" style="display: none;">
+                                        <ol>
+                                            <li class="in"><a href="javascript:void(0)">收起</a></li>
+                                            <li class="source"><a href="__ROOT__/{$obj['recontent']['images'][0]['source']}" target="_blank">查看原图</a></li>
+                                        </ol>
+                                        <img data="__ROOT__/{$obj['recontent']['images'][0]['unfold']}" src="__IMG__/loading_100.png" alt="">
+                                    </div>
+                                </case>
+                                <default/>
+                                <for start="0" end="$obj['recontent']['count']">
+                                    <div class="imgs"><img src="__ROOT__/{$obj['recontent']['images'][$i]['thumb']}" unfold-src="__ROOT__/{$obj['recontent']['images'][$i]['unfold']}" source-src="__ROOT__/{$obj['recontent']['images'][$i]['source']}" alt=""></div>
+                                </for>
+                            </switch>
+                        </div>
+                        <div class="footer">
+                            <span class="time">{$obj.time}</span>
+                            <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播</a> | 评论 | 收藏</span>
+                            <div class="re_box" style="display: none;">
+                                <p>表情、字数限制自行完成</p>
+                                <textarea class="re_text" name="commend"></textarea>
+                                <input type="text" name="reid" value="{$obj.id}"/>
+                                <input class="re_button" type="button" value="转播"/>
+                            </div>
+                        </div>
+                    </dd>
+                </dl>
+            </empty>
             </volist>
 
             <div id="loadmore">加载更多<img src="__IMG__/loadmore.gif" /></div>

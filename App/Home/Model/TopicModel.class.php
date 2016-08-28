@@ -78,7 +78,7 @@ class TopicModel extends Model\RelationModel{
     public function getList($first,$total){
         return $this->format($this->relation(true)
                         ->table('__TOPIC__ a,__USER__ b')
-                        ->field('a.id,a.content,a.content_over,a.create,a.uid,b.username,b.face,b.domain')
+                        ->field('a.id,a.content,a.content_over,a.create,a.uid,a.reid,b.username,b.face,b.domain')
                         ->limit($first, $total)
                         ->order('a.create DESC')
                         ->where('a.uid=b.id')
@@ -120,8 +120,42 @@ class TopicModel extends Model\RelationModel{
 
             //头像解析
             $list[$key]['face'] = json_decode($list[$key]['face'])->small;
+
+            //获取转发的微博
+            if($list[$key]['reid'] > 0){
+                $list[$key]['recontent'] = $this->getReContent($list[$key]['reid']);
+            }
         }
 
         return $list;
     }
+    //获取被转发的微博内容
+    private function getReContent($reid){
+        return $this->format2($this->relation(true)
+                    ->table('__TOPIC__ a,__USER__ b')
+                    ->field('a.id,a.content,a.content_over,a.create,a.uid,a.reid,b.username,b.face,b.domain')
+                    ->where('a.id='.$reid)
+                    ->find());
+    }
+
+    //格式化被转发的微博
+    private function format2($list){
+        if (!is_null($list['images'])) {
+            foreach ($list['images'] as $key => $value) {
+                $list['images'][$key] = json_decode($value['data'], true);
+            }
+        }
+            $list['count'] = count($list['images']);
+
+            //表情解析
+            $list['content'] .= $list['content_over'];
+            $list['content'] = preg_replace('/\[(a|b|c|d)_([0-9])+\]/i','<img src="'.__ROOT__.'/Public/'.MODULE_NAME.'/face/$1/$2.gif" border="0">',$list['content']);
+
+            //解析@符号
+            $list['content'] .=' ';
+            $pattern = '/(@\S+)\s/i';
+            $list['content'] = preg_replace($pattern,'<a href="'.__ROOT__.'/$1" class="space" target="_blank">$1</a>',$list['content']);
+
+            return $list;
+        }
 }

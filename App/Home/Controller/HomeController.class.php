@@ -19,7 +19,7 @@ class HomeController extends Controller{
             if($ip == get_client_ip()) {
                 $map['username'] = $username;
                 $User = D('User');
-                $userObj = $User->field('id,username')->where($map)->find();
+                $userObj = $User->field('id,username,face')->where($map)->find();
 
                 //自动登陆验证后写入登录信息
                 $update = array(
@@ -33,6 +33,7 @@ class HomeController extends Controller{
                 $auth = array(
                     'id' => $userObj['id'],
                     'username' => $userObj['username'],
+                    'face'=>json_decode($userObj['face']),
                     'last_login' => NOW_TIME,
                 );
                 //写入session

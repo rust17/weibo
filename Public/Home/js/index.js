@@ -334,7 +334,7 @@ $(function(){
     });
 
     //转播按钮
-    $('.re_button').button().clean(function(){
+    $('.re_button').button().click(function(){
         var reid = $(this).parent().find('input[name="reid"]').val();
         var content = $(this).parent().find('textarea[name="commend"]').val();
         var commend = $(this).parent().find('textarea[name="commend"]');

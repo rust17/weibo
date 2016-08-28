@@ -47,6 +47,7 @@ class TopicController extends HomeController{
         if (IS_AJAX) {
             $Topic = D('Topic');
             $tid = $Topic->publish(I('post.content'), session('user_auth')['id'],I('post.reid'));
+            echo $tid;
         }else{
             $this->error('非法访问');
         }
