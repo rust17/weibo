@@ -95,11 +95,11 @@
                     </switch>
                     <div class="footer">
                         <span class="time">{$obj.time}</span>
-                        <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播</a> | 评论 | 收藏</span>
+                        <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播({$obj.recount})</a> | 评论 | 收藏</span>
                         <div class="re_box" style="display: none;">
                             <p>表情、字数限制自行完成</p>
                             <textarea class="re_text" name="commend"></textarea>
-                            <input type="text" name="reid" value="{$obj.id}"/>
+                            <input type="hidden" name="reid" value="{$obj.id}"/>
                             <input class="re_button" type="button" value="转播"/>
                         </div>
                     </div>
@@ -158,14 +158,17 @@
                                     <div class="imgs"><img src="__ROOT__/{$obj['recontent']['images'][$i]['thumb']}" unfold-src="__ROOT__/{$obj['recontent']['images'][$i]['unfold']}" source-src="__ROOT__/{$obj['recontent']['images'][$i]['source']}" alt=""></div>
                                 </for>
                             </switch>
+                            <div class="footer">
+                                <span class="time">{$obj.recontent.time}该微博共被转发了{$obj.recontent.recount}次</span>
+                            </div>
                         </div>
                         <div class="footer">
                             <span class="time">{$obj.time}</span>
                             <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播</a> | 评论 | 收藏</span>
                             <div class="re_box" style="display: none;">
                                 <p>表情、字数限制自行完成</p>
-                                <textarea class="re_text" name="commend"></textarea>
-                                <input type="text" name="reid" value="{$obj.id}"/>
+                                <textarea class="re_text" name="commend"> || @{$obj.username}: {$obj.textarea}</textarea>
+                                <input type="hidden" name="reid" value="{$obj.reid}"/>
                                 <input class="re_button" type="button" value="转播"/>
                             </div>
                         </div>

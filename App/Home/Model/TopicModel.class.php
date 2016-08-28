@@ -78,7 +78,7 @@ class TopicModel extends Model\RelationModel{
     public function getList($first,$total){
         return $this->format($this->relation(true)
                         ->table('__TOPIC__ a,__USER__ b')
-                        ->field('a.id,a.content,a.content_over,a.create,a.uid,a.reid,b.username,b.face,b.domain')
+                        ->field('a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain')
                         ->limit($first, $total)
                         ->order('a.create DESC')
                         ->where('a.uid=b.id')
@@ -104,7 +104,7 @@ class TopicModel extends Model\RelationModel{
                 $list[$key]['time'] = '今天'.date('H:i',$list[$key]['create']);
             }else if(date("Y-m-d",strtotime("-1 day")) == date('Y-m-d',$list[$key]['create'])){
                 $list[$key]['time'] = '昨天'.date('H:i',$list[$key]['create']);
-            }else if($time < 60 * 60 * 365){
+            }else if(date('Y')==date('Y',$list[$key]['create'])){
                 $list[$key]['time'] = date('m月d日H:i',$list[$key]['create']);
             }else{
                 $list[$key]['time'] = date('Y年m月d日H:i',$list[$key]['create']);
@@ -112,6 +112,9 @@ class TopicModel extends Model\RelationModel{
             //表情解析
             $list[$key]['content'] .= $list[$key]['content_over'];
             $list[$key]['content'] = preg_replace('/\[(a|b|c|d)_([0-9])+\]/i','<img src="'.__ROOT__.'/Public/'.MODULE_NAME.'/face/$1/$2.gif" border="0">',$list[$key]['content']);
+
+            //textarea专用，不转换
+            $list[$key]['textarea'] = $list[$key]['content'];
 
             //解析@符号
             $list[$key]['content'] .=' ';
@@ -133,8 +136,8 @@ class TopicModel extends Model\RelationModel{
     private function getReContent($reid){
         return $this->format2($this->relation(true)
                     ->table('__TOPIC__ a,__USER__ b')
-                    ->field('a.id,a.content,a.content_over,a.create,a.uid,a.reid,b.username,b.face,b.domain')
-                    ->where('a.id='.$reid)
+                    ->field('a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain')
+                    ->where('a.uid=b.id AND a.id='.$reid)
                     ->find());
     }
 
@@ -145,16 +148,32 @@ class TopicModel extends Model\RelationModel{
                 $list['images'][$key] = json_decode($value['data'], true);
             }
         }
-            $list['count'] = count($list['images']);
+        $list['count'] = count($list['images']);
 
-            //表情解析
-            $list['content'] .= $list['content_over'];
-            $list['content'] = preg_replace('/\[(a|b|c|d)_([0-9])+\]/i','<img src="'.__ROOT__.'/Public/'.MODULE_NAME.'/face/$1/$2.gif" border="0">',$list['content']);
+        //表情解析
+        $list['content'] .= $list['content_over'];
+        $list['content'] = preg_replace('/\[(a|b|c|d)_([0-9])+\]/i','<img src="'.__ROOT__.'/Public/'.MODULE_NAME.'/face/$1/$2.gif" border="0">',$list['content']);
 
             //解析@符号
-            $list['content'] .=' ';
-            $pattern = '/(@\S+)\s/i';
-            $list['content'] = preg_replace($pattern,'<a href="'.__ROOT__.'/$1" class="space" target="_blank">$1</a>',$list['content']);
+        $list['content'] .=' ';
+        $pattern = '/(@\S+)\s/i';
+        $list['content'] = preg_replace($pattern,'<a href="'.__ROOT__.'/$1" class="space" target="_blank">$1</a>',$list['content']);
+
+        //原微博时间
+        $time = NOW_TIME - $list['create'];
+        if($time<60){
+            $list['time'] = '刚刚发布';
+        }else if($time < 60 * 60){
+            $list['time'] = floor($time/60).'分钟之前';
+        }else if(date('Y-m-d')==date('Y-m-d',$list['create'])){
+            $list['time'] = '今天'.date('H:i',$list['create']);
+        }else if(date("Y-m-d",strtotime("-1 day")) == date('Y-m-d',$list['create'])){
+            $list['time'] = '昨天'.date('H:i',$list['create']);
+        }else if(date('Y')==date('Y',$list['create'])){
+            $list['time'] = date('m月d日H:i',$list['create']);
+        }else{
+            $list['time'] = date('Y年m月d日H:i',$list['create']);
+        }
 
             return $list;
         }

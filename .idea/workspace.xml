@@ -3,11 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="ddafb10a-f7c3-4f37-9661-dc61b7c2f468" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Runtime/Logs/Home/16_08_28.log" afterPath="$PROJECT_DIR$/App/Runtime/Logs/Home/16_08_28.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/Controller/HomeController.class.php" afterPath="$PROJECT_DIR$/App/Home/Controller/HomeController.class.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/Controller/TopicController.class.php" afterPath="$PROJECT_DIR$/App/Home/Controller/TopicController.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/Model/TopicModel.class.php" afterPath="$PROJECT_DIR$/App/Home/Model/TopicModel.class.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Runtime/Cache/Home/cdac79174c15306e6d18489b52381cb2.php" afterPath="$PROJECT_DIR$/App/Runtime/Cache/Home/cdac79174c15306e6d18489b52381cb2.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/css/index.css" afterPath="$PROJECT_DIR$/Public/Home/css/index.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/App/Home/View/Default/Index/index.html" afterPath="$PROJECT_DIR$/App/Home/View/Default/Index/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Public/Home/js/index.js" afterPath="$PROJECT_DIR$/Public/Home/js/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -35,7 +32,7 @@
       <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Home/Controller/IndexController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.6923075">
+            <state vertical-scroll-proportion="0.0">
               <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
               <folding />
             </state>
@@ -45,8 +42,8 @@
       <file leaf-file-name="UserModel.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Home/Model/UserModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-15.461538">
-              <caret line="167" column="48" selection-start-line="167" selection-start-column="48" selection-end-line="167" selection-end-column="48" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="122" column="51" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -55,7 +52,7 @@
       <file leaf-file-name="SpaceController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Home/Controller/SpaceController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-10.076923">
+            <state vertical-scroll-proportion="0.0">
               <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
               <folding />
             </state>
@@ -65,21 +62,9 @@
       <file leaf-file-name="SettingController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Home/Controller/SettingController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.23077">
+            <state vertical-scroll-proportion="0.0">
               <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="setting.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Public/Home/js/setting.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="152" column="25" selection-start-line="152" selection-start-column="25" selection-end-line="152" selection-end-column="25" />
-              <folding>
-                <element signature="e#0#42#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -87,8 +72,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.1538463">
-              <caret line="137" column="120" selection-start-line="137" selection-start-column="120" selection-end-line="137" selection-end-column="120" />
+            <state vertical-scroll-proportion="-53.076923">
+              <caret line="160" column="48" selection-start-line="160" selection-start-column="48" selection-end-line="160" selection-end-column="48" />
               <folding>
                 <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#0;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
@@ -113,7 +98,7 @@
         <entry file="file://$PROJECT_DIR$/Public/Home/js/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="335" column="10" selection-start-line="335" selection-start-column="10" selection-end-line="335" selection-end-column="10" />
+              <caret line="356" column="46" selection-start-line="356" selection-start-column="46" selection-end-line="356" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -122,8 +107,8 @@
       <file leaf-file-name="TopicModel.class.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Home/Model/TopicModel.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.53736657">
-              <caret line="129" column="20" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
+            <state vertical-scroll-proportion="0.3594306">
+              <caret line="80" column="87" selection-start-line="80" selection-start-column="87" selection-end-line="80" selection-end-column="87" />
               <folding />
             </state>
           </provider>
@@ -132,7 +117,7 @@
       <file leaf-file-name="TopicController.class.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Home/Controller/TopicController.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-18.538462">
+            <state vertical-scroll-proportion="0.0">
               <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
               <folding />
             </state>
@@ -212,9 +197,9 @@
         <option value="$PROJECT_DIR$/App/Home/Controller/SettingController.class.php" />
         <option value="$PROJECT_DIR$/App/Home/Controller/SpaceController.class.php" />
         <option value="$PROJECT_DIR$/App/Home/Controller/HomeController.class.php" />
-        <option value="$PROJECT_DIR$/Public/Home/js/index.js" />
         <option value="$PROJECT_DIR$/Public/Home/css/index.css" />
         <option value="$PROJECT_DIR$/App/Home/Controller/TopicController.class.php" />
+        <option value="$PROJECT_DIR$/Public/Home/js/index.js" />
         <option value="$PROJECT_DIR$/App/Home/View/Default/Index/index.html" />
         <option value="$PROJECT_DIR$/App/Home/Model/TopicModel.class.php" />
       </list>
@@ -807,13 +792,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.42704627">
-          <caret line="20" column="28" selection-start-line="20" selection-start-column="28" selection-end-line="20" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ThinkPHP/Conf/debug.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -916,7 +894,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="148" column="22" selection-start-line="148" selection-start-column="22" selection-end-line="148" selection-end-column="22" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,7 +901,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -939,7 +915,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.06802721">
           <caret line="2" column="88" selection-start-line="2" selection-start-column="88" selection-end-line="2" selection-end-column="88" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -954,7 +929,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.34875444">
           <caret line="512" column="9" selection-start-line="512" selection-start-column="9" selection-end-line="512" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -962,9 +936,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.30612245">
           <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc;n#nothing#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -979,7 +950,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.3537415">
           <caret line="12" column="45" selection-start-line="12" selection-start-column="45" selection-end-line="12" selection-end-column="45" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -994,7 +964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.79591835">
           <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1026,7 +995,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="32" column="16" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1048,14 +1016,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.4358974">
           <caret line="126" column="29" selection-start-line="126" selection-start-column="29" selection-end-line="126" selection-end-column="29" />
-          <folding>
-            <marker date="1472391711585" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1472391711585" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1472391711585" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1472391711585" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1472391711585" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1472391711585" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1063,7 +1023,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.49822065">
           <caret line="14" column="53" selection-start-line="14" selection-start-column="53" selection-end-line="14" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1071,10 +1030,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.035587188">
           <caret line="18" column="44" selection-start-line="18" selection-start-column="44" selection-end-line="18" selection-end-column="44" />
-          <folding>
-            <element signature="n#style#0;n#a#0;n#div#0;n#div#1;n#block#1;n#!!top" expanded="false" />
-            <element signature="n#style#0;n#a#1;n#div#0;n#div#1;n#block#1;n#!!top" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1082,7 +1037,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37010676">
           <caret line="12" column="44" selection-start-line="12" selection-start-column="44" selection-end-line="12" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1090,7 +1044,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8232503">
           <caret line="26" column="33" selection-start-line="26" selection-start-column="33" selection-end-line="26" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1098,7 +1051,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.076923">
           <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1106,9 +1058,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.886121">
           <caret line="58" column="10" selection-start-line="58" selection-start-column="10" selection-end-line="58" selection-end-column="10" />
-          <folding>
-            <element signature="e#110#126#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1116,32 +1065,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="152" column="25" selection-start-line="152" selection-start-column="25" selection-end-line="152" selection-end-column="25" />
-          <folding>
-            <element signature="e#0#42#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Home/Controller/SpaceController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-10.076923">
+        <state vertical-scroll-proportion="0.0">
           <caret line="38" column="48" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/Controller/HomeController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0676156">
-          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/Model/UserModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-15.461538">
-          <caret line="167" column="48" selection-start-line="167" selection-start-column="48" selection-end-line="167" selection-end-column="48" />
           <folding />
         </state>
       </provider>
@@ -1154,17 +1084,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/Controller/TopicController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/Model/UserModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="122" column="51" selection-start-line="122" selection-start-column="16" selection-end-line="122" selection-end-column="51" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Home/Controller/HomeController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.25266904">
+          <caret line="35" column="55" selection-start-line="35" selection-start-column="55" selection-end-line="35" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/App/Home/Controller/IndexController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.6923075">
+        <state vertical-scroll-proportion="0.0">
           <caret line="10" column="71" selection-start-line="10" selection-start-column="71" selection-end-line="10" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/date.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="1.4163702">
+          <caret line="291" column="9" selection-start-line="291" selection-start-column="9" selection-end-line="291" selection-end-column="9" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Home/Controller/SettingController.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.23077">
+        <state vertical-scroll-proportion="0.0">
           <caret line="51" column="5" selection-start-line="51" selection-start-column="5" selection-end-line="51" selection-end-column="5" />
           <folding />
         </state>
@@ -1172,8 +1133,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Home/View/Default/Index/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.1538463">
-          <caret line="137" column="120" selection-start-line="137" selection-start-column="120" selection-end-line="137" selection-end-column="120" />
+        <state vertical-scroll-proportion="-53.076923">
+          <caret line="160" column="48" selection-start-line="160" selection-start-column="48" selection-end-line="160" selection-end-column="48" />
           <folding>
             <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#block#1;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#0;n#case#1;n#switch#0;n#dd#0;n#dl#0;n#empty#0;n#volist#0;n#div#1;n#div#0;n#block#1;n#!!top" expanded="true" />
@@ -1196,23 +1157,15 @@
     <entry file="file://$PROJECT_DIR$/Public/Home/js/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
-          <caret line="335" column="10" selection-start-line="335" selection-start-column="10" selection-end-line="335" selection-end-column="10" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Home/Controller/TopicController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.538462">
-          <caret line="58" column="32" selection-start-line="58" selection-start-column="32" selection-end-line="58" selection-end-column="32" />
+          <caret line="356" column="46" selection-start-line="356" selection-start-column="46" selection-end-line="356" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/Home/Model/TopicModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.53736657">
-          <caret line="129" column="20" selection-start-line="129" selection-start-column="20" selection-end-line="129" selection-end-column="20" />
+        <state vertical-scroll-proportion="0.3594306">
+          <caret line="80" column="87" selection-start-line="80" selection-start-column="87" selection-end-line="80" selection-end-column="87" />
           <folding />
         </state>
       </provider>

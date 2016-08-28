@@ -1,0 +1,1728 @@
+[ 2016-08-29T06:42:26+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007812s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.010334s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.010389s ]
+NOTIC: [8] Undefined offset: 1 G:\php\www\weibo\App\Home\Controller\HomeController.class.php 第 18 行.
+
+[ 2016-08-29T06:42:27+08:00 ] ::1 /weibo/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000423s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000458s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000095s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000148s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.058320s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.058379s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005353s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005431s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007084s ]
+
+[ 2016-08-29T06:42:27+08:00 ] ::1 /weibo/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000270s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000445s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000487s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000524s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000579s ]
+
+[ 2016-08-29T06:42:37+08:00 ] ::1 /weibo/Home/User/checkVerify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.023523s ]
+NOTIC: [2] sha1() expects at least 1 parameter, 0 given G:\php\www\weibo\ThinkPHP\Library\Think\Model.class.php 第 1013 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000573s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2016-08-29T06:42:37+08:00 ] ::1 /weibo/Home/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000296s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000623s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000692s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.007464s ]
+SQL: SELECT `id`,`username`,`password`,`face` FROM `weibo_user` WHERE `username` = '路飞1' LIMIT 1   [ RunTime:0.000312s ]
+SQL: UPDATE `weibo_user` SET `last_login`=1472424157,`last_ip`=0 WHERE `id` = '18' [ RunTime:0.089385s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000669s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000720s ]
+
+[ 2016-08-29T06:42:39+08:00 ] ::1 /weibo/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000437s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+
+[ 2016-08-29T06:42:39+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000710s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000765s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.014554s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.135029s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.040041s ]
+SQL: DESCRIBE weibo_image [ RunTime:0.037332s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='46' )  [ RunTime:0.000298s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='45' )  [ RunTime:0.000203s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='44' )  [ RunTime:0.000191s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000226s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='42' )  [ RunTime:0.000197s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='41' )  [ RunTime:0.000192s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='40' )  [ RunTime:0.000203s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='39' )  [ RunTime:0.000191s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='38' )  [ RunTime:0.000190s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000197s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.004711s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000394s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000273s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.003988s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000332s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000229s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.004576s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=43 ) LIMIT 1   [ RunTime:0.000499s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000332s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.004229s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000461s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000263s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000291s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000334s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.218251s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.218313s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000640s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000694s ]
+
+[ 2016-08-29T06:42:40+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000551s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.026021s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.036696s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000475s ]
+SQL: DESCRIBE weibo_image [ RunTime:0.012292s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='46' )  [ RunTime:0.000256s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='45' )  [ RunTime:0.000199s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='44' )  [ RunTime:0.000192s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000197s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='42' )  [ RunTime:0.000201s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='41' )  [ RunTime:0.000186s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='40' )  [ RunTime:0.000183s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='39' )  [ RunTime:0.000175s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='38' )  [ RunTime:0.000145s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000143s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.019183s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000336s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000218s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.033575s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000379s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000211s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.023615s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=43 ) LIMIT 1   [ RunTime:0.000322s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000256s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.047542s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000371s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000208s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000225s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000270s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.131506s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.131565s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000462s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000514s ]
+
+[ 2016-08-29T06:42:41+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000454s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000506s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.008044s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000241s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000387s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000424s ]
+
+[ 2016-08-29T06:42:41+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000732s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000785s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.006572s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '炎日' LIMIT 1   [ RunTime:0.000412s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.008370s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='16' ) LIMIT 1   [ RunTime:0.000265s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000588s ]
+
+[ 2016-08-29T06:42:41+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000481s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.004954s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '路飞1' LIMIT 1   [ RunTime:0.000293s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.003845s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='18' ) LIMIT 1   [ RunTime:0.000283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000646s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000687s ]
+
+[ 2016-08-29T06:57:13+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000561s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.010909s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.006112s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`count`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000314s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`count`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000281s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000366s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.140938s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.140996s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000994s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001068s ]
+
+[ 2016-08-29T06:57:13+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000542s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005684s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005619s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`count`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000347s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`count`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000240s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000289s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.203986s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.204038s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000515s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000553s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000636s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000684s ]
+
+[ 2016-08-29T06:57:13+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000513s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004906s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000184s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000583s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000628s ]
+
+[ 2016-08-29T06:57:27+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.016194s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004115s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000228s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000313s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000385s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.193031s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.193104s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000377s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000956s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001025s ]
+
+[ 2016-08-29T06:57:28+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000443s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000922s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.012268s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.006708s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000259s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000266s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000330s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.193242s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.193304s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000380s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000414s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000817s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000885s ]
+
+[ 2016-08-29T06:57:28+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000425s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004875s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000208s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000534s ]
+
+[ 2016-08-29T06:57:29+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000369s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.009342s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005777s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000219s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000223s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000265s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.149070s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.149115s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000286s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000339s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000381s ]
+
+[ 2016-08-29T06:57:29+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000298s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000592s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005380s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.006308s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000234s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000394s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000488s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.179594s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.179640s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000744s ]
+
+[ 2016-08-29T06:57:29+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000247s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000363s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004857s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000240s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000647s ]
+
+[ 2016-08-29T06:57:31+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000260s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000328s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000376s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.009528s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005412s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000217s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000261s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000301s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.143534s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.143580s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000287s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000338s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000383s ]
+
+[ 2016-08-29T06:57:31+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000859s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.012019s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005678s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000283s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000309s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000371s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.185013s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.185091s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000374s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000670s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000762s ]
+
+[ 2016-08-29T06:57:31+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005227s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000202s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000438s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000478s ]
+
+[ 2016-08-29T06:57:51+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000319s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000355s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.011478s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005237s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000260s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000262s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000304s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.132756s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.132802s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000293s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000718s ]
+
+[ 2016-08-29T06:57:51+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005181s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004896s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000232s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000274s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000326s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.188881s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.188930s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000351s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000853s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000940s ]
+
+[ 2016-08-29T06:57:51+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000592s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004587s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000225s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000571s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000609s ]
+
+[ 2016-08-29T06:57:52+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000235s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.012664s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005366s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000218s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000270s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000319s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.134920s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.134979s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000394s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000692s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000741s ]
+
+[ 2016-08-29T06:57:53+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000568s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005250s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.006540s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000256s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000413s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000488s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.181220s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.181267s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000330s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000717s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000790s ]
+
+[ 2016-08-29T06:57:53+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000772s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000851s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.008966s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000601s ]
+
+[ 2016-08-29T06:58:43+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000265s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.016350s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004835s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000239s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000238s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000286s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.133901s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.133960s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001011s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001082s ]
+
+[ 2016-08-29T06:58:43+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000384s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004487s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005219s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000232s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000249s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000295s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.207826s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.207875s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000554s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000641s ]
+
+[ 2016-08-29T06:58:43+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000383s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000719s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000788s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005247s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000231s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000617s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000660s ]
+
+[ 2016-08-29T06:58:45+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000462s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.010782s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005163s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000215s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000239s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000279s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.133672s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.133721s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000755s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000811s ]
+
+[ 2016-08-29T06:58:46+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.044898s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.015455s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000387s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000416s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000528s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.161048s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.161117s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000860s ]
+
+[ 2016-08-29T06:58:46+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000254s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000326s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000373s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005789s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000192s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000413s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000461s ]
+
+[ 2016-08-29T06:58:53+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000390s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000437s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.022016s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004023s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000198s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000269s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000315s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.144630s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.144676s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000270s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000584s ]
+
+[ 2016-08-29T06:58:53+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.011143s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.086518s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000321s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000286s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000340s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.213534s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.213650s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000352s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000839s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000933s ]
+
+[ 2016-08-29T06:58:53+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000388s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000541s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004714s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000177s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000614s ]
+
+[ 2016-08-29T06:58:53+08:00 ] ::1 /weibo/Index/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000267s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000327s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+ERR: 非法操作:index.js.map
+
+[ 2016-08-29T06:59:05+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000241s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000318s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.023590s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004230s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000193s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000276s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000321s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.133708s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.133755s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000265s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000586s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000683s ]
+
+[ 2016-08-29T06:59:06+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000787s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000856s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.130382s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.016157s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000289s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000264s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000318s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.183924s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.183985s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000508s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000563s ]
+
+[ 2016-08-29T06:59:06+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000262s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000483s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.014459s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000283s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000897s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000981s ]
+
+[ 2016-08-29T06:59:06+08:00 ] ::1 /weibo/Index/index.js.map
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000618s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000677s ]
+ERR: 非法操作:index.js.map
+
+[ 2016-08-29T06:59:27+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000250s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000476s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.009752s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005765s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000238s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000296s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000347s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.133165s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.133212s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000355s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001352s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001448s ]
+
+[ 2016-08-29T06:59:28+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000499s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.011586s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005831s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000207s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000395s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000474s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.198440s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.198521s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001325s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001477s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000991s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001064s ]
+
+[ 2016-08-29T06:59:28+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000724s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000794s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.006283s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000215s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000654s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000724s ]
+
+[ 2016-08-29T07:00:02+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000738s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000816s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.049396s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.013103s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000248s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000372s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000443s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.159641s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.159727s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000360s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000812s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000884s ]
+
+[ 2016-08-29T07:00:02+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000432s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004513s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.007049s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000251s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000269s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000336s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.207452s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.207510s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000873s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000936s ]
+
+[ 2016-08-29T07:00:02+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000806s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000882s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005710s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000289s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000642s ]
+
+[ 2016-08-29T07:00:33+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001585s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.024433s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005880s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000199s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000378s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000469s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.154691s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.154737s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000324s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000353s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000769s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000839s ]
+
+[ 2016-08-29T07:00:33+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000256s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.012593s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005760s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000230s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000359s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000443s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.215137s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.215189s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000338s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000372s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000681s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000778s ]
+
+[ 2016-08-29T07:00:33+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000423s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000779s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000861s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.006023s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000181s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000566s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000615s ]
+
+[ 2016-08-29T07:00:34+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000291s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000509s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.010851s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004811s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000217s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000222s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000262s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.130790s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.130881s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000613s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000656s ]
+
+[ 2016-08-29T07:00:35+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000385s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000426s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004770s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.007911s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000202s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000232s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000280s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.177375s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.177425s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000276s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000596s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000715s ]
+
+[ 2016-08-29T07:00:35+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000862s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000949s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.020575s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000223s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000570s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000608s ]
+
+[ 2016-08-29T07:12:09+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000317s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.016610s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004532s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000241s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000236s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000294s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.142426s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.142476s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000363s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000395s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001078s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001160s ]
+
+[ 2016-08-29T07:12:09+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000440s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000812s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000887s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.011026s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005727s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000245s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001210s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001467s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.195387s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.195436s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001088s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001145s ]
+
+[ 2016-08-29T07:12:09+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000809s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004405s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000227s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000590s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000630s ]
+
+[ 2016-08-29T07:12:10+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000284s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005235s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005866s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000214s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000260s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000303s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.131884s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.131933s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000379s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000662s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000725s ]
+
+[ 2016-08-29T07:12:10+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000525s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.011845s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005938s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000239s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000242s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.187643s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.187697s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000397s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000437s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001446s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001565s ]
+
+[ 2016-08-29T07:12:10+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000465s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004941s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000204s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000601s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000638s ]
+
+[ 2016-08-29T07:15:43+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000500s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.016916s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004125s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000235s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000249s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.130711s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.130758s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000600s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001515s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001602s ]
+
+[ 2016-08-29T07:15:44+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000750s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004840s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.006973s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000275s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000287s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000337s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.200816s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.200864s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000367s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000781s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000838s ]
+
+[ 2016-08-29T07:15:44+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.009402s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000307s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000923s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000978s ]
+
+[ 2016-08-29T07:15:47+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000245s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.023909s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004188s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000221s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000348s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000434s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.147603s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.147661s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000402s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000662s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000723s ]
+
+[ 2016-08-29T07:15:47+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000504s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005843s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.007188s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000284s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000248s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.176921s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.176992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000372s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000904s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000969s ]
+
+[ 2016-08-29T07:15:47+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000249s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000803s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000873s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004929s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000197s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000555s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000598s ]
+
+[ 2016-08-29T07:15:50+08:00 ] ::1 /weibo/Setting/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.033073s ]
+SQL: SELECT `id`,`username`,`email`,`face`,`domain` FROM `weibo_user` WHERE `id` = 18 LIMIT 1   [ RunTime:0.000292s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.006686s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='18' ) LIMIT 1   [ RunTime:0.000298s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000067s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.044290s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.044341s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000483s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000515s ]
+
+[ 2016-08-29T07:15:52+08:00 ] ::1 /weibo/Setting/avatar.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000497s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000535s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.016373s ]
+SQL: SELECT `face` FROM `weibo_user` WHERE `id` = 18 LIMIT 1   [ RunTime:0.000251s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000084s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000126s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018100s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018148s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000516s ]
+
+[ 2016-08-29T07:15:53+08:00 ] ::1 /weibo/Setting/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000458s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.010662s ]
+SQL: SELECT `id`,`username`,`email`,`face`,`domain` FROM `weibo_user` WHERE `id` = 18 LIMIT 1   [ RunTime:0.000254s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.007092s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='18' ) LIMIT 1   [ RunTime:0.000236s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006717s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006784s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000526s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000587s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000475s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000529s ]
+
+[ 2016-08-29T07:15:53+08:00 ] ::1 /weibo/Setting/domain.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000486s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.004241s ]
+SQL: SELECT `id`,`username`,`email`,`face`,`domain` FROM `weibo_user` WHERE `id` = 18 LIMIT 1   [ RunTime:0.000271s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.006019s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='18' ) LIMIT 1   [ RunTime:0.000263s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000068s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.042103s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.042154s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000367s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000400s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000439s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000471s ]
+
+[ 2016-08-29T07:15:55+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000447s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.012124s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005270s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000255s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000222s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000263s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.132152s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.132202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000679s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000764s ]
+
+[ 2016-08-29T07:15:56+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000488s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001598s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.007626s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.011812s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000317s ]
+ERR: 1054:Unknown column 'a' in 'field list'
+ [ SQL语句 ] : SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,`a`,`recount`,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10  
+NOTIC: [2] Invalid argument supplied for foreach() G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 90 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000392s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000468s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.171164s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.171215s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000475s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000631s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000688s ]
+
+[ 2016-08-29T07:15:56+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008227s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000844s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000997s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004262s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000197s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000627s ]
+
+[ 2016-08-29T07:20:22+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000527s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000885s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000948s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.022183s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004814s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000408s ]
+SQL: DESCRIBE weibo_image [ RunTime:0.007554s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='46' )  [ RunTime:0.000229s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='45' )  [ RunTime:0.000132s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='44' )  [ RunTime:0.000116s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000123s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='42' )  [ RunTime:0.000113s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='41' )  [ RunTime:0.000108s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='40' )  [ RunTime:0.000106s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='39' )  [ RunTime:0.000106s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='38' )  [ RunTime:0.000131s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000139s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.004823s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000261s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000159s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.004318s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000313s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000149s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.005026s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=43 ) LIMIT 1   [ RunTime:0.000342s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000364s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.004269s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000286s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000230s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000246s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000290s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.159623s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.159693s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001247s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001355s ]
+
+[ 2016-08-29T07:20:23+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000539s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004904s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005179s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000468s ]
+SQL: DESCRIBE weibo_image [ RunTime:0.004952s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='46' )  [ RunTime:0.000283s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='45' )  [ RunTime:0.000238s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='44' )  [ RunTime:0.000199s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000194s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='42' )  [ RunTime:0.000219s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='41' )  [ RunTime:0.000184s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='40' )  [ RunTime:0.000159s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='39' )  [ RunTime:0.000174s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='38' )  [ RunTime:0.000158s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000153s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.004990s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000334s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000219s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.005257s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000340s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000210s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.005499s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=43 ) LIMIT 1   [ RunTime:0.000431s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000245s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.005084s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000360s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000359s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 125 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000237s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000278s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.146051s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.146135s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000408s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000696s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000755s ]
+
+[ 2016-08-29T07:20:23+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000396s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000618s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.019661s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000236s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000770s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000853s ]
+
+[ 2016-08-29T07:20:23+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000569s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000623s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.006804s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '炎日' LIMIT 1   [ RunTime:0.000283s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.006466s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='16' ) LIMIT 1   [ RunTime:0.000301s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000469s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000503s ]
+
+[ 2016-08-29T07:20:23+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000251s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000335s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.004074s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '路飞1' LIMIT 1   [ RunTime:0.000291s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.004045s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='18' ) LIMIT 1   [ RunTime:0.000280s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000494s ]
+

@@ -354,6 +354,7 @@ $(function(){
                     setTimeout(function () {
                         $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/loading.gif)no-repeat 20px center').html('...').dialog('close');
                         commend.val('');
+                        location.reload(true);
                     },500);
                     }else{
 
