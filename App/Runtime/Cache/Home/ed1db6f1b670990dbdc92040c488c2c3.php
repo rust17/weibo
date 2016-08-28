@@ -11,14 +11,7 @@
 
 
 
-    <script type="text/javascript" src="/weibo/Public/Home/uploadify/jquery.uploadify.min.js"></script>
-    <script type="text/javascript" src="/weibo/Public/Home/js/jquery-migrate-1.2.1.js"></script>
-    <script type="text/javascript" src="/weibo/Public/Home/js/jquery.Jcrop.js"></script>
-    <script type="text/javascript" src="/weibo/Public/Home/js/setting.js"></script>
-    <link rel="stylesheet" href="/weibo/Public/Home/uploadify/uploadify.css">
-    <link rel="stylesheet" href="/weibo/Public/Home/css/setting.css">
-    <link rel="stylesheet" href="/weibo/Public/Home/css/jquery.Jcrop.css">
-
+<link rel="stylesheet" href="/weibo/Public/Home/css/space.css" />
 
 
 <script type="text/javascript">
@@ -83,30 +76,19 @@
 <div id="main">
     
     <div class="main_left">
-        <ul>
-            <li><a href="<?php echo U('Setting/index');?>">个人设置</a></li>
-            <li><a href="<?php echo U('Setting/avatar');?>" class="selected">头像设置</a></li>
-            <li><a href="<?php echo U('Setting/domain');?>">个性域名</a></li>
-        </ul>
+        <div class="header">
+            <dl>
+                <dt>
+                    <?php if(empty($bigFace)): ?><dt><img src="/weibo/Public/Home/img/big.jpg" alt="" /></dt>
+                        <?php else: ?>
+                        <dt><img src="/weibo/<?php echo ($bigFace); ?>" alt=""></dt><?php endif; ?></dt>
+                <dd class="username"><?php echo ($user["username"]); ?></dd>
+                <dd class="intro">个人简介：<?php echo ($user["extend"]["intro"]); ?></dd>
+            </dl>
+        </div>
     </div>
     <div class="main_right">
-        <h2>头像设置</h2>
-        <p class="face_info">请上传一张头像图片，尺寸不低于200px*200px</p>
-        <div class="face">
-            <?php if(empty($bigFace)): ?><img id="face" src="/weibo/Public/Home/img/big.jpg">
-                <?php else: ?>
-                <img id="face" src="/weibo<?php echo ($bigFace); ?>"/><?php endif; ?>
-
-            <span id="preview_box" class="crop_preview"><img id="crop_preview" src="/weibo/Public/Home/img/big.jpg"></span>
-            <a href="javascript:void (0)" class="save" style="display: none;margin: 10px 0 0 0;">保存</a>
-            <a href="javascript:void (0)" class="cancel" style="display: none;margin: 10px 0 0 0;">取消</a>
-            <input type="hidden" id="x" name="x" />
-            <input type="hidden" id="y" name="y" />
-            <input type="hidden" id="w" name="w" />
-            <input type="hidden" id="h" name="h" />
-            <input type="hidden" id="url" name="url" />
-            <input type="file" name="file" id="file" />
-        </div>
+        right
     </div>
 
 </div>

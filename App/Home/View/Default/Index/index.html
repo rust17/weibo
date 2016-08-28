@@ -47,11 +47,33 @@
                 <li><a href="javascript:void(0)" class="selected">我关注的<i class="nav_arrow"></i></a></li>
                 <li><a href="javascript:void(0)">互听的</a></li>
             </ul>
+            <!--这里插入一个DOM节点-->
             <volist name="topicList" id="obj">
             <dl class="weibo_content_data">
-                <dt><a href="javascript:void (0)"><img src="__IMG__/small_face.jpg" alt="" /></a></dt>
+                <dt><a href="javascript:void (0)">
+                    <empty name="obj.face">
+                        <empty name="obj.domain">
+                            <a href="{:U('Space/index',array('id'=>$obj['uid']))}"><img src="__IMG__/small_face.jpg" alt="" /></a>
+                        <else/>
+                            <a href="__ROOT__/i/{$obj.domain}"><img src="__IMG__/small_face.jpg" alt="" /></a>
+                        </empty>
+                    <else/>
+                        <empty name="obj.domain">
+                            <a href="{:U('Space/index',array('id'=>$obj['uid']))}"><img src="__ROOT__/{$obj.face}" alt=""></a>
+                        <else/>
+                            <a href="__ROOT__/i/{$obj.domain}"><img src="__ROOT__/{$obj.face}" alt=""></a>
+                        </empty>
+                    </empty>
+
+                </a></dt>
                 <dd>
-                    <h4><a href="javascript:void (0)">{$obj.username}</a></h4>
+                    <h4>
+                    <empty name="obj.domain">
+                        <a href="{:U('Space/index',array('id'=>$obj['uid']))}">{$obj.username}</a>
+                    <else/>
+                        <a href="__ROOT__/i/{$obj.domain}">{$obj.username}</a>
+                    </empty>
+                    </h4>
                     <p>{$obj.content}</p>
                     <switch name="obj.count">
                         <case value="0"></case>
@@ -89,7 +111,13 @@
             <!--无配图-->
             <div id="ajax_html1" style="display: none;">
                 <dl class="weibo_content_data">
-                    <dt><a href="javascript:void (0)"><img src="__IMG__/small_face.jpg" alt=""/></a></dt>
+                    <dt><a href="javascript:void (0)">
+                        <empty name="smallFace">
+                            <img src="__IMG__/small_face.jpg" alt=""/>
+                            <else/>
+                            <img src="__ROOT__/{$smallFace}" alt="" />
+                        </empty>
+                    </a></dt>
                     <dd>
                         <h4><a href="javascript:void (0)">{:session('user_auth')['username']}</a></h4>
                         <p>#内容#</p>
@@ -103,7 +131,13 @@
             <!--一张配图-->
             <div id="ajax_html2" style="display: none;">
                 <dl class="weibo_content_data">
-                    <dt><a href="javascript:void (0)"><img src="__IMG__/small_face.jpg" alt=""/></a></dt>
+                    <dt><a href="javascript:void (0)">
+                        <empty name="smallFace">
+                            <img src="__IMG__/small_face.jpg" alt=""/>
+                            <else/>
+                            <img src="__ROOT__/{$smallFace}" alt="" />
+                        </empty>
+                    </a></dt>
                     <dd>
                         <h4><a href="javascript:void (0)">{:session('user_auth')['username']}</a></h4>
                         <p>#内容#</p>
@@ -126,7 +160,13 @@
             <!--多张配图-->
             <div id="ajax_html3" style="display: none;">
                 <dl class="weibo_content_data">
-                    <dt><a href="javascript:void (0)"><img src="__IMG__/small_face.jpg" alt=""/></a></dt>
+                    <dt><a href="javascript:void (0)">
+                        <empty name="smallFace">
+                            <img src="__IMG__/small_face.jpg" alt=""/>
+                            <else/>
+                            <img src="__ROOT__/{$smallFace}" alt="" />
+                        </empty>
+                    </a></dt>
                     <dd>
                         <h4><a href="javascript:void (0)">{:session('user_auth')['username']}</a></h4>
                         <p>#内容#</p>
@@ -140,6 +180,13 @@
         </div>
     </div>
     <div class="main_right">
-        right
+        <empty name="bigFace">
+            <img src="__IMG__/big.jpg" alt="" class="face"/>
+            <else/>
+            <img src="__ROOT__{$bigFace}" alt="" class="face">
+        </empty>
+        <span class="user">
+            <a href="javascript:void (0)">{:session('user_auth')['username']}</a>
+        </span>
     </div>
 </block>

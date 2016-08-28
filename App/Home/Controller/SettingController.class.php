@@ -20,11 +20,31 @@ class SettingController extends HomeController {
         }
     }
 
+    //显示个性域名
+    public function domain(){
+        if($this->login()){
+            $User = D('User');
+            $this->assign('domain',$User->getUser()['domain']);
+            $this->display();
+        }
+    }
+
     //修改资料
     public function updateUser(){
         if(IS_AJAX){
             $User = D('User');
             $uid = $User -> updateUser(I('post.email'),I('post.intro'));
+            echo $uid;
+        }else{
+            $this->error('非法访问！');
+        }
+    }
+
+    //注册个性域名
+    public function registerDomain(){
+        if(IS_AJAX){
+            $User = D('User');
+            $uid = $User -> registerDomain(I('post.domain'));
             echo $uid;
         }else{
             $this->error('非法访问！');

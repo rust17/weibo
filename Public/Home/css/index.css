@@ -369,3 +369,19 @@
     position: relative;
     top: 1px;
 }
+#main .main_right .face{
+    display: block;
+    width: 120px;
+    height: 120px;
+    margin: 30px auto 10px auto;
+}
+#main .main_right .user{
+    display: block;
+    text-align: center;
+    font-size: 13px;
+}
+#main .main_right .user a{
+    text-decoration: none;
+    color: #049;
+    font-weight: bold;
+}

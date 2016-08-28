@@ -24,6 +24,7 @@
         'IMAGEURL' : '<?php echo U("File/image");?>',
         'FACEURL' : '<?php echo U("File/face");?>',
         'UPLOADIFY' : '/weibo/Public/Home/uploadify',
+        'BIGFACE' : '<?php echo session("user_auth")["face"]->big;?>',
         'INDEX' : '<?php echo U("Index/index");?>',
     };
 </script>
@@ -43,7 +44,7 @@
         </div>
         <div class="person">
             <ul>
-                <li><a href="#">蜡笔小新</a></li>
+                <li><a href="#"><?php echo session('user_auth')['username'];?></a></li>
                 <li class="app">消息
                     <dl class="list">
                         <dd><a href="#">@提到我的</a></dd>
@@ -79,6 +80,7 @@
         <ul>
             <li><a href="<?php echo U('Setting/index');?>" class="selected">个人设置</a></li>
             <li><a href="<?php echo U('Setting/avatar');?>">头像设置</a></li>
+            <li><a href="<?php echo U('Setting/domain');?>">个性域名</a></li>
         </ul>
     </div>
     <div class="main_right">

@@ -64,7 +64,7 @@ class FileModel extends Model{
         $image->open($url);
         $image->crop($w,$h,$x,$y)->save($url);
         $image->thumb(200,200,Image::IMAGE_THUMB_FIXED)->save($bigPath);
-        $image->thumb(200,200,Image::IMAGE_THUMB_FIXED)->save($smallPath);
+        $image->thumb(50,50,Image::IMAGE_THUMB_FIXED)->save($smallPath);
         $imageArr = array(
             'big' => $bigPath,
             'small' => $smallPath,

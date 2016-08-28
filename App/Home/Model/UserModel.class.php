@@ -106,7 +106,7 @@ class UserModel extends Model\RelationModel{
             }
         }
         //验证密码
-        $user = $this->field('id,username,password')->where($map)->find();
+        $user = $this->field('id,username,password,face')->where($map)->find();
         if($user['password'] == sha1($password)){
             //登录验证后写入登录消息
             $update = array(
@@ -120,6 +120,7 @@ class UserModel extends Model\RelationModel{
             $auth = array(
                 'id'=>$user['id'],
                 'username'=>$user['username'],
+                'face'=>json_decode($user['face']),
                 'last_login'=>NOW_TIME,
             );
             //写入到session
@@ -137,9 +138,13 @@ class UserModel extends Model\RelationModel{
     }
 
     //通过一对一关联获取用户信息
-    public function getUser(){
-        $map['id'] = session('user_auth')['id'];
-        $user = $this->relation(true)->field('id,username,email')->where($map)->find();
+    public function getUser($id = 0){
+        if($id == 0){
+            $map['id'] = session('user_auth')['id'];
+        }else{
+            $map['id'] = $id;
+        }
+        $user = $this->relation(true)->field('id,username,email,face,domain')->where($map)->find();
         if(!is_array($user['extend'])){
             $UserExtend = M('UserExtend');
             $data = array(
@@ -147,6 +152,13 @@ class UserModel extends Model\RelationModel{
             );
             $UserExtend->add($data);
         }
+        return $user;
+    }
+
+    //通过一对一关联获取用户信息
+    public function getUser2($domain){
+        $map['domain'] = $domain;
+        $user = $this->relation(true)->field('id,username,email,face')->where($map)->find();
         return $user;
     }
 
@@ -175,5 +187,14 @@ class UserModel extends Model\RelationModel{
     public function getFace(){
         $map['id'] = session('user_auth')['id'];
         return json_decode($this->field('face')->where($map)->find()['face'])->big;
+    }
+
+    //注册个性域名
+    public function registerDomain($domain){
+        $data = array(
+            'domain'=>$domain,
+        );
+        $map['id'] = session('user_auth')['id'];
+        return $this->where($map)->save($data);
     }
 }

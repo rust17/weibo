@@ -62,7 +62,7 @@ class TopicModel extends Model\RelationModel{
     public function getList($first,$total){
         return $this->format($this->relation(true)
                         ->table('__TOPIC__ a,__USER__ b')
-                        ->field('a.id,a.content,a.content_over,a.create,b.username')
+                        ->field('a.id,a.content,a.content_over,a.create,a.uid,b.username,b.face,b.domain')
                         ->limit($first, $total)
                         ->order('a.create DESC')
                         ->where('a.uid=b.id')
@@ -96,6 +96,9 @@ class TopicModel extends Model\RelationModel{
             //表情解析
             $list[$key]['content'] .= $list[$key]['content_over'];
             $list[$key]['content'] = preg_replace('/\[(a|b|c|d)_([0-9])+\]/i','<img src="'.__ROOT__.'/Public/'.MODULE_NAME.'/face/$1/$2.gif" border="0">',$list[$key]['content']);
+
+            //头像解析
+            $list[$key]['face'] = json_decode($list[$key]['face'])->small;
         }
 
         return $list;

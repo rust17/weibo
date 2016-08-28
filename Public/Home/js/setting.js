@@ -80,7 +80,11 @@ $(function(){
     //取消当前图片裁剪
     $('.cancel').click(function(e){
         jcrop.destroy();
-        $('#face,#crop_preview').attr('src', ThinkPHP['IMG'] + '/big.jpg');
+        if(ThinkPHP['BIGFACE'].length > 0){
+            $('#face,#crop_preview').attr('src', ThinkPHP['ROOT'] + ThinkPHP['BIGFACE']);
+        }else{
+            $('#face,#crop_preview').attr('src', ThinkPHP['IMG'] + '/big.jpg');
+        }
         $('#preview_box').hide();
         $('.save,.cancel').hide();
         $('#file').show();
@@ -140,5 +144,28 @@ $(function(){
                 }
             }
         })
+    });
+
+    //注册个性域名
+    $('.register').button().click(function(){
+        $.ajax({
+            url: ThinkPHP['MODULE'] + '/Setting/registerDomain',
+            type: 'POST',
+            data: {
+                domain : $('input[name=domain]').val(),
+            },
+            beforeSend : function(){
+                $('#loading').html('域名注册中...').dialog('open');
+            },
+            success: function (data, response, status) {
+                if(data){
+                    $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/success.gif)no-repeat 20px 65%').html('域名注册成功。。。');
+                    setTimeout(function(){
+                        $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/success.gif)no-repeat 20px 65%').dialog('close');
+                        location.reload();
+                    },500);
+                };
+            }
+        });
     });
 });
