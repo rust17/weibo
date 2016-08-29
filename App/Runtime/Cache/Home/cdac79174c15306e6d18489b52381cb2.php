@@ -147,7 +147,7 @@
                                 <img data="/weibo/<?php echo ($obj['images'][0]['unfold']); ?>" src="/weibo/Public/Home/img/loading_100.png" alt="">
                             </div><?php break;?>
                         <?php Default: ?>
-                        <?php $__FOR_START_6796__=0;$__FOR_END_6796__=$obj['count'];for($i=$__FOR_START_6796__;$i < $__FOR_END_6796__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
+                        <?php $__FOR_START_11815__=0;$__FOR_END_11815__=$obj['count'];for($i=$__FOR_START_11815__;$i < $__FOR_END_11815__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
                     <div class="footer">
                         <span class="time"><?php echo ($obj["time"]); ?></span>
                         <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播(<?php echo ($obj["recount"]); ?>)</a> | <a href="javascript:void (0)" class="comment">评论</a> | 收藏</span>
@@ -162,6 +162,9 @@
                             <textarea class="com_text re_com_text" name="commend"></textarea>
                             <input type="hidden" name="tid" value="<?php echo ($obj["id"]); ?>"/>
                             <input class="com_button" type="button" value="评论"/>
+                            <div class="comment_content">
+                                <p style="text-align: center;">评论加载中<img src="/weibo/Public/Home/img/loadmore.gif"/></p>
+                            </div>
                         </div>
                     </div>
                 </dd>
@@ -202,7 +205,7 @@
                                         <img data="/weibo/<?php echo ($obj['recontent']['images'][0]['unfold']); ?>" src="/weibo/Public/Home/img/loading_100.png" alt="">
                                     </div><?php break;?>
                                 <?php Default: ?>
-                                <?php $__FOR_START_9685__=0;$__FOR_END_9685__=$obj['recontent']['count'];for($i=$__FOR_START_9685__;$i < $__FOR_END_9685__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['recontent']['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
+                                <?php $__FOR_START_14548__=0;$__FOR_END_14548__=$obj['recontent']['count'];for($i=$__FOR_START_14548__;$i < $__FOR_END_14548__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['recontent']['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
                             <div class="footer">
                                 <span class="time"><?php echo ($obj["recontent"]["time"]); ?>该微博共被转发了<?php echo ($obj["recontent"]["recount"]); ?>次</span>
                             </div>
@@ -221,6 +224,9 @@
                                 <textarea class="com_text re_com_text" name="commend"></textarea>
                                 <input type="hidden" name="tid" value="<?php echo ($obj["reid"]); ?>"/>
                                 <input class="com_button" type="button" value="评论"/>
+                                <div class="comment_content">
+                                    <p style="text-align: center;">评论加载中<img src="/weibo/Public/Home/img/loadmore.gif"/></p>
+                                </div>
                             </div>
                         </div>
                     </dd>

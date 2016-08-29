@@ -341,6 +341,30 @@ $(function(){
             $(this).parent().parent().find('.re_box').hide();
             $(this).parent().parent().find('.com_box').show();
             $(this).parent().parent().find('.com_text').focus();
+            var comment = $(this).parent().parent().find('.comment_content').find();
+            var tid = $(this).parent().parent().find('input[name="tid"]');
+            $.ajax({
+                url: ThinkPHP['MODULE'] + '/Comment/getList',
+                type: 'POST',
+                data: {
+
+                },
+                beforeSend : function(){
+
+                },
+                success: function (data, response, status) {
+                    if (data) {
+                        //删除子节点评论
+                        comment.find('*').remove();
+                        //添加评论内容
+                        comment.append(data);
+                        //@账号
+                        setUrl();
+                        //高度
+                        allHeight();
+                    }
+                }
+            });
         }else{
             $(this).parent().parent().find('.com_box').hide();
         }

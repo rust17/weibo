@@ -30,8 +30,7 @@ class TopicController extends HomeController{
     }
 
     //Ajax获取微博列表
-    public function ajaxList()
-    {
+    public function ajaxList(){
         if (IS_AJAX) {
             $Topic = D('Topic');
             $ajaxList = $Topic->getList(I('post.first'), 10);
@@ -58,7 +57,7 @@ class TopicController extends HomeController{
         if(IS_AJAX){
             $Topic = D('Topic');
             $count = $Topic->where('1=1')->count();
-            ceil($count/10);
+            echo ceil($count/10);
         }else{
             $this->error('非法访问!');
         }

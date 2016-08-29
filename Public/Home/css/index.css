@@ -364,6 +364,25 @@
     color: #049;
     text-decoration: none;
 }
+#main .weibo_content_data .comment_content{
+    border-top: 1px solid #EEEEEE;
+    width: 100%;
+    padding: 0 0 10px 0;
+    float: left;
+}
+#main .weibo_content_data .comment_content ol{
+    padding: 5px 15px 0 15px;
+}
+#main .weibo_content_data .comment_content ol li{
+    line-height: 200%;
+}
+#main .weibo_content_data .comment_content ol li.line{
+    border-bottom: 1px solid #EEEEEE;
+    color: #999;
+}
+#main .weibo_content_data .comment_content ol li.a{
+    color: #049;
+}
 #main .main_right{
     float: right;
     width: 269px;
