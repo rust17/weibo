@@ -74,6 +74,12 @@ class TopicModel extends Model\RelationModel{
         $this->where($map)->setInc('recount');
     }
 
+    //被评论的微博+1
+    public function comCount($tid){
+        $map['id'] = $tid;
+        $this->where($map)->setInc('comcount');
+    }
+
     //获取微博列表
     public function getList($first,$total){
         return $this->format($this->relation(true)

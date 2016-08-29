@@ -327,9 +327,22 @@ $(function(){
     //切换转播
     $('.re').click(function(){
         if($(this).parent().parent().find('.re_box').is(':hidden')){
+            $(this).parent().parent().find('.com_box').hide();
             $(this).parent().parent().find('.re_box').show();
+            $(this).parent().parent().find('.re_box').focus();
         }else{
             $(this).parent().parent().find('.re_box').hide();
+        }
+    });
+
+    //切换评论
+    $('.comment').click(function(){
+        if($(this).parent().parent().find('.com_box').is(':hidden')){
+            $(this).parent().parent().find('.re_box').hide();
+            $(this).parent().parent().find('.com_box').show();
+            $(this).parent().parent().find('.com_text').focus();
+        }else{
+            $(this).parent().parent().find('.com_box').hide();
         }
     });
 
@@ -357,6 +370,36 @@ $(function(){
                         location.reload(true);
                     },500);
                     }else{
+
+                }
+            }
+        });
+    });
+
+    //评论按钮
+    $('.com_button').button().click(function(){
+        var tid = $(this).parent().find('input[name="tid"]').val();
+        var content = $(this).parent().find('textarea[name="commend"]').val();
+        var commend = $(this).parent().find('textarea[name="commend"]');
+        $.ajax({
+            url: ThinkPHP['MODULE'] + '/Comment/publish',
+            type: 'POST',
+            data: {
+                tid: tid,
+                content: content,
+            },
+            beforeSend : function(){
+                $('#loading').html('评论发表中...').dialog('open');
+            },
+            success: function (data, response, status) {
+                if (data) {
+                    $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/success.gif)no-repeat 20px center').html('评论发表成功');
+                    setTimeout(function () {
+                        $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/loading.gif)no-repeat 20px center').html('...').dialog('close');
+                        commend.val('');
+
+                    },500);
+                }else{
 
                 }
             }

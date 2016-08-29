@@ -147,15 +147,21 @@
                                 <img data="/weibo/<?php echo ($obj['images'][0]['unfold']); ?>" src="/weibo/Public/Home/img/loading_100.png" alt="">
                             </div><?php break;?>
                         <?php Default: ?>
-                        <?php $__FOR_START_8534__=0;$__FOR_END_8534__=$obj['count'];for($i=$__FOR_START_8534__;$i < $__FOR_END_8534__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
+                        <?php $__FOR_START_6796__=0;$__FOR_END_6796__=$obj['count'];for($i=$__FOR_START_6796__;$i < $__FOR_END_6796__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
                     <div class="footer">
                         <span class="time"><?php echo ($obj["time"]); ?></span>
-                        <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播(<?php echo ($obj["recount"]); ?>)</a> | 评论 | 收藏</span>
-                        <div class="re_box" style="display: none;">
+                        <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播(<?php echo ($obj["recount"]); ?>)</a> | <a href="javascript:void (0)" class="comment">评论</a> | 收藏</span>
+                        <div class="re_box re_com_box" style="display: none;">
                             <p>表情、字数限制自行完成</p>
-                            <textarea class="re_text" name="commend"></textarea>
+                            <textarea class="re_text re_com_text" name="commend"></textarea>
                             <input type="hidden" name="reid" value="<?php echo ($obj["id"]); ?>"/>
                             <input class="re_button" type="button" value="转播"/>
+                        </div>
+                        <div class="com_box re_com_box" style="display: none;">
+                            <p>表情、字数限制自行完成</p>
+                            <textarea class="com_text re_com_text" name="commend"></textarea>
+                            <input type="hidden" name="tid" value="<?php echo ($obj["id"]); ?>"/>
+                            <input class="com_button" type="button" value="评论"/>
                         </div>
                     </div>
                 </dd>
@@ -196,19 +202,25 @@
                                         <img data="/weibo/<?php echo ($obj['recontent']['images'][0]['unfold']); ?>" src="/weibo/Public/Home/img/loading_100.png" alt="">
                                     </div><?php break;?>
                                 <?php Default: ?>
-                                <?php $__FOR_START_5591__=0;$__FOR_END_5591__=$obj['recontent']['count'];for($i=$__FOR_START_5591__;$i < $__FOR_END_5591__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['recontent']['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
+                                <?php $__FOR_START_9685__=0;$__FOR_END_9685__=$obj['recontent']['count'];for($i=$__FOR_START_9685__;$i < $__FOR_END_9685__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['recontent']['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
                             <div class="footer">
                                 <span class="time"><?php echo ($obj["recontent"]["time"]); ?>该微博共被转发了<?php echo ($obj["recontent"]["recount"]); ?>次</span>
                             </div>
                         </div>
                         <div class="footer">
                             <span class="time"><?php echo ($obj["time"]); ?></span>
-                            <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播</a> | 评论 | 收藏</span>
-                            <div class="re_box" style="display: none;">
+                            <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播</a> | <a href="javascript:void (0)" class="comment">评论</a> | 收藏</span>
+                            <div class="re_box re_com_box" style="display: none;">
                                 <p>表情、字数限制自行完成</p>
-                                <textarea class="re_text" name="commend"> || @<?php echo ($obj["username"]); ?>: <?php echo ($obj["textarea"]); ?></textarea>
+                                <textarea class="re_text re_com_text" name="commend"> || @<?php echo ($obj["username"]); ?>: <?php echo ($obj["textarea"]); ?></textarea>
                                 <input type="hidden" name="reid" value="<?php echo ($obj["reid"]); ?>"/>
                                 <input class="re_button" type="button" value="转播"/>
+                            </div>
+                            <div class="com_box re_com_box" style="display: none;">
+                                <p>表情、字数限制自行完成</p>
+                                <textarea class="com_text re_com_text" name="commend"></textarea>
+                                <input type="hidden" name="tid" value="<?php echo ($obj["reid"]); ?>"/>
+                                <input class="com_button" type="button" value="评论"/>
                             </div>
                         </div>
                     </dd>

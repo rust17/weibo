@@ -95,12 +95,18 @@
                     </switch>
                     <div class="footer">
                         <span class="time">{$obj.time}</span>
-                        <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播({$obj.recount})</a> | 评论 | 收藏</span>
-                        <div class="re_box" style="display: none;">
+                        <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播({$obj.recount})</a> | <a href="javascript:void (0)" class="comment">评论</a> | 收藏</span>
+                        <div class="re_box re_com_box" style="display: none;">
                             <p>表情、字数限制自行完成</p>
-                            <textarea class="re_text" name="commend"></textarea>
+                            <textarea class="re_text re_com_text" name="commend"></textarea>
                             <input type="hidden" name="reid" value="{$obj.id}"/>
                             <input class="re_button" type="button" value="转播"/>
+                        </div>
+                        <div class="com_box re_com_box" style="display: none;">
+                            <p>表情、字数限制自行完成</p>
+                            <textarea class="com_text re_com_text" name="commend"></textarea>
+                            <input type="hidden" name="tid" value="{$obj.id}"/>
+                            <input class="com_button" type="button" value="评论"/>
                         </div>
                     </div>
                 </dd>
@@ -164,12 +170,18 @@
                         </div>
                         <div class="footer">
                             <span class="time">{$obj.time}</span>
-                            <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播</a> | 评论 | 收藏</span>
-                            <div class="re_box" style="display: none;">
+                            <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播</a> | <a href="javascript:void (0)" class="comment">评论</a> | 收藏</span>
+                            <div class="re_box re_com_box" style="display: none;">
                                 <p>表情、字数限制自行完成</p>
-                                <textarea class="re_text" name="commend"> || @{$obj.username}: {$obj.textarea}</textarea>
+                                <textarea class="re_text re_com_text" name="commend"> || @{$obj.username}: {$obj.textarea}</textarea>
                                 <input type="hidden" name="reid" value="{$obj.reid}"/>
                                 <input class="re_button" type="button" value="转播"/>
+                            </div>
+                            <div class="com_box re_com_box" style="display: none;">
+                                <p>表情、字数限制自行完成</p>
+                                <textarea class="com_text re_com_text" name="commend"></textarea>
+                                <input type="hidden" name="tid" value="{$obj.reid}"/>
+                                <input class="com_button" type="button" value="评论"/>
                             </div>
                         </div>
                     </dd>
