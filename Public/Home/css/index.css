@@ -422,7 +422,19 @@
     cursor: pointer;
     display: block;
 }
-
+.page {
+    text-align: right;
+    padding: 0 15px 0 0;
+}
+.page a {
+    margin: 0 0 0 5px;
+    padding: 2px 8px 2px 8px;
+    border: 1px solid #EEEEEE;
+}
+.page a:hover,.page a.select{
+    color: #FFFFFF;!important;
+    background: #333;
+}
 #scrollUp{
     bottom: 20px;
     right: 20px;

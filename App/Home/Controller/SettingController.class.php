@@ -50,4 +50,14 @@ class SettingController extends HomeController {
             $this->error('非法访问！');
         }
     }
+
+    //显示@提及到我
+    public function refer(){
+        if($this->login()){
+            $Refer = D('refer');
+            $getRefer = $Refer->getRefer(session('user_auth'['id']));
+            $this->assign('getRefer',$getRefer);
+            $this->display();
+        }
+    }
 }

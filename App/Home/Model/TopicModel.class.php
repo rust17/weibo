@@ -55,16 +55,37 @@ class TopicModel extends Model\RelationModel{
             $data['reid'] = $reid;
         }
         if($this->create($data)){
-            $uid = $this->add();
-            if($uid){
+            $tid = $this->add();
+            if($tid){
+                //统计转发次数
                 if($reid > 0)$this->reCount($reid);
-                return $uid;
+                //@提醒
+                $this->refer($allContent,$tid);
+                return $tid;
             }else{
                 return 0;
             }
             //return $uid ? $uid : 0;
         }else{
             return $this->getError();
+        }
+    }
+
+    //@提醒
+    private function refer($content,$tid){
+        $pattern = '/(@\S+)\s/i';
+        preg_match_all($pattern,$content,$arr);
+        if(!empty($arr[0])){
+            $User = D('user');
+            $Refer = D('Refer');
+            foreach($arr[0] as $key=>$value){
+                $username = substr($value,1);
+                $uid = $User->getUser3($username)['id'];
+                if($uid){
+                    $rid = $Refer->referTo($tid,$uid);
+                    if(!$rid) return $this->getError();
+                }
+            }
         }
     }
 

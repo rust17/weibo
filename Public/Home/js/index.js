@@ -341,16 +341,16 @@ $(function(){
             $(this).parent().parent().find('.re_box').hide();
             $(this).parent().parent().find('.com_box').show();
             $(this).parent().parent().find('.com_text').focus();
-            var comment = $(this).parent().parent().find('.comment_content').find();
-            var tid = $(this).parent().parent().find('input[name="tid"]');
+            var comment = $(this).parent().parent().find('.comment_content');
+            var tid = $(this).parent().parent().find('input[name="tid"]').val();
             $.ajax({
                 url: ThinkPHP['MODULE'] + '/Comment/getList',
                 type: 'POST',
                 data: {
-
+                    tid: tid,
                 },
                 beforeSend : function(){
-
+                    comment.append('<p style="text-align: center;">评论加载中<img src="' + ThinkPHP['IMG'] + '/loadmore.gif"/></p>');
                 },
                 success: function (data, response, status) {
                     if (data) {
@@ -368,6 +368,37 @@ $(function(){
         }else{
             $(this).parent().parent().find('.com_box').hide();
         }
+    });
+
+    //分页点击
+    $('.re_com_box').on('click','.page_comment',function(){
+        var page = $(this).attr('page');
+        var comment = $(this).parent().parent().parent().find('.comment_content');
+        var tid = $(this).parent().parent().parent().find('input[name="tid"]').val();
+        comment.find('*').remove();
+        $.ajax({
+            url: ThinkPHP['MODULE'] + '/Comment/getList',
+            type: 'POST',
+            data: {
+                tid: tid,
+                page: page,
+            },
+            beforeSend : function(){
+                comment.append('<p style="text-align: center;">评论加载中<img src="' + ThinkPHP['IMG'] + '/loadmore.gif"/></p>');
+            },
+            success: function (data, response, status) {
+                if (data) {
+                    //删除子节点评论
+                    comment.find('*').remove();
+                    //添加评论内容
+                    comment.append(data);
+                    //@账号
+                    setUrl();
+                    //高度
+                    allHeight();
+                }
+            }
+        });
     });
 
     //转播按钮

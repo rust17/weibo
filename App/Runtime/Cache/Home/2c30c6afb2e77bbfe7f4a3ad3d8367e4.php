@@ -7,3 +7,6 @@
         </li>
         <li class="line"><?php echo ($obj["time"]); ?></li><?php endforeach; endif; else: echo "" ;endif; ?>
 </ol>
+<div class="page">
+    <?php $__FOR_START_25996__=1;$__FOR_END_25996__=$total+1;for($i=$__FOR_START_25996__;$i < $__FOR_END_25996__;$i+=1){ ?><a href="javascript:void (0)" page="<?php echo ($i); ?>" class="page_comment <?php echo ($page == $i ? 'select' : ''); ?>"><?php echo ($i); ?></a><?php } ?>
+</div>

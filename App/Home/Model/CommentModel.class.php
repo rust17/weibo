@@ -40,12 +40,30 @@ class CommentModel extends Model{
     }
 
     //获取评论列表
-    public function getList($tid){
-        return $this->format($this->table('__COMMENT__ a,__USER__ b')
+    public function getList($tid,$page){
+        //总记录
+        $count =  $this->table('__COMMENT__ a,__USER__ b')
             ->field('a.id,a.content,a.create,a.uid,b.username,b.domain')
             ->order('a.create DESC')
             ->where('a.uid=b.id AND a.tid='.$tid)
+            ->count();
+        //总页码
+        $total = ceil($count/5);
+        //当前first
+        $first = ($page - 1) * 5;
+        //评论数据
+        $list = $this->format($this->table('__COMMENT__ a,__USER__ b')
+            ->field('a.id,a.content,a.create,a.uid,b.username,b.domain')
+            ->order('a.create DESC')
+            ->limit($first,5)
+            ->where('a.uid=b.id AND a.tid='.$tid)
             ->select());
+        $obj = array(
+            'list'=>$list,
+            'total'=>$total,
+        );
+
+        return $obj;
     }
 
     //格式化
