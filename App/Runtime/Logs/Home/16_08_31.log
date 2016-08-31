@@ -301,3 +301,713 @@ INFO: [ app_end ] --START--
 INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000903s ]
 INFO: [ app_end ] --END-- [ RunTime:0.000968s ]
 
+[ 2016-08-31T21:43:31+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.007962s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.008622s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.008681s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.011648s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = null AND `read` = 0 LIMIT 1   [ RunTime:0.000284s ]
+NOTIC: [8] Undefined offset: 1 G:\php\www\weibo\App\Home\Controller\HomeController.class.php 第 26 行.
+
+[ 2016-08-31T21:43:31+08:00 ] ::1 /weibo/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000478s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004897s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = null AND `read` = 0 LIMIT 1   [ RunTime:0.000248s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000058s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.082161s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.082229s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.005873s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005925s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.006539s ]
+INFO: [ app_end ] --END-- [ RunTime:0.006644s ]
+
+[ 2016-08-31T21:43:31+08:00 ] ::1 /weibo/Login/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000674s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000732s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.074136s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = null AND `read` = 0 LIMIT 1   [ RunTime:0.000259s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000538s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000599s ]
+
+[ 2016-08-31T21:43:45+08:00 ] ::1 /weibo/Home/User/checkVerify
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.009174s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = null AND `read` = 0 LIMIT 1   [ RunTime:0.000248s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.009293s ]
+NOTIC: [2] sha1() expects at least 1 parameter, 0 given G:\php\www\weibo\ThinkPHP\Library\Think\Model.class.php 第 1013 行.
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000605s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000639s ]
+
+[ 2016-08-31T21:43:46+08:00 ] ::1 /weibo/Home/User/login
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000365s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000608s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000672s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.008460s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = null AND `read` = 0 LIMIT 1   [ RunTime:0.000370s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.006572s ]
+SQL: SELECT `id`,`username`,`password`,`face` FROM `weibo_user` WHERE `username` = '路飞1' LIMIT 1   [ RunTime:0.000319s ]
+SQL: UPDATE `weibo_user` SET `last_login`=1472651026,`last_ip`=0 WHERE `id` = '18' [ RunTime:0.062498s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000570s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000602s ]
+
+[ 2016-08-31T21:43:47+08:00 ] ::1 /weibo/Login/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.010421s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000307s ]
+
+[ 2016-08-31T21:43:48+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000484s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.005103s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000288s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.008634s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004544s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000609s ]
+SQL: DESCRIBE weibo_image [ RunTime:0.009247s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='49' )  [ RunTime:0.000299s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='48' )  [ RunTime:0.000227s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='47' )  [ RunTime:0.000221s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='46' )  [ RunTime:0.000209s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='45' )  [ RunTime:0.000200s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='44' )  [ RunTime:0.000208s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000207s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='42' )  [ RunTime:0.000192s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='41' )  [ RunTime:0.000214s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='40' )  [ RunTime:0.000212s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004427s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000299s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000227s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.005676s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000235s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.005163s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000424s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000244s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.124856s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=43 ) LIMIT 1   [ RunTime:0.125662s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000284s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.048105s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000425s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000271s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000249s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000293s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.150166s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.150243s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000572s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000921s ]
+
+[ 2016-08-31T21:43:48+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000026s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000329s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000644s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000724s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.043300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000257s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.050748s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.025878s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000415s ]
+SQL: DESCRIBE weibo_image [ RunTime:0.026627s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='49' )  [ RunTime:0.000246s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='48' )  [ RunTime:0.000186s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='47' )  [ RunTime:0.000155s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='46' )  [ RunTime:0.000151s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='45' )  [ RunTime:0.000141s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='44' )  [ RunTime:0.000160s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000180s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='42' )  [ RunTime:0.000161s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='41' )  [ RunTime:0.000171s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='40' )  [ RunTime:0.000155s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.059026s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000360s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000215s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.024191s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000352s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000237s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.004951s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000295s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000167s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.004948s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=43 ) LIMIT 1   [ RunTime:0.000296s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000186s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.004231s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000310s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000178s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000320s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.152855s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.152910s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000882s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000947s ]
+
+[ 2016-08-31T21:43:49+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.009244s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000286s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.006563s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000612s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000654s ]
+
+[ 2016-08-31T21:43:49+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000760s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000825s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004722s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000379s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.007450s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '路飞1' LIMIT 1   [ RunTime:0.000324s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.007495s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='18' ) LIMIT 1   [ RunTime:0.000274s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000622s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000660s ]
+
+[ 2016-08-31T21:43:49+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000512s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004776s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000285s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.004692s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '炎日' LIMIT 1   [ RunTime:0.000275s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.003842s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='16' ) LIMIT 1   [ RunTime:0.000260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000638s ]
+
+[ 2016-08-31T21:43:49+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004224s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000361s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.004773s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '山治' LIMIT 1   [ RunTime:0.000274s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.004487s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='17' ) LIMIT 1   [ RunTime:0.000260s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000627s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000665s ]
+
+[ 2016-08-31T21:43:49+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000295s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000438s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000474s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.005094s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000293s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.004312s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '路飞1' LIMIT 1   [ RunTime:0.000281s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.004366s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='18' ) LIMIT 1   [ RunTime:0.000262s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000541s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000573s ]
+
+[ 2016-08-31T21:43:49+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000266s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000694s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004599s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000286s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.004493s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '炎日:' LIMIT 1   [ RunTime:0.000248s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000594s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000631s ]
+
+[ 2016-08-31T21:43:49+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000263s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000519s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004263s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000306s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.005289s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '炎日' LIMIT 1   [ RunTime:0.000296s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.004340s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='16' ) LIMIT 1   [ RunTime:0.000253s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000544s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000576s ]
+
+[ 2016-08-31T21:43:49+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000308s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000444s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004181s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000304s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.004969s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '路飞1' LIMIT 1   [ RunTime:0.000270s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.005486s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='18' ) LIMIT 1   [ RunTime:0.000272s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000605s ]
+
+[ 2016-08-31T21:44:02+08:00 ] ::1 /weibo/Setting/refer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000261s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000774s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000878s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.009194s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000321s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004970s ]
+NOTIC: [2] Illegal string offset 'id' G:\php\www\weibo\App\Home\Controller\SettingController.class.php 第 58 行.
+SQL: SELECT `id`,`tid`,`uid`,`read` FROM `weibo_refer` WHERE `uid` = null  [ RunTime:0.000276s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021027s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021076s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000445s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000476s ]
+
+[ 2016-08-31T21:44:10+08:00 ] ::1 /weibo/Setting/refer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000259s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.010209s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000293s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004110s ]
+NOTIC: [2] Illegal string offset 'id' G:\php\www\weibo\App\Home\Controller\SettingController.class.php 第 58 行.
+SQL: SELECT `id`,`tid`,`uid`,`read` FROM `weibo_refer` WHERE `uid` = null  [ RunTime:0.000250s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008489s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008540s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000547s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000582s ]
+
+[ 2016-08-31T21:44:20+08:00 ] ::1 /weibo/Setting/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000240s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000543s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.009198s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000280s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.007271s ]
+SQL: SELECT `id`,`username`,`email`,`face`,`domain` FROM `weibo_user` WHERE `id` = 18 LIMIT 1   [ RunTime:0.000300s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.006305s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='18' ) LIMIT 1   [ RunTime:0.000259s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000071s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.043460s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.043512s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000531s ]
+
+[ 2016-08-31T21:44:22+08:00 ] ::1 /weibo/Setting/refer.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000255s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.010568s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000286s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004908s ]
+NOTIC: [2] Illegal string offset 'id' G:\php\www\weibo\App\Home\Controller\SettingController.class.php 第 58 行.
+SQL: SELECT `id`,`tid`,`uid`,`read` FROM `weibo_refer` WHERE `uid` = null  [ RunTime:0.000236s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000074s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000112s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008388s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008437s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000298s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000507s ]
+
+[ 2016-08-31T21:44:24+08:00 ] ::1 /weibo/Setting/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000479s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.010596s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000327s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.007227s ]
+SQL: SELECT `id`,`username`,`email`,`face`,`domain` FROM `weibo_user` WHERE `id` = 18 LIMIT 1   [ RunTime:0.000273s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.005834s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='18' ) LIMIT 1   [ RunTime:0.000280s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000111s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007151s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007198s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000318s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000441s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000472s ]
+
+[ 2016-08-31T21:44:26+08:00 ] ::1 /weibo/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000234s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000560s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.016403s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000288s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.006780s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004958s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000429s ]
+SQL: DESCRIBE weibo_image [ RunTime:0.005671s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='49' )  [ RunTime:0.000308s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='48' )  [ RunTime:0.000196s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='47' )  [ RunTime:0.000193s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='46' )  [ RunTime:0.000203s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='45' )  [ RunTime:0.000239s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='44' )  [ RunTime:0.000236s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000318s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='42' )  [ RunTime:0.000213s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='41' )  [ RunTime:0.000198s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='40' )  [ RunTime:0.000204s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005857s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000309s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000216s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.004238s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000340s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000214s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.004376s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000322s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000208s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.004427s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=43 ) LIMIT 1   [ RunTime:0.000348s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000216s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.003976s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000414s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000264s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000244s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000285s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.129153s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.129203s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000305s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000654s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000711s ]
+
+[ 2016-08-31T21:44:26+08:00 ] ::1 /weibo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000835s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000918s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.068245s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000243s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.021726s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004160s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id ) ORDER BY a.create DESC LIMIT 0,10   [ RunTime:0.000388s ]
+SQL: DESCRIBE weibo_image [ RunTime:0.003867s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='49' )  [ RunTime:0.000251s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='48' )  [ RunTime:0.000208s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='47' )  [ RunTime:0.000160s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='46' )  [ RunTime:0.000171s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='45' )  [ RunTime:0.000174s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='44' )  [ RunTime:0.000179s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000165s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='42' )  [ RunTime:0.000153s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='41' )  [ RunTime:0.000158s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='40' )  [ RunTime:0.000149s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.004210s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000363s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000224s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.004166s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000311s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000209s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.005366s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000321s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000203s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.005346s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=43 ) LIMIT 1   [ RunTime:0.000314s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='43' )  [ RunTime:0.000197s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+SQL: DESCRIBE weibo_topic [ RunTime:0.004592s ]
+SQL: SELECT a.id,a.content,a.content_over,a.create,a.uid,a.reid,a.recount,b.username,b.face,b.domain FROM weibo_topic a,weibo_user b WHERE ( a.uid=b.id AND a.id=37 ) LIMIT 1   [ RunTime:0.000464s ]
+SQL: SELECT `data` FROM `weibo_image` WHERE ( 1=1 AND tid='37' )  [ RunTime:0.000249s ]
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+NOTIC: [8] Trying to get property of non-object G:\php\www\weibo\App\Home\Model\TopicModel.class.php 第 152 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000272s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000312s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.137475s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.137544s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000332s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000364s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000602s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000662s ]
+
+[ 2016-08-31T21:44:26+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000380s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004058s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000259s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.006111s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '路飞1' LIMIT 1   [ RunTime:0.000239s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.006768s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='18' ) LIMIT 1   [ RunTime:0.000252s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000419s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000451s ]
+
+[ 2016-08-31T21:44:26+08:00 ] ::1 /weibo/Home/Topic/ajaxCount
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000512s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000495s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004977s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000282s ]
+SQL: DESCRIBE weibo_topic [ RunTime:0.005333s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_topic` WHERE ( 1=1 ) LIMIT 1   [ RunTime:0.000232s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000612s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000663s ]
+
+[ 2016-08-31T21:44:26+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000264s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000383s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000441s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004468s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000291s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.004582s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '炎日' LIMIT 1   [ RunTime:0.000230s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.004213s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='16' ) LIMIT 1   [ RunTime:0.000256s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000477s ]
+
+[ 2016-08-31T21:44:26+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000239s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000303s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004425s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000275s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.005224s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '山治' LIMIT 1   [ RunTime:0.000206s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.004627s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='17' ) LIMIT 1   [ RunTime:0.000213s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000488s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000528s ]
+
+[ 2016-08-31T21:44:26+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000454s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000388s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004388s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000305s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.005371s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '路飞1' LIMIT 1   [ RunTime:0.000267s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.003641s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='18' ) LIMIT 1   [ RunTime:0.000279s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000393s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000425s ]
+
+[ 2016-08-31T21:44:26+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000236s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000294s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000328s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.006086s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000282s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.004929s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '炎日:' LIMIT 1   [ RunTime:0.000261s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000498s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000538s ]
+
+[ 2016-08-31T21:44:26+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000243s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000302s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000337s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004820s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000275s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.004298s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '炎日' LIMIT 1   [ RunTime:0.000298s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.004058s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='16' ) LIMIT 1   [ RunTime:0.000228s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000395s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000427s ]
+
+[ 2016-08-31T21:44:26+08:00 ] ::1 /weibo/Home/Space/setUrl
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000238s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000356s ]
+SQL: DESCRIBE weibo_refer [ RunTime:0.004519s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `weibo_refer` WHERE `uid` = 18 AND `read` = 0 LIMIT 1   [ RunTime:0.000347s ]
+SQL: DESCRIBE weibo_user [ RunTime:0.004134s ]
+SQL: SELECT `id`,`domain` FROM `weibo_user` WHERE `username` = '路飞1' LIMIT 1   [ RunTime:0.000253s ]
+SQL: DESCRIBE weibo_user_extend [ RunTime:0.004256s ]
+SQL: SELECT `intro` FROM `weibo_user_extend` WHERE ( 1=1 AND uid='18' ) LIMIT 1   [ RunTime:0.000272s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000424s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000470s ]
+

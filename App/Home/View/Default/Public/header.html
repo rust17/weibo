@@ -11,10 +11,34 @@
         </div>
         <div class="person">
             <ul>
-                <li><a href="#">{:session('user_auth')['username']}</a></li>
+                <li class="user">
+                    <a href="#">{:session('user_auth')['username']}</a>
+                    <!--
+                    <gt name="referCount" value="0">
+                        <div class="refer">
+                            <span>x</span>
+                            您有{$referCount}条@提及！
+                        </div>
+                    </gt>
+                    -->
+                    <div class="refer">
+                        <span>x</span>
+                        您有<b>0</b>条@提及！
+                    </div>
+                </li>
                 <li class="app">消息
                     <dl class="list">
-                        <dd><a href="{:U('Setting/refer')}">@提到我的</a></dd>
+                        <dd><a href="{:U('Setting/refer')}">@提到我的
+                            <!--
+                            <gt name="referCount" value="0">
+                                    <strong style="color:red;">({$referCount})</strong>
+                                <else/>
+                                    <span>({$referCount})</span>
+                            </gt>
+                            -->
+                            <span>(0)</span>
+                            </a>
+                        </dd>
                         <dd><a href="#">收到的评论</a></dd>
                         <dd><a href="#">发出的评论</a></dd>
                         <dd><a href="#">我的私信</a></dd>

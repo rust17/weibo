@@ -15,6 +15,11 @@ $(function(){
         }).find('.list').hide();
     });
 
+    //关闭提醒
+    $('.refer_span').click(function(){
+        $(this).parent().remove();
+    });
+
     //error
     $('#error').dialog({
         width:190,
@@ -37,4 +42,30 @@ $(function(){
         autoOpen:false,
     }).parent().find('.ui-widget-header').hide();
 
+    //5秒轮询
+    getRefer();
+    function getRefer(){
+        $.ajax({
+            url : ThinkPHP['MODULE'] + '/Home/getRefer',
+            type : 'POST',
+            success : function(data,response,status){
+                if(data > 0){
+                    $('.refer').show().find('b').text(data);
+                    $('.list').find('span').text('(' + data + ')').css({
+                        color : 'red',
+                        fontWeight : 'bold'
+                    });
+                }else{
+                    $('.refer').hide();
+                    $('.list').find('span').text('(' + data + ')'),css({
+                        color : '#333',
+                        fontWeight : 'normal'
+                    });
+                }
+            }
+        })
+        setTimeout(function(){
+            getRefer();
+        },5000);
+    }
 })

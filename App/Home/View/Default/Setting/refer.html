@@ -18,7 +18,10 @@
         <h2>@提及到我</h2>
         <dl style="font-size: 14px;">
             <volist name="getRefer" id="obj">
-                <dd><a href="javascript:alert('点击进入此微博详情')">您被微博“{$obj.topic.content|mb_substr=0,10,utf8}...”</a>提及到!</dd>
+                <switch name="obj.read">
+                    <case value="0"><dd class="a"><a href="javascript:alert('点击进入此微博详情')">您被微博“{$obj.topic.content|mb_substr=0,10,utf8}...”</a>提及到!<b class="read red" rid="{$obj.id}">[未读]</b></dd></case>
+                    <case value="1"><dd class="b"><a href="javascript:alert('点击进入此微博详情')">您被微博“{$obj.topic.content|mb_substr=0,10,utf8}...”</a>提及到!<b class="read green">[已读]</b></dd></case>
+                </switch>
             </volist>
         </dl>
     </div>

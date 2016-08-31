@@ -43,4 +43,19 @@ class ReferModel extends Model\RelationModel{
         $map['uid'] = $uid;
         return $this->relation(true)->field('id,tid,uid,read')->where($map)->select();
     }
+
+    //设置阅读
+    public function readRefer($id){
+        $map['id'] = $id;
+        return $this->where($map)->save(array('read'=>1));
+    }
+
+    //获取@数量
+    public function getReferCount($uid){
+        $map = array(
+            'uid'=>$uid,
+            'read'=>0,
+        );
+        return $this->where($map)->count();
+    }
 }

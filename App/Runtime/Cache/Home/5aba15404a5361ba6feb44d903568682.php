@@ -89,21 +89,18 @@
     
     <div class="main_left">
         <ul>
-            <li><a href="<?php echo U('Setting/index');?>" class="selected">个人设置</a></li>
+            <li><a href="<?php echo U('Setting/index');?>">个人设置</a></li>
             <li><a href="<?php echo U('Setting/avatar');?>">头像设置</a></li>
             <li><a href="<?php echo U('Setting/domain');?>">个性域名</a></li>
-            <li><a href="<?php echo U('Setting/refer');?>">@提及到我</a></li>
+            <li><a href="<?php echo U('Setting/refer');?>" class="selected">@提及到我</a></li>
         </ul>
     </div>
     <div class="main_right">
-        <h2>个人设置</h2>
-        <dl>
-            <dd>账号名称：<?php echo ($user["username"]); ?></dd>
-            <dd>电子邮箱：<input type="text" name="email" value="<?php echo ($user["email"]); ?>" class="text" /><strong style="color: red;">*</strong></dd>
-            <dd><span>个人简介：</span><textarea name="intro"><?php echo ($user["extend"]["intro"]); ?></textarea></dd>
-            <dd><input type="submit" class="submit" value="修改" /></dd>
+        <h2>@提及到我</h2>
+        <dl style="font-size: 14px;">
+            <?php if(is_array($getRefer)): $i = 0; $__LIST__ = $getRefer;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$obj): $mod = ($i % 2 );++$i; switch($obj["read"]): case "0": ?><dd class="a"><a href="javascript:alert('点击进入此微博详情')">您被微博“<?php echo (mb_substr($obj["topic"]["content"],0,10,utf8)); ?>...”</a>提及到!<b class="read red" rid="<?php echo ($obj["id"]); ?>">[未读]</b></dd><?php break;?>
+                    <?php case "1": ?><dd class="b"><a href="javascript:alert('点击进入此微博详情')">您被微博“<?php echo (mb_substr($obj["topic"]["content"],0,10,utf8)); ?>...”</a>提及到!<b class="read green">[已读]</b></dd><?php break; endswitch; endforeach; endif; else: echo "" ;endif; ?>
         </dl>
-        <p style="margin: 20px 0;font-size: 13px;color: red;text-align: center;">(PS：这里为了不再重复，不做前后端验证)</p>
     </div>
 
 </div>

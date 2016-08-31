@@ -60,4 +60,15 @@ class SettingController extends HomeController {
             $this->display();
         }
     }
+
+    //设置已读
+    public function readRefer(){
+        if(IS_AJAX){
+            $Refer = D('Refer');
+            $rid = $Refer -> readRefer(I('post.id'));
+            echo $rid;
+        }else{
+            $this->error('非法访问！');
+        }
+    }
 }

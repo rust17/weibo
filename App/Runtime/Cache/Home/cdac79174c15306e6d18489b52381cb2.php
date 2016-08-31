@@ -50,10 +50,21 @@
         </div>
         <div class="person">
             <ul>
-                <li><a href="#"><?php echo session('user_auth')['username'];?></a></li>
+                <li class="user">
+                    <a href="#"><?php echo session('user_auth')['username'];?></a>
+                    <?php if(($referCount) > "0"): ?><div class="refer">
+                            <span>x</span>
+                            您有<?php echo ($referCount); ?>条@提及！
+                        </div><?php endif; ?>
+                </li>
                 <li class="app">消息
                     <dl class="list">
-                        <dd><a href="<?php echo U('Setting/refer');?>">@提到我的</a></dd>
+                        <dd><a href="<?php echo U('Setting/refer');?>">@提到我的
+                                <?php if(($referCount) > "0"): ?><strong style="color:red;">(<?php echo ($referCount); ?>)</strong>
+                                <?php else: ?>
+                                    <span>(<?php echo ($referCount); ?>)</span><?php endif; ?>
+                            </a>
+                        </dd>
                         <dd><a href="#">收到的评论</a></dd>
                         <dd><a href="#">发出的评论</a></dd>
                         <dd><a href="#">我的私信</a></dd>
@@ -147,7 +158,7 @@
                                 <img data="/weibo/<?php echo ($obj['images'][0]['unfold']); ?>" src="/weibo/Public/Home/img/loading_100.png" alt="">
                             </div><?php break;?>
                         <?php Default: ?>
-                        <?php $__FOR_START_20076__=0;$__FOR_END_20076__=$obj['count'];for($i=$__FOR_START_20076__;$i < $__FOR_END_20076__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
+                        <?php $__FOR_START_24545__=0;$__FOR_END_24545__=$obj['count'];for($i=$__FOR_START_24545__;$i < $__FOR_END_24545__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
                     <div class="footer">
                         <span class="time"><?php echo ($obj["time"]); ?></span>
                         <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播(<?php echo ($obj["recount"]); ?>)</a> | <a href="javascript:void (0)" class="comment">评论</a> | 收藏</span>
@@ -205,7 +216,7 @@
                                         <img data="/weibo/<?php echo ($obj['recontent']['images'][0]['unfold']); ?>" src="/weibo/Public/Home/img/loading_100.png" alt="">
                                     </div><?php break;?>
                                 <?php Default: ?>
-                                <?php $__FOR_START_31797__=0;$__FOR_END_31797__=$obj['recontent']['count'];for($i=$__FOR_START_31797__;$i < $__FOR_END_31797__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['recontent']['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
+                                <?php $__FOR_START_4358__=0;$__FOR_END_4358__=$obj['recontent']['count'];for($i=$__FOR_START_4358__;$i < $__FOR_END_4358__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['recontent']['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
                             <div class="footer">
                                 <span class="time"><?php echo ($obj["recontent"]["time"]); ?>该微博共被转发了<?php echo ($obj["recontent"]["recount"]); ?>次</span>
                             </div>

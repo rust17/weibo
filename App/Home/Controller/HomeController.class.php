@@ -9,6 +9,23 @@ namespace Home\Controller;
 use Think\Controller;
 
 class HomeController extends Controller{
+
+    //构造方法
+    protected function _initialize(){
+
+    }
+
+    //通过Ajax轮询执行方法
+    public function getRefer(){
+        if(IS_AJAX){
+            $Refer = D('Refer');
+            $referCount = $Refer->getReferCount(session('user_auth')['id']);
+            echo $referCount;
+        }else{
+            $this->error('非法操作！');
+        }
+    }
+
     //检测用户登录状态
     protected function login(){
         //处理自动登陆，当cookie存在，且session不存在的情况下

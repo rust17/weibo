@@ -125,6 +125,31 @@ ul,ol{
     top: 13px;
     right: 38px;
 }
+#header .user{
+    position: relative;
+}
+#header .refer{
+    display: none;
+    width: 140px;
+    height: 35px;
+    line-height: 35px;
+    background: #fafafa;
+    border: 1px solid #666666;
+    border-top: none;
+    position: absolute;
+    top: 42px;
+    left: -51px;
+    color: #666666;
+    font-size: 13px;
+    text-indent: 10px;
+}
+#header div.refer span{
+    float: right;
+    padding: 0 8px 0 0;
+    cursor: pointer;
+    position: relative;
+    top: -2px;
+}
 #main{
     width: 960px;
     min-height: 800px;

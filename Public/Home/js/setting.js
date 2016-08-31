@@ -168,4 +168,30 @@ $(function(){
             }
         });
     });
+
+    //设置已读
+    $('.read').click(function(){
+        var _this = this;
+        .ajax({
+            url: ThinkPHP['MODULE'] + '/Setting/readRefer',
+            type: 'POST',
+            data: {
+                id : $(_this).attr('rid'),
+            },
+            beforeSend : function(){
+                $('#loading').html('阅读中...').dialog('open');
+            },
+            success: function (data, response, status) {
+                if(data){
+                    $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/success.gif)no-repeat 20px 65%').html('阅读完毕。。。');
+                    $(_this).text('[已读]');
+                    $(_this).removeClass('red').addClass('green');
+                    $(_this).parent().removeClass('a').addClass('b');
+                    setTimeout(function(){
+                        $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/success.gif)no-repeat 20px 65%').dialog('close');
+                    },500);
+                };
+            }
+        });
+    });
 });
