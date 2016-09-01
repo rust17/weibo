@@ -16,4 +16,6 @@ return array(
     'DB_DSN'=>'mysql:host=localhost;dbname=weibo;charset=UTF8',
     //URL模式
     'URL_MODEL'=>2,
+    //缓存设置
+    'DATA_CACHE_TYPE'=>'Memcache',
 );

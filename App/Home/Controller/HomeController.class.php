@@ -18,9 +18,12 @@ class HomeController extends Controller{
     //通过Ajax轮询执行方法
     public function getRefer(){
         if(IS_AJAX){
+            /*
             $Refer = D('Refer');
             $referCount = $Refer->getReferCount(session('user_auth')['id']);
             echo $referCount;
+            */
+            echo S('refer'.session('user_auth')['id']);
         }else{
             $this->error('非法操作！');
         }

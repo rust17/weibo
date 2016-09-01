@@ -33,6 +33,12 @@ class ReferModel extends Model\RelationModel{
         );
         if($this->create($data)){
             $rid = $this->add();
+            if(S('refer'.$uid)){
+                $count = S('refer'.$uid);
+                S('refer'.$uid,$count+1);
+            }else{
+                S('refer'.$uid,1);
+            }
             return $rid ? $rid : 0;
         }else{
             return $this->getError();
@@ -47,6 +53,8 @@ class ReferModel extends Model\RelationModel{
     //设置阅读
     public function readRefer($id){
         $map['id'] = $id;
+        $count = S('refer'.session('user_auth')['id']);
+        S('refer'.session('user_auth')['id'],$count-1);
         return $this->where($map)->save(array('read'=>1));
     }
 
