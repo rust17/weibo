@@ -41,7 +41,29 @@ $(function(){
         }else if(!$('#password').validatebox(isValid)){
             $('#password').focus();
         }else{
-            alert('验证成功，提交中！');
+            $.ajax({
+                url : ThinkPHP['MODULE'] + '/Login/checkManager',
+                type : 'POST',
+                data : {
+                    manager : $('#manager').val(),
+                    password : $('#password').val(),
+                },
+                beforeSend : function (){
+                    $.messager.progress({
+                        text : '正在尝试登陆...',
+                    });
+                },
+                success : function(data,response,status){
+                    $.message.progress('close');
+                    if(data > 0){
+                        location.href = ThinkPHP['INDEX'];
+                    }else{
+                        $.messager.alert('登录失败！','管理员账号或密码不正确','warning',function(){
+                            $('#password').select();
+                        });
+                    }
+                },
+            })
         }
     });
 });

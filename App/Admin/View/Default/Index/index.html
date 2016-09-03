@@ -3,14 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <title>微博系统--后台管理</title>
-    <script type="text/javascript" src="__EASYUI__/jquery.min.js"></script>
-    <script type="text/javascript" src="__EASYUI__/jquery.easyui.min.js"></script>
-    <script type="text/javascript" src="__EASYUI__/locale/easyui-lang-zh_CN.js"></script>
-    <script type="text/javascript" src="__JS__/index.js"></script>
+
     <link rel="stylesheet" type="text/css" href="__EASYUI__/themes/bootstrap/easyui.css" />
     <link rel="stylesheet" type="text/css" href="__EASYUI__/themes/icon.css" />
+    <style type="text/css">
+        .logo{
+            width: 180px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            float: left;
+            color: #fff;
+        }
+        .logout{
+            float: right;
+            padding: 30px 15px 0 0;
+            color: #fff;
+        }
+        a{
+            color: #06f;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+        #nav{
+            margin: 10px 15px;
+        }
+        .tree-node-selected{
+            background: #999;
+            border-radius: 4px;
+        }
+        .tree-node-hover{
+            border-radius : 4px;
+        }
+    </style>
+    <script type="text/javascript">
+        var ThinkPHP={
+            'ROOT' : '__ROOT__',
+            'MODULE' : '__MODULE__',
+            'INDEX' : '{:U("Index/index")}',
+        };
+    </script>
 </head>
-<body>
-主页
+<body class="easyui-layout">
+    <div data-options="region:'north',title:'North Title',split:true,nohead:true" style="height:60px; background: #666;">
+        <div class="logo">微博管理</div>
+        <div class="logout">您好，{:session('admin')} | <a href="{:U('Login/out')}">退出</a></div>
+    </div>
+    <div data-options="region:'south',title:'South Title',split:true,nohead:true" style="height:35px;line-height: 30px;text-align: center;">
+        ©2009-2014 瓢城Web 俱乐部. Powered by ThinkPHP and EasyUI.
+    </div>
+    <div data-options="region:'west',title:'导航',split:true" style="width:180px;">
+        <ul id="nav"></ul>
+    </div>
+    <div data-options="region:'center',title:'center title'" style="padding:5px;background:#eee;"></div>
 </body>
+<script type="text/javascript" src="__EASYUI__/jquery.min.js"></script>
+<script type="text/javascript" src="__EASYUI__/jquery.easyui.min.js"></script>
+<script type="text/javascript" src="__EASYUI__/locale/easyui-lang-zh_CN.js"></script>
+<script type="text/javascript" src="__JS__/index.js"></script>
 </html>
