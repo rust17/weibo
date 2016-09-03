@@ -7,7 +7,7 @@ $(function(){
         title : '后台登陆',
         width : 300,
         height : 180,
-        iconCls : 'icon-tip',
+        iconCls : 'icon-login',
         modal : true,
         buttons : '#btn',
     });

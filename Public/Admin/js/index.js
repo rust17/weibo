@@ -14,6 +14,24 @@ $(function(){
                     }
                 })
             }
-        }
+        },
+        onclick : function(node){
+            if(node.url) {
+                if ($('#tabs').tabs('exists', node.text)) {
+                    $('#tabs').tabs('select', node.text)
+                } else {
+                    $('#tabs').tabs('add', {
+                        title: node.text,
+                        closable: true,
+                        iconCls: node.iconCls,
+                        href: ThinkPHP['MODULE'] + '/' + node.url,
+                    });
+                }
+            }
+        },
+    });
+
+    $('#tabs').tabs({
+        border : false,
     });
 });

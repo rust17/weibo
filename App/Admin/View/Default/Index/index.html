@@ -39,6 +39,12 @@
         .tree-node-hover{
             border-radius : 4px;
         }
+        a.tabs-inner{
+            color: #666;!important;
+        }
+        .datagrid-row-selected{
+            background: #999;!important;
+        }
     </style>
     <script type="text/javascript">
         var ThinkPHP={
@@ -56,10 +62,16 @@
     <div data-options="region:'south',title:'South Title',split:true,nohead:true" style="height:35px;line-height: 30px;text-align: center;">
         ©2009-2014 瓢城Web 俱乐部. Powered by ThinkPHP and EasyUI.
     </div>
-    <div data-options="region:'west',title:'导航',split:true" style="width:180px;">
+    <div data-options="region:'west',title:'导航',split:true,iconCls:'icon-world'" style="width:180px;">
         <ul id="nav"></ul>
     </div>
-    <div data-options="region:'center',title:'center title'" style="padding:5px;background:#eee;"></div>
+    <div data-options="region:'center'" style="overflow:hidden;">
+        <div id="tabs">
+            <div title="起始页" iconCls="icon-house" style="padding: 0 10px;">
+                <p>欢迎来到微博管理系统！</p>
+            </div>
+        </div>
+    </div>
 </body>
 <script type="text/javascript" src="__EASYUI__/jquery.min.js"></script>
 <script type="text/javascript" src="__EASYUI__/jquery.easyui.min.js"></script>
