@@ -461,6 +461,29 @@ $(function(){
         });
     });
 
+    //10秒轮询
+    getWeibo();
+    function getWeibo(){
+        $.ajax({
+            url : ThinkPHP['MODULE'] + '/Index/getWeibo',
+            type : 'POST',
+            success : function(data,response,status){
+                if(data.length > 0){
+                    $('.msg').show().text('约 + data.length + 条新广播，点击查看');
+                }else{
+                    $('.msg').hide().text('');
+                }
+            }
+        })
+        setTimeout(function(){
+            getWeibo();
+        },10000);
+    }
+
+    $('.msg').click(function(){
+        location.reload();
+    });
+
     $.scrollUp({
         scrollName: 'scrollUp',
         topDistance: '300',

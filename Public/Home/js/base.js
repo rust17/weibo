@@ -42,7 +42,7 @@ $(function(){
         autoOpen:false,
     }).parent().find('.ui-widget-header').hide();
 
-    //5秒轮询
+    //10秒轮询
     getRefer();
     function getRefer(){
         $.ajax({
@@ -66,6 +66,6 @@ $(function(){
         })
         setTimeout(function(){
             getRefer();
-        },5000);
+        },10000);
     }
 })

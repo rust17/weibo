@@ -469,3 +469,14 @@
     color: #049;
     font-weight: bold;
 }
+#main .msg{
+    border: 1px solid #FFE4C4;
+    font-size: 13px;
+    color: #FF8247;
+    background: #FFF8DC;
+    text-align: center;
+    height: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    display: none;
+}

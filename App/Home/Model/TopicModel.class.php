@@ -57,6 +57,14 @@ class TopicModel extends Model\RelationModel{
         if($this->create($data)){
             $tid = $this->add();
             if($tid){
+                if(S('weibo'.$uid)){
+                    $weibo = S('weibo'.$uid);
+                    $weibo[] = array($tid,NOW_TIME);
+                    S('weibo'.$uid,$weibo);
+                }else{
+                    S('weibo'.$uid,array(array($tid,NOW_TIME)));
+                }
+
                 //统计转发次数
                 if($reid > 0)$this->reCount($reid);
                 //@提醒

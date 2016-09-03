@@ -18,4 +18,5 @@ return array(
     'URL_MODEL'=>2,
     //缓存设置
     'DATA_CACHE_TYPE'=>'Memcache',
+    'DATA_CACHE_TIME'=>3600,
 );
