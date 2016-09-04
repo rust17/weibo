@@ -20,4 +20,24 @@ class UserController extends Controller {
             $this->error('非法操作');
         }
     }
+
+    //新增用户
+    public function register(){
+        if(IS_AJAX){
+            $User = D('User');
+            echo $User->register(I('post.username'),I('post.password'),I('post.email'),I('post.domain'),I('post.intro'));
+        }else{
+            $this->error('非法操作！');
+        }
+    }
+
+    //删除会员
+    public function remove(){
+        if(IS_AJAX){
+            $User = D('User');
+            echo($User->remove(I('post.ids')));
+        }else{
+            $this->error('非法操作！');
+        }
+    }
 }

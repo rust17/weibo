@@ -91,6 +91,15 @@
 .icon-folder{
 	background: url("icons/folder.png")no-repeat center center;
 }
+.icon-delete-new{
+	background: url("icons/delete-new.png")no-repeat center center;
+}
+.icon-add-new{
+	background: url("icons/add-new.png")no-repeat center center;
+}
+.icon-user-add{
+	background: url("icons/user-add.png")no-repeat center center;
+}
 
 .icon-mini-add{
 	background:url('icons/mini_add.png') no-repeat center center;
