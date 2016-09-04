@@ -1,8 +1,14 @@
 <table id="user">123</table>
 
 <div id="user_tool" style="padding: 5px;">
-    <div>
+    <div style="margin-bottom: 5px;">
         <a href="javascript:void (0)" class="easyui-linkbutton" plain="true" iconCls="icon-reload" onclick="user_tool.reload();">刷新</a>
+    </div>
+    <div style="padding: 0 0 0 7px;color: #333;">
+        查询账号：<input type="text" class="textbox" name="username" style="width: 110px;" />
+        创建时间从：<input type="text" name="date_from" editable="false" class="easyui-datebox" style="width: 110px;" />
+        到：<input type="text" name="date_to" editable="false" class="easyui-datebox" style="width: 110px;" />
+        <a href="javascript:void (0)" class="easyui-linkbutton" iconCls="icon-search" onclick="user_tool.search();">查询</a>
     </div>
 </div>
 

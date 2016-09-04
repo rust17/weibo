@@ -1,10 +1,18 @@
 $(function(){
     $('#user').datagrid({
         url : ThinkPHP['MODULE'] + '/User/getList',
+        fit : true,
         fitColumns : true,
         rownumbers : true,
         border : false,
         striped : true,
+        toolbar : '#user_tool',
+        pagination : true,
+        pageList : [10,20,30,40,50],
+        pageNumber : 1,
+        pageSize : 10,
+        sortName : 'create',
+        sortOrder : 'DESC',
         columns : [[
             {
                 field : 'id',
@@ -31,11 +39,13 @@ $(function(){
                 field : 'create',
                 title : '注册时间',
                 width : 100,
+                sortable : true,
             },
             {
                 field : 'last_login',
                 title : '最后登录时间',
                 width : 100,
+                sortable : true,
             },
             {
                 field : 'last_ip',
@@ -46,8 +56,15 @@ $(function(){
     });
 
     user_tool = {
+        search : function(){
+            $('#user').datagrid('load',{
+                username : $.trim($('input[name="username"]').val()),
+                date_from : $('input[name="date_from"]').val(),
+                date_to : $('input[name="date_to"]').val(),
+            })
+        },
         reload : function(){
-            $('#user').datagrid('load');
+            $('#user').datagrid('reload');
         },
     };
 })

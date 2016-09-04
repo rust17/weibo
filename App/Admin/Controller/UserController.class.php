@@ -15,7 +15,7 @@ class UserController extends Controller {
     public function getList(){
         if(IS_AJAX){
             $User = D('User');
-            $this->ajaxReturn($User->getList());
+            $this->ajaxReturn($User->getList(I('post.page'),I('post.rows'),I('post.sort'),I('post.order'),I('post.username',I('post.date_from'),I('post.date_to'))));
         }else{
             $this->error('非法操作');
         }
