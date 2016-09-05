@@ -100,6 +100,9 @@
 .icon-user-add{
 	background: url("icons/user-add.png")no-repeat center center;
 }
+.icon-edit-new{
+	background: url("icons/edit-new.png")no-repeat center center;
+}
 
 .icon-mini-add{
 	background:url('icons/mini_add.png') no-repeat center center;

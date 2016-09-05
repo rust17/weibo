@@ -138,6 +138,79 @@ $(function(){
         }
     });
 
+    $('#user_edit').dialog({
+        width : 350,
+        height : 420,
+        title : '修改用户',
+        iconCls : 'icon-user',
+        modal : true,
+        closed : true,
+        buttons : [
+            {
+                text : '提交',
+                iconCls : 'icon-edit-new',
+                handler : function(){
+                    if($('#user_edit').form('validate')){
+                        $.ajax({
+                            url: ThinkPHP['MODULE'] + '/User/update',
+                            type: 'POST',
+                            data: {
+                                id : $.trim($('input[name="id"]').val()),
+                                password : $('input[name="edit_password"]').val(),
+                                email : $.trim($('input[name="edit_email"]').val()),
+                                domain : $.trim($('input[name="edit_domain"]').val()),
+                                intro : $.trim($('textarea[name="edit_intro"]').val()),
+                                source_intro : $.trim($('input[name="source_intro"]').val()),
+                            },
+                            beforeSend: function () {
+                                $.messager.progress({
+                                    text : '正在尝试提交...',
+                                });
+                            },
+                            success: function (data, response,status) {
+                                $.messager.progress('close');
+                                if (data > 0) {
+                                    $.messager.progress('close');
+                                    if (data > 0) {
+                                        $.messager.show({
+                                            title: '操作提醒',
+                                            msg: '修改用户成功',
+                                        });
+                                        $('#user_edit').dialog('closed');
+                                        $('#user').datagrid('load');
+                                    }
+                                } else if (data == -5) {
+                                    $.messager.alert('警告操作', '电子邮件被占用', 'warning', function () {
+                                        $('input[name="edit_email"]').select();
+                                    });
+                                } else if (data == -7) {
+                                    $.messager.alert('警告操作', '个性域名被占用', 'warning', function () {
+                                        $('input[name="edit_domain"]').select();
+                                    });
+                                }else if(data == 0){
+                                    $.messager.alert('警告操作','尚未修改或未知错误','warning')
+                                }
+                                else {
+                                    $.messager.alert('警告操作', '未知错误', 'warning');
+                                }
+                            },
+                        });
+                    }
+                }
+            },
+            {
+                text : '取消',
+                iconCls : 'icon-redo',
+                handler : function(){
+                    $('#user_edit').dialog('close');
+                }
+            },
+        ],
+        onClose : function(){
+            $('#user_edit').form('reset');
+        }
+    });
+
     $('input[name="username"]').validatebox({
         required : true,
         validType : 'length[2,20]',
@@ -152,14 +225,20 @@ $(function(){
         invalidMessage : '用户密码必须在6-30位之间',
     });
 
-    $('input[name="email"]').validatebox({
+    $('input[name="edit_password"]').validatebox({
+        validType : 'length[6,30]',
+        missingMessage : '请输入用户密码',
+        invalidMessage : '用户密码必须在6-30位之间',
+    });
+
+    $('input[name="email"],input[name="edit_email"]').validatebox({
         required : true,
         validType : 'email',
         missingMessage : '请输入电子邮件',
         invalidMessage : '电子邮件格式不正确',
     });
 
-    $('input[name="domain"]').validatebox({
+    $('input[name="domain"],input[name="edit_domain"]').validatebox({
         validType : 'domain',
     });
 
@@ -212,7 +291,41 @@ $(function(){
             $('#user_add').dialog('open');
             $('input[name="username"]').focus();
         },
-
+        edit : function(){
+            var rows = $('#user').datagrid('getSelections');
+            if(rows.length > 1){
+                $.messager.alert('警告操作','编辑记录只能选定一条数据！','warning');
+            }else if(rows.length == 1){
+                $('#user_edit').dialog('open');
+                $.ajax({
+                    url: ThinkPHP['MODULE'] + '/User/getUser',
+                    type: 'POST',
+                    data: {
+                        ids : rows[0].id,
+                    },
+                    beforeSend: function () {
+                        $.messager.progress({
+                            text : '正在获取信息...',
+                        });
+                    },
+                    success: function (data, response,status) {
+                        $.messager.progress('close');
+                        if(data){
+                            $('#user_edit').form('load',{
+                                id : data.id,
+                                edit_username : data.username,
+                                edit_email : data.email,
+                                edit_domain : data.domain,
+                                edit_intro : data.extend ? data.extend.intro : '',
+                                source_intro : data.extend ? data.extend.intro : '',
+                            });
+                        }
+                    },
+                });
+            }else if(rows.length == 0){
+                $.messager.alert('警告操作','编辑记录必须选定一条记录','warning');
+            }
+        },
         redo : function(){
             $('#user').datagrid('unselectAll');
         },

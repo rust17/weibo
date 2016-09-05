@@ -31,6 +31,26 @@ class UserController extends Controller {
         }
     }
 
+    //修改用户
+    public function update(){
+        if(IS_AJAX){
+            $User = D('User');
+            echo $User->update(I('post.id'),I('post.password'),I('post.email'),I('post.domain'),I('post.intro'),I('post.source_intro'));
+        }else{
+            $this->error('非法操作！');
+        }
+    }
+
+    //获取一条用户
+    public function getUser(){
+        if(IS_AJAX){
+            $User = D('User');
+            $this->ajaxReturn($User->getUser(I('post.id')));
+        }else{
+            $this->error('非法操作');
+        }
+    }
+
     //删除会员
     public function remove(){
         if(IS_AJAX){
