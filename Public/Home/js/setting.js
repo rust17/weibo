@@ -25,6 +25,30 @@ $(function(){
         });
     });
 
+    //申请认证
+    $('.approve').button().click(function(){
+        $.ajax({
+            url: ThinkPHP['MODULE'] + '/Setting/apply',
+            type: 'POST',
+            data: {
+                email : $('input[name=name]').val(),
+                intro : $('textarea[name=intro]').val(),
+            },
+            beforeSend : function(){
+                $('#loading').html('申请提交中...').dialog('open');
+            },
+            success: function (data, response, status) {
+                if(response == 'success'){
+                    $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/success.gif)no-repeat 20px 65%').html('申请提交成功。。。');
+                    setTimeout(function(){
+                        $('#loading').css('background', 'url(' + ThinkPHP['IMG'] + '/success.gif)no-repeat 20px 65%').dialog('close');
+                        location.reload();
+                    },500);
+                };
+            }
+        });
+    });
+
     //头像上传
     if($('#file').length > 0) {
         $('#file').uploadify({

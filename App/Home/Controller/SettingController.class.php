@@ -29,6 +29,27 @@ class SettingController extends HomeController {
         }
     }
 
+    //显示申请认证
+    public function approve(){
+        if($this->login()){
+            $Approve = D('Approve');
+            $obj = $Approve->getApprove(session('user_auth')['id']);
+            $this->assign('approve',$obj);
+            $this->display();
+        }
+    }
+
+    //申请认证
+    public function apply(){
+        if(IS_AJAX){
+            $Approve = D('Approve');
+            $aid = $Approve -> apply(I('post.name'),I('post.intro'),session('user_auto')['id']);
+            echo $aid;
+        }else{
+            $this->error('非法访问！');
+        }
+    }
+
     //修改资料
     public function updateUser(){
         if(IS_AJAX){

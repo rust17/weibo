@@ -7,11 +7,16 @@ class SpaceController extends HomeController {
         if($id == 0 && $domain == '') {$this->error('非法操作');}
         if($this->login()){
             $User = D('User');
+            $Approve = D('Approve');
             if($id) {
                 $getUser = $User->getUser($id);
                 if ($getUser) {
                     $this->assign('user', $getUser);
                     $this->assign('bigFace', json_decode($getUser['face'])->big);
+
+                    $obj = $Approve->getApprove($id);
+                    $this->assign('approve',$obj);
+
                     $this->display();
                 } else {
                     $this->error('不存在此用户');
@@ -23,6 +28,10 @@ class SpaceController extends HomeController {
                     $this->assign('user', $getUser);
                     $this->assign('bigFace', json_decode($getUser['face'])->big);
                     $this->display();
+
+                    $obj = $Approve->getApprove($getUser['id']);
+                    $this->assign('approve',$obj);
+
                 } else {
                     $this->error('不存在此用户');
                 }
