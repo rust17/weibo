@@ -13,6 +13,8 @@ $(function(){
                         $(_this).tree('expendAll');
                     }
                 })
+            }else{
+                $('#nav').tree('remove',node.target);
             }
         },
         onclick : function(node){

@@ -1,14 +1,9 @@
 <?php
 namespace Admin\Controller;
-use Think\Controller;
-class UserController extends Controller {
+class UserController extends AuthController {
     //显示会员列表
     public function index(){
-        if (session('admin')) {
             $this->display();
-        } else {
-            $this->redirect('Login/index');
-        }
     }
 
     //获取会员数据

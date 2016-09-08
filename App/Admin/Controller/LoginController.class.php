@@ -3,11 +3,7 @@ namespace Admin\Controller;
 use Think\Controller;
 class LoginController extends Controller {
     public function index(){
-        if(session('admin')){
             $this->redirect('Index/index');
-        }else {
-            $this->display();
-        }
     }
 
     //验证管理员

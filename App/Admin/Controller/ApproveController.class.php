@@ -1,7 +1,6 @@
 <?php
 namespace Admin\Controller;
-use Think\Controller;
-class ApproveController extends Controller {
+class ApproveController extends AuthController {
     //显示认证审核列表
     public function index(){
             $this->display();

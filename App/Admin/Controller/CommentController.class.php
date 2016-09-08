@@ -1,14 +1,9 @@
 <?php
 namespace Admin\Controller;
-use Think\Controller;
-class CommentController extends Controller {
+class CommentController extends AuthController {
     //显示评论列表
     public function index(){
-        if (session('admin')) {
             $this->display();
-        } else {
-            $this->redirect('Login/index');
-        }
     }
 
     //获取评论数据

@@ -64,7 +64,7 @@
 <body class="easyui-layout">
     <div data-options="region:'north',title:'North Title',split:true,nohead:true" style="height:60px; background: #666;">
         <div class="logo">微博管理</div>
-        <div class="logout">您好，{:session('admin')} | <a href="{:U('Login/out')}">退出</a></div>
+        <div class="logout">您好，{:session('admin')['manager']} | <a href="{:U('Login/out')}">退出</a></div>
     </div>
     <div data-options="region:'south',title:'South Title',split:true,nohead:true" style="height:35px;line-height: 30px;text-align: center;">
         ©2009-2014 瓢城Web 俱乐部. Powered by ThinkPHP and EasyUI.

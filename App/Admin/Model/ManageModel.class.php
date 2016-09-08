@@ -30,7 +30,10 @@ class ManageModel extends Model{
             $map['password'] = sha1($password);
             $obj = $this->field('id,manager')->where($map)->find();
             if($obj){
-                session('admin',$obj['manager']);
+                session('admin',array(
+                    'id'=>$obj['id'],
+                    'manager'=>$obj['manager'],
+                ));
                 //登录验证后写入信息
                 $update = array(
                     'id'=>$obj['id'],
