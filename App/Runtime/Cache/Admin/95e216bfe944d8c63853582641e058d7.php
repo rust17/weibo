@@ -1,4 +1,4 @@
-<table id="authgroup"></table>
+<?php if (!defined('THINK_PATH')) exit();?><table id="authgroup"></table>
 
 <div id="authgroup_tool" style="padding: 5px;">
     <div style="margin-bottom: 5px;">
@@ -17,4 +17,4 @@
     <p>权限分配：<input type="text" id="auth_nav" name="rules" class="textbox" style="width: 200px;" /></p>
 </form>
 
-<script type="text/javascript" src="__JS__/authgroup.js"></script>
+<script type="text/javascript" src="/weibo/Public/Admin/js/authgroup.js"></script>

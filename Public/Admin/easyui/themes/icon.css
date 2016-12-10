@@ -91,6 +91,9 @@
 .icon-folder{
 	background: url("icons/folder.png")no-repeat center center;
 }
+.icon-key{
+	background: url("icons/key.png")no-repeat center center;
+}
 .icon-delete-new{
 	background: url("icons/delete-new.png")no-repeat center center;
 }

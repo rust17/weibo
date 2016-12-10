@@ -1,7 +1,7 @@
 
 $(function(){
-    $('#approve').datagrid({
-        url : ThinkPHP['MODULE'] + '/Approve/getList',
+    $('#authgroup').datagrid({
+        url : ThinkPHP['MODULE'] + '/AuthGroup/getList',
         fit : true,
         fitColumns : true,
         striped : true,
@@ -11,9 +11,7 @@ $(function(){
         pageSize : 20,
         pageList : [10,20,30,40,50],
         pageNumber : 1,
-        sortName : 'create',
-        sortOrder : 'desc',
-        toolbar : '#approve_tool',
+        toolbar : '#authgroup_tool',
         columns : [[
             {
                 field : 'id',
@@ -22,66 +20,118 @@ $(function(){
                 checkbox : true,
             },
             {
-                field : 'name',
-                title : '认证名称',
-                width : 50,
-            },
-            {
-                field : 'info',
-                title : '认证资料',
+                field : 'title',
+                title : '角色名称',
                 width : 100,
             },
             {
-                field : 'state',
-                title : '认证状态',
-                width : 30,
-                formatter : function (value){
-                    return value == 0 ? '未认证' : '已认证';
-                }
-            },
-            {
-                    field : 'create',
-                title : '申请时间',
+                field : 'auth',
+                title : '拥有的权限',
                 width : 100,
             },
         ]],
     });
 
-    approve_tool = {
-        edit : function(){
-            var rows = $('approve').datagrid('getSelections');
-            if(rows.length > 1){
-                $.messager.alert('警告操作','编辑记录只能选定一条数据','warning');
-            }else if(rows.length == 1){
-                $.ajax({
-                    type: 'POST',
-                    url: ThinkPHP['MODULE'] + '/Approve/update',
-                    data: {
-                        id: rows[0].id,
-                    },
-                    beforeSend: function () {
-                        $.messager.progress({
-                            text: '正在尝试获取数据。。。',
+    $('#authgroup_add').dialog({
+        width : 350,
+        title : '新增角色',
+        iconCls : 'icon-user-add',
+        modal : true,
+        closed : true,
+        buttons : [
+            {
+                text : '提交',
+                iconCls : 'icon-add-new',
+                handler : function(){
+                    if($('#authgroup_add').form('validate')){
+                        $.ajax({
+                            url: ThinkPHP['MODULE'] + '/AuthGroup/addRole',
+                            type: 'POST',
+                            data: {
+                                title : $.trim($('input[name="title"]').val()),
+                                rules : $('#auth_nav').combotree('getText'),
+                            },
+                            beforeSend: function () {
+                                $.messager.progress({
+                                    text : '正在尝试提交...',
+                                });
+                            },
+                            success: function (data, response,status) {
+                                $.messager.progress('close');
+                                if(data > 0){
+                                    $.messager.progress('close');
+                                    if(data > 0){
+                                        $.messager.show({
+                                            title : '操作提醒',
+                                            msg : '新增角色成功',
+                                        });
+                                        $('#authgroup_add').dialog('close');
+                                        $('#authgroup').datagrid('load');
+                                    }
+                                }else if(data == -4){
+                                    $.messager.alert('警告操作','用户账号被占用','warning',function(){
+                                        $('input[name="username"]').select();
+                                    });
+                                }else if(data == -5) {
+                                    $.messager.alert('警告操作', '电子邮件被占用', 'warning', function () {
+                                        $('input[name="email"]').select();
+                                    });
+                                }else if(data == -7) {
+                                    $.messager.alert('警告操作', '个性域名被占用', 'warning', function () {
+                                        $('input[name="domain"]').select();
+                                    });
+                                }else{
+                                    $.messager.alert('警告操作','未知错误','warning');
+                                }
+                            },
                         });
-                    },
-                    success : function(data) {
-                        $.messager.progress('close');
-                        if (data == 0) {
-                            $.messager.progress('close');
-                        } else if (data == 1) {
-                            $('#approve').datagrid('reload');
-                            $.messager.show({
-                                title: '提示',
-                                msg: data + '个用户被认证成功',
-                            });
-                        } else {
-                            $.messager.alert('警告操作', '未知错误！请重试', 'warning');
-                        }
-                    },
-                });
-            }else if(rows.length == 0){
-                $.messager.alert('警告操作','编辑记录至少选定一条数据','warning');
+                    }
+                }
+            },
+            {
+                text : '取消',
+                iconCls : 'icon-redo',
+                handler : function(){
+                    $('#authgroup_add').dialog('close');
+                }
+            },
+        ],
+        onClose : function(){
+            $('#authgroup_add').form('reset');
+        }
+    });
+
+    $('input[name="title"]').validatebox({
+        required : true,
+        validType : 'length[2,20]',
+        missingMessage : '请输入角色名称',
+        invalidMessage : '角色名称必须在2-20位之间',
+    });
+
+    $('#auth_nav').combotree({
+        url : ThinkPHP['MODULE'] + '/Index/getNav',
+        lines : true,
+        required : true,
+        multiple : true,
+        checkbox : true,
+        onlyLeafCheck : true,
+        onLoadSuccess : function(node,data){
+            console.log(node);
+            var _this = this;
+            if(data){
+                $(data).each(function(){
+                    if(this.state == 'closed'){
+                        $(_this).tree('expandAll');
+                    }
+                })
             }
+        },
+    });
+
+    authgroup_tool = {
+        add : function(){
+            $('#authgroup_add').dialog('open');
+            $('input[name="title"]').focus();
         },
     };
 

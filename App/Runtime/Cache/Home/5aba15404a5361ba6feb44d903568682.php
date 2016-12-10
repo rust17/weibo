@@ -46,17 +46,26 @@
             <ul>
                 <li class="user">
                     <a href="#"><?php echo session('user_auth')['username'];?></a>
+                    <!--
                     <?php if(($referCount) > "0"): ?><div class="refer">
                             <span>x</span>
                             您有<?php echo ($referCount); ?>条@提及！
                         </div><?php endif; ?>
+                    -->
+                    <div class="refer">
+                        <span>x</span>
+                        您有<b>0</b>条@提及！
+                    </div>
                 </li>
                 <li class="app">消息
                     <dl class="list">
                         <dd><a href="<?php echo U('Setting/refer');?>">@提到我的
-                                <?php if(($referCount) > "0"): ?><strong style="color:red;">(<?php echo ($referCount); ?>)</strong>
+                            <!--
+                            <?php if(($referCount) > "0"): ?><strong style="color:red;">(<?php echo ($referCount); ?>)</strong>
                                 <?php else: ?>
                                     <span>(<?php echo ($referCount); ?>)</span><?php endif; ?>
+                            -->
+                            <span>(0)</span>
                             </a>
                         </dd>
                         <dd><a href="#">收到的评论</a></dd>
@@ -70,7 +79,7 @@
                     <dl class="list">
                         <dd><a href="<?php echo U('Setting/index');?>">个人设置</a></dd>
                         <dd><a href="#">排行榜</a></dd>
-                        <dd><a href="#">申请认证</a></dd>
+                        <dd><a href="<?php echo U('Setting/approve');?>">申请认证</a></dd>
                         <dd><a href="<?php echo U('User/logout');?>" class="line">退出》</a></dd>
                     </dl>
                 </li>
@@ -93,6 +102,7 @@
             <li><a href="<?php echo U('Setting/avatar');?>">头像设置</a></li>
             <li><a href="<?php echo U('Setting/domain');?>">个性域名</a></li>
             <li><a href="<?php echo U('Setting/refer');?>" class="selected">@提及到我</a></li>
+            <li><a href="<?php echo U('Setting/approve');?>">申请认证</a></li>
         </ul>
     </div>
     <div class="main_right">

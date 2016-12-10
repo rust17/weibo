@@ -1,10 +1,10 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title></title>
-    <script type="text/javascript" src="__JS__/jquery.js"></script>
-    <script type="text/javascript" src="__JS__/jquery.ui.js"></script>
+    <script type="text/javascript" src="/weibo/Public/Home/js/jquery.js"></script>
+    <script type="text/javascript" src="/weibo/Public/Home/js/jquery.ui.js"></script>
     <script type="text/javascript">
         function load(){
                 alert($('p').eq(1).val());

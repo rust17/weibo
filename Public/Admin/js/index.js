@@ -10,14 +10,14 @@ $(function(){
             if(data){
                 $(data).each(function(){
                     if(this.state == 'closed'){
-                        $(_this).tree('expendAll');
+                        $(_this).tree('expandAll');
                     }
                 })
             }else{
                 $('#nav').tree('remove',node.target);
             }
         },
-        onclick : function(node){
+        onClick : function(node){
             if(node.url) {
                 if ($('#tabs').tabs('exists', node.text)) {
                     $('#tabs').tabs('select', node.text)

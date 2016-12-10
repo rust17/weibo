@@ -9,21 +9,23 @@ namespace Admin\Model;
 
 use Think\Model;
 
-class ApproveModel extends Model{
+class AuthGroupModel extends Model{
 
     //获取微博列表
-    public function getList($page,$rows,$sort,$order){
+    public function getList($page,$rows){
 
-        $obj = $this->field('id,name,info,create,state')
-                    ->order(array($sort=>$order))
+        $obj = $this->field('id,title,rules')
                     ->limit(($rows * ($page - 1)),$rows)
                     ->select();
 
         foreach ($obj as $key => $value) {
-            $obj[$key]['create'] = date('Y-m-d H:i:s',$value['create']);
-            if(mb_strlen($obj[$key]['info'],'utf8') > 40){
-                $obj[$key]['info'] = mb_substr($obj[$key]['info'],0,40,'utf8').'...';
+            $map['id'] = array('in',$value['rules']);
+            $AuthRule = M('AuthRule');
+            $objAR = $AuthRule->field('title')->where($map)->select();
+            foreach ($objAR as $key2 => $value2) {
+                $obj[$key]['auth'] .= $value2['title'].',';
             }
+            $obj[$key]['auth'] = substr($obj[$key]['auth'],0,-1);
         }
 
         return array(
@@ -32,12 +34,32 @@ class ApproveModel extends Model{
         );
     }
 
-    //通过审核
-    public function update($id){
+    //获取所有角色
+    public function getListAll(){
+        return $this->field('id,title,rules')->select();
+    }
+
+    //新增角色名称
+    public function addRole($title,$rules){
+        $map['title'] = array('in',$rules);
+        $AuthRule = D('AuthRule');
+        $objAr = $AuthRule->field('id')->where($map)->select();
+
+        $ids = '';
+        foreach($objAr as $key=>$value){
+            $ids .=$value['id'].',';
+        }
+        $ids = substr($ids,0,-1);
+
         $data = array(
-            'id'=>$id,
-            'state'=>1,
+            'title'=>$title,
+            'rules'=>$ids,
         );
-        return $this->save($data);
+        if($this->create($data)){
+            $aid = $this->add($data);
+            return $aid ? $aid : 0;
+        }else{
+            return $this->getError();
+        }
     }
 }

@@ -2,9 +2,7 @@
 namespace Admin\Controller;
 use Think\Controller;
 class LoginController extends Controller {
-    public function index(){
-            $this->redirect('Index/index');
-    }
+
 
     //验证管理员
     public function checkManager(){

@@ -1,7 +1,7 @@
 <?php
 namespace Admin\Controller;
 
-class ManagerController extends AuthController {
+class ManageController extends AuthController {
     //显示管理员列表
     public function index(){
         $this->display();

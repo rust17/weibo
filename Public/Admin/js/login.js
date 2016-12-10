@@ -38,7 +38,7 @@ $(function(){
     $('#btn a').click(function(){
         if(!$('#manager').validatebox('isValid')){
             $('#manager').focus();
-        }else if(!$('#password').validatebox(isValid)){
+        }else if(!$('#password').validatebox('isValid')){
             $('#password').focus();
         }else{
             $.ajax({
@@ -54,7 +54,7 @@ $(function(){
                     });
                 },
                 success : function(data,response,status){
-                    $.message.progress('close');
+                    $.messager.progress('close');
                     if(data > 0){
                         location.href = ThinkPHP['INDEX'];
                     }else{

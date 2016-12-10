@@ -164,7 +164,6 @@ class TopicModel extends Model\RelationModel{
                 $list[$key]['recontent'] = $this->getReContent($list[$key]['reid']);
             }
         }
-
         return $list;
     }
     //获取被转发的微博内容

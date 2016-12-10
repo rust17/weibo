@@ -27,10 +27,10 @@ class SpaceController extends HomeController {
                 if ($getUser) {
                     $this->assign('user', $getUser);
                     $this->assign('bigFace', json_decode($getUser['face'])->big);
-                    $this->display();
 
                     $obj = $Approve->getApprove($getUser['id']);
                     $this->assign('approve',$obj);
+                    $this->display();
 
                 } else {
                     $this->error('不存在此用户');

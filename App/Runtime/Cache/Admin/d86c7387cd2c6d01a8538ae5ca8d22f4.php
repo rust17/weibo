@@ -1,4 +1,4 @@
-<table id="manage"></table>
+<?php if (!defined('THINK_PATH')) exit();?><table id="manage"></table>
 
 <div id="manage_tool" style="padding: 5px;">
     <div style="margin-bottom: 5px;">
@@ -18,4 +18,4 @@
     <p>分配角色：<input id="role" class="textbox" name="role" style="width: 205px;" /></p>
 </form>
 
-<script type="text/javascript" src="__JS__/manage.js"></script>
+<script type="text/javascript" src="/weibo/Public/Admin/js/manage.js"></script>

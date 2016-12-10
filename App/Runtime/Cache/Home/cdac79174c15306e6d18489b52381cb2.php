@@ -85,7 +85,7 @@
                     <dl class="list">
                         <dd><a href="<?php echo U('Setting/index');?>">个人设置</a></dd>
                         <dd><a href="#">排行榜</a></dd>
-                        <dd><a href="#">申请认证</a></dd>
+                        <dd><a href="<?php echo U('Setting/approve');?>">申请认证</a></dd>
                         <dd><a href="<?php echo U('User/logout');?>" class="line">退出》</a></dd>
                     </dl>
                 </li>
@@ -138,6 +138,9 @@
                 <li><a href="javascript:void(0)" class="selected">我关注的<i class="nav_arrow"></i></a></li>
                 <li><a href="javascript:void(0)">互听的</a></li>
             </ul>
+
+            <div class="msg">约0条广播，点击查看</div>
+
             <!--这里插入一个DOM节点-->
             <?php if(is_array($topicList)): $i = 0; $__LIST__ = $topicList;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$obj): $mod = ($i % 2 );++$i; if(empty($obj["reid"])): ?><dl class="weibo_content_data">
                 <dt><a href="javascript:void (0)">
@@ -167,7 +170,7 @@
                                 <img data="/weibo/<?php echo ($obj['images'][0]['unfold']); ?>" src="/weibo/Public/Home/img/loading_100.png" alt="">
                             </div><?php break;?>
                         <?php Default: ?>
-                        <?php $__FOR_START_5716__=0;$__FOR_END_5716__=$obj['count'];for($i=$__FOR_START_5716__;$i < $__FOR_END_5716__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
+                        <?php $__FOR_START_19799__=0;$__FOR_END_19799__=$obj['count'];for($i=$__FOR_START_19799__;$i < $__FOR_END_19799__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
                     <div class="footer">
                         <span class="time"><?php echo ($obj["time"]); ?></span>
                         <span class="handler">赞(0) | <a href="javascript:void (0)" class="re">转播(<?php echo ($obj["recount"]); ?>)</a> | <a href="javascript:void (0)" class="comment">评论</a> | 收藏</span>
@@ -225,7 +228,7 @@
                                         <img data="/weibo/<?php echo ($obj['recontent']['images'][0]['unfold']); ?>" src="/weibo/Public/Home/img/loading_100.png" alt="">
                                     </div><?php break;?>
                                 <?php Default: ?>
-                                <?php $__FOR_START_18941__=0;$__FOR_END_18941__=$obj['recontent']['count'];for($i=$__FOR_START_18941__;$i < $__FOR_END_18941__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['recontent']['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
+                                <?php $__FOR_START_8260__=0;$__FOR_END_8260__=$obj['recontent']['count'];for($i=$__FOR_START_8260__;$i < $__FOR_END_8260__;$i+=1){ ?><div class="imgs"><img src="/weibo/<?php echo ($obj['recontent']['images'][$i]['thumb']); ?>" unfold-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['unfold']); ?>" source-src="/weibo/<?php echo ($obj['recontent']['images'][$i]['source']); ?>" alt=""></div><?php } endswitch;?>
                             <div class="footer">
                                 <span class="time"><?php echo ($obj["recontent"]["time"]); ?>该微博共被转发了<?php echo ($obj["recontent"]["recount"]); ?>次</span>
                             </div>

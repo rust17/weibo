@@ -102,7 +102,7 @@ $(function(){
                                             title : '操作提醒',
                                             msg : '新增用户成功',
                                         });
-                                        $('#user_add').dialog('closed');
+                                        $('#user_add').dialog('close');
                                         $('#user').datagrid('load');
                                     }
                                 }else if(data == -4){

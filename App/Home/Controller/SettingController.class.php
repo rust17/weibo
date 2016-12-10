@@ -75,7 +75,7 @@ class SettingController extends HomeController {
     //显示@提及到我
     public function refer(){
         if($this->login()){
-            $Refer = D('refer');
+            $Refer = D('Refer');
             $getRefer = $Refer->getRefer(session('user_auth'['id']));
             $this->assign('getRefer',$getRefer);
             $this->display();

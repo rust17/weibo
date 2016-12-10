@@ -1,7 +1,7 @@
 
 $(function(){
-    $('#approve').datagrid({
-        url : ThinkPHP['MODULE'] + '/Approve/getList',
+    $('#manage').datagrid({
+        url : ThinkPHP['MODULE'] + '/Manage/getList',
         fit : true,
         fitColumns : true,
         striped : true,
@@ -12,8 +12,8 @@ $(function(){
         pageList : [10,20,30,40,50],
         pageNumber : 1,
         sortName : 'create',
-        sortOrder : 'desc',
-        toolbar : '#approve_tool',
+        sortOrder : 'DESC',
+        toolbar : '#manage_tool',
         columns : [[
             {
                 field : 'id',
@@ -22,66 +22,129 @@ $(function(){
                 checkbox : true,
             },
             {
-                field : 'name',
-                title : '认证名称',
-                width : 50,
-            },
-            {
-                field : 'info',
-                title : '认证资料',
+                field : 'manager',
+                title : '管理员账号',
                 width : 100,
             },
             {
-                field : 'state',
-                title : '认证状态',
-                width : 30,
-                formatter : function (value){
-                    return value == 0 ? '未认证' : '已认证';
-                }
+                field : 'role',
+                title : '所属角色',
+                width : 100,
             },
             {
-                    field : 'create',
-                title : '申请时间',
+                field : 'create',
+                title : '创建时间',
+                width : 100,
+            },
+            {
+                field : 'last_login',
+                title : '最后登录时间',
+                width : 100,
+            },
+            {
+                field : 'last_ip',
+                title : '最后登录IP',
                 width : 100,
             },
         ]],
     });
 
-    approve_tool = {
-        edit : function(){
-            var rows = $('approve').datagrid('getSelections');
-            if(rows.length > 1){
-                $.messager.alert('警告操作','编辑记录只能选定一条数据','warning');
-            }else if(rows.length == 1){
-                $.ajax({
-                    type: 'POST',
-                    url: ThinkPHP['MODULE'] + '/Approve/update',
-                    data: {
-                        id: rows[0].id,
-                    },
-                    beforeSend: function () {
-                        $.messager.progress({
-                            text: '正在尝试获取数据。。。',
+    $('#manage_add').dialog({
+        width : 350,
+        title : '新增管理',
+        iconCls : 'icon-user-add',
+        modal : true,
+        closed : true,
+        buttons : [
+            {
+                text : '提交',
+                iconCls : 'icon-add-new',
+                handler : function(){
+                    if($('#manage_add').form('validate')){
+                        $.ajax({
+                            url: ThinkPHP['MODULE'] + '/Manage/addManage',
+                            type: 'POST',
+                            data: {
+                                manager : $.trim($('input[name="manager"]').val()),
+                                password : $('input[name="password"]').val(),
+                                role : $.trim($('input[name="role"]').val()),
+                            },
+                            beforeSend: function () {
+                                $.messager.progress({
+                                    text : '正在尝试提交...',
+                                });
+                            },
+                            success: function (data, response,status) {
+                                $.messager.progress('close');
+                                if(data > 0){
+                                    $.messager.progress('close');
+                                    if(data > 0){
+                                        $.messager.show({
+                                            title : '操作提醒',
+                                            msg : '新增管理成功',
+                                        });
+                                        $('#manage_add').dialog('close');
+                                        $('#manage').datagrid('load');
+                                    }
+                                }else if(data == -4){
+                                    $.messager.alert('警告操作','用户账号被占用','warning',function(){
+                                        $('input[name="username"]').select();
+                                    });
+                                }else if(data == -5) {
+                                    $.messager.alert('警告操作', '电子邮件被占用', 'warning', function () {
+                                        $('input[name="email"]').select();
+                                    });
+                                }else if(data == -7) {
+                                    $.messager.alert('警告操作', '个性域名被占用', 'warning', function () {
+                                        $('input[name="domain"]').select();
+                                    });
+                                }else{
+                                    $.messager.alert('警告操作','未知错误','warning');
+                                }
+                            },
                         });
-                    },
-                    success : function(data) {
-                        $.messager.progress('close');
-                        if (data == 0) {
-                            $.messager.progress('close');
-                        } else if (data == 1) {
-                            $('#approve').datagrid('reload');
-                            $.messager.show({
-                                title: '提示',
-                                msg: data + '个用户被认证成功',
-                            });
-                        } else {
-                            $.messager.alert('警告操作', '未知错误！请重试', 'warning');
-                        }
-                    },
-                });
-            }else if(rows.length == 0){
-                $.messager.alert('警告操作','编辑记录至少选定一条数据','warning');
-            }
+                    }
+                }
+            },
+            {
+                text : '取消',
+                iconCls : 'icon-redo',
+                handler : function(){
+                    $('#manage_add').dialog('close');
+                }
+            },
+        ],
+        onClose : function(){
+            $('#manage_add').form('reset');
+        }
+    });
+
+    $('input[name="manager"]').validatebox({
+        required : true,
+        validType : 'length[2,20]',
+        missingMessage : '请输入管理账号',
+        invalidMessage : '管理账号必须在2-20位之间',
+    });
+
+    $('input[name="password"]').validatebox({
+        required : true,
+        validType : 'length[6,30]',
+        missingMessage : '请输入管理密码',
+        invalidMessage : '管理密码在6-30位之间',
+    });
+
+    $('#role').combobox({
+        url : ThinkPHP['MODULE'] + '/AuthGroup/getListAll',
+        required : true,
+        editable : false,
+        valueField : 'id',
+        textField : 'title',
+    });
+
+    manage_tool = {
+        add : function(){
+            $('#manage_add').dialog('open');
+            $('input[name="manager"]').focus();
         },
     };
 

@@ -11,7 +11,8 @@
 
 
 
-<link rel="stylesheet" href="/weibo/Public/Home/css/space.css" />
+    <script type="text/javascript" src="/weibo/Public/Home/js/setting.js"></script>
+    <link rel="stylesheet" href="/weibo/Public/Home/css/setting.css">
 
 
 <script type="text/javascript">
@@ -96,24 +97,27 @@
 <div id="main">
     
     <div class="main_left">
-        <div class="header">
-            <dl>
-                <dt>
-                    <?php if(empty($bigFace)): ?><dt><img src="/weibo/Public/Home/img/big.jpg" alt="" /></dt>
-                        <?php else: ?>
-                        <dt><img src="/weibo/<?php echo ($bigFace); ?>" alt=""></dt><?php endif; ?></dt>
-                <dd class="username"><?php echo ($user["username"]); ?>
-                    <?php if(($approve["state"]) == "1"): ?><img src="/weibo/Public/Home/img/approve.png" alt="认证个人" title="认证个人"/><?php endif; ?>
-                </dd>
-                <dd class="intro">个人简介：<?php echo ($user["extend"]["intro"]); ?></dd>
-            </dl>
-        </div>
+        <ul>
+            <li><a href="<?php echo U('Setting/index');?>">个人设置</a></li>
+            <li><a href="<?php echo U('Setting/avatar');?>">头像设置</a></li>
+            <li><a href="<?php echo U('Setting/domain');?>">个性域名</a></li>
+            <li><a href="<?php echo U('Setting/refer');?>">@提及到我</a></li>
+            <li><a href="<?php echo U('Setting/approve');?>" class="selected">申请认证</a></li>
+        </ul>
     </div>
     <div class="main_right">
-        <?php if(($approve["state"]) == "1"): ?><dl>
-                <dt>微博认证资料</dt>
-                <dd><?php echo ($approve["name"]); ?>,<?php echo ($approve["info"]); ?></dd>
-            </dl><?php endif; ?>
+        <h2>申请认证</h2>
+        <dl>
+            <?php switch($approve["state"]): case "0": ?><dd>您的申请正在审核中，请耐心等待！</dd><?php break;?>
+                <?php case "1": ?><dd>您已认证成功！认证信息如下：</dd>
+                    <dd>认证名称：<?php echo ($approve["name"]); ?></dd>
+                    <dd>认证信息：<?php echo ($approve["info"]); ?></dd><?php break;?>
+                <?php Default: ?>
+                    <dd>认证名称：<input type="text" name="name" class="text" /><strong style="color: red;">*</strong></dd>
+                    <dd><span>认证资料：</span><textarea name="intro"></textarea><strong style="color: red;">*</strong></dd>
+                    <dd><input type="submit" class="approve" value="申请认证" /></dd><?php endswitch;?>
+        </dl>
+        <p style="margin: 20px 0;font-size: 13px;color: red;text-align: center;">(PS：这里为了不再重复，不做前后端验证)</p>
     </div>
 
 </div>

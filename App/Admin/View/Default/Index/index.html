@@ -49,6 +49,7 @@
         .datagrid-row-selected{
             background: #999;!important;
         }
+
         .dialog-button{
             text-align: center;
         }
@@ -62,11 +63,11 @@
     </script>
 </head>
 <body class="easyui-layout">
-    <div data-options="region:'north',title:'North Title',split:true,nohead:true" style="height:60px; background: #666;">
+    <div data-options="region:'north',split:true,nohead:true" style="height:60px; background: #666;">
         <div class="logo">微博管理</div>
         <div class="logout">您好，{:session('admin')['manager']} | <a href="{:U('Login/out')}">退出</a></div>
     </div>
-    <div data-options="region:'south',title:'South Title',split:true,nohead:true" style="height:35px;line-height: 30px;text-align: center;">
+    <div data-options="region:'south',split:true,nohead:true" style="height:35px;line-height: 30px;text-align: center;">
         ©2009-2014 瓢城Web 俱乐部. Powered by ThinkPHP and EasyUI.
     </div>
     <div data-options="region:'west',title:'导航',split:true,iconCls:'icon-world'" style="width:180px;">

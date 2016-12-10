@@ -8,7 +8,7 @@ $(function(){
     //    .css('background','url('+ThinkPHP['IMG']+'/login_bg'+rand+'.jpg)no-repeat')
     //    .css('background-size','100%');
     //登录页的按钮
-    $('#login input[type="submit"]').button();
+        $('#login input[type="submit"]').button();
     $('#login').validate({
         submitHandler : function(form){
             $('#verify_register').attr('form-click','login');

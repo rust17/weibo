@@ -1,5 +1,6 @@
 <?php
 namespace Admin\Controller;
+
 class UserController extends AuthController {
     //显示会员列表
     public function index(){
